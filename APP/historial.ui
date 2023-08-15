@@ -173,6 +173,11 @@
        </column>
        <column>
         <property name="text">
+         <string>Temperatura</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
          <string>Fecha</string>
         </property>
        </column>
@@ -181,6 +186,75 @@
          <string>Hora</string>
         </property>
        </column>
+       <item>
+        <property name="text">
+         <string>Olivia</string>
+        </property>
+        <property name="text">
+         <string>100</string>
+        </property>
+        <property name="text">
+         <string>97%</string>
+        </property>
+        <property name="text">
+         <string>1%</string>
+        </property>
+        <property name="text">
+         <string>35</string>
+        </property>
+        <property name="text">
+         <string>13/08/2023</string>
+        </property>
+        <property name="text">
+         <string>20:25:45</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Antonella</string>
+        </property>
+        <property name="text">
+         <string>96</string>
+        </property>
+        <property name="text">
+         <string>98%</string>
+        </property>
+        <property name="text">
+         <string>0.5%</string>
+        </property>
+        <property name="text">
+         <string>36.8</string>
+        </property>
+        <property name="text">
+         <string>13/08/2023</string>
+        </property>
+        <property name="text">
+         <string>19:55:13</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ayden</string>
+        </property>
+        <property name="text">
+         <string>73</string>
+        </property>
+        <property name="text">
+         <string>99%</string>
+        </property>
+        <property name="text">
+         <string>0.1%</string>
+        </property>
+        <property name="text">
+         <string>36.5</string>
+        </property>
+        <property name="text">
+         <string>04/09/2020</string>
+        </property>
+        <property name="text">
+         <string>20:27:53</string>
+        </property>
+       </item>
       </widget>
      </item>
     </layout>

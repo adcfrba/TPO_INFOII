@@ -86,6 +86,9 @@ public:
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
         treeWidget_historial = new QTreeWidget(Historial);
+        new QTreeWidgetItem(treeWidget_historial);
+        new QTreeWidgetItem(treeWidget_historial);
+        new QTreeWidgetItem(treeWidget_historial);
         treeWidget_historial->setObjectName("treeWidget_historial");
         QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
@@ -141,12 +144,42 @@ public:
         Historial->setWindowTitle(QCoreApplication::translate("Historial", "Historial", nullptr));
         label_historialModal->setText(QCoreApplication::translate("Historial", "HISTORIAL DE USUARIO", nullptr));
         QTreeWidgetItem *___qtreewidgetitem = treeWidget_historial->headerItem();
-        ___qtreewidgetitem->setText(5, QCoreApplication::translate("Historial", "Hora", nullptr));
-        ___qtreewidgetitem->setText(4, QCoreApplication::translate("Historial", "Fecha", nullptr));
+        ___qtreewidgetitem->setText(6, QCoreApplication::translate("Historial", "Hora", nullptr));
+        ___qtreewidgetitem->setText(5, QCoreApplication::translate("Historial", "Fecha", nullptr));
+        ___qtreewidgetitem->setText(4, QCoreApplication::translate("Historial", "Temperatura", nullptr));
         ___qtreewidgetitem->setText(3, QCoreApplication::translate("Historial", "Gas ", nullptr));
         ___qtreewidgetitem->setText(2, QCoreApplication::translate("Historial", "Oxigenacion", nullptr));
         ___qtreewidgetitem->setText(1, QCoreApplication::translate("Historial", "PPM", nullptr));
         ___qtreewidgetitem->setText(0, QCoreApplication::translate("Historial", "Nombre", nullptr));
+
+        const bool __sortingEnabled = treeWidget_historial->isSortingEnabled();
+        treeWidget_historial->setSortingEnabled(false);
+        QTreeWidgetItem *___qtreewidgetitem1 = treeWidget_historial->topLevelItem(0);
+        ___qtreewidgetitem1->setText(6, QCoreApplication::translate("Historial", "20:25:45", nullptr));
+        ___qtreewidgetitem1->setText(5, QCoreApplication::translate("Historial", "13/08/2023", nullptr));
+        ___qtreewidgetitem1->setText(4, QCoreApplication::translate("Historial", "35", nullptr));
+        ___qtreewidgetitem1->setText(3, QCoreApplication::translate("Historial", "1%", nullptr));
+        ___qtreewidgetitem1->setText(2, QCoreApplication::translate("Historial", "97%", nullptr));
+        ___qtreewidgetitem1->setText(1, QCoreApplication::translate("Historial", "100", nullptr));
+        ___qtreewidgetitem1->setText(0, QCoreApplication::translate("Historial", "Olivia", nullptr));
+        QTreeWidgetItem *___qtreewidgetitem2 = treeWidget_historial->topLevelItem(1);
+        ___qtreewidgetitem2->setText(6, QCoreApplication::translate("Historial", "19:55:13", nullptr));
+        ___qtreewidgetitem2->setText(5, QCoreApplication::translate("Historial", "13/08/2023", nullptr));
+        ___qtreewidgetitem2->setText(4, QCoreApplication::translate("Historial", "36.8", nullptr));
+        ___qtreewidgetitem2->setText(3, QCoreApplication::translate("Historial", "0.5%", nullptr));
+        ___qtreewidgetitem2->setText(2, QCoreApplication::translate("Historial", "98%", nullptr));
+        ___qtreewidgetitem2->setText(1, QCoreApplication::translate("Historial", "96", nullptr));
+        ___qtreewidgetitem2->setText(0, QCoreApplication::translate("Historial", "Antonella", nullptr));
+        QTreeWidgetItem *___qtreewidgetitem3 = treeWidget_historial->topLevelItem(2);
+        ___qtreewidgetitem3->setText(6, QCoreApplication::translate("Historial", "20:27:53", nullptr));
+        ___qtreewidgetitem3->setText(5, QCoreApplication::translate("Historial", "04/09/2020", nullptr));
+        ___qtreewidgetitem3->setText(4, QCoreApplication::translate("Historial", "36.5", nullptr));
+        ___qtreewidgetitem3->setText(3, QCoreApplication::translate("Historial", "0.1%", nullptr));
+        ___qtreewidgetitem3->setText(2, QCoreApplication::translate("Historial", "99%", nullptr));
+        ___qtreewidgetitem3->setText(1, QCoreApplication::translate("Historial", "73", nullptr));
+        ___qtreewidgetitem3->setText(0, QCoreApplication::translate("Historial", "Ayden", nullptr));
+        treeWidget_historial->setSortingEnabled(__sortingEnabled);
+
     } // retranslateUi
 
 };

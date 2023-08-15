@@ -45,6 +45,10 @@ public:
     QLabel *label_gas;
     QGraphicsView *graphicsView_gas;
     QListWidget *listWidget_gas;
+    QVBoxLayout *verticalLayout;
+    QLabel *label_temperatura;
+    QGraphicsView *graphicsView_temperatura;
+    QListWidget *listWidget_temperatura;
     QPushButton *pushButton_historial;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -53,7 +57,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(599, 430);
+        MainWindow->resize(601, 430);
         QPalette palette;
         QBrush brush(QColor(47, 47, 47, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -222,6 +226,33 @@ public:
 
         horizontalLayout->addLayout(verticalLayout_5);
 
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName("verticalLayout");
+        label_temperatura = new QLabel(centralwidget);
+        label_temperatura->setObjectName("label_temperatura");
+        QPalette palette5;
+        palette5.setBrush(QPalette::Active, QPalette::WindowText, brush8);
+        palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
+        palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush7);
+        label_temperatura->setPalette(palette5);
+        label_temperatura->setFont(font2);
+        label_temperatura->setAlignment(Qt::AlignCenter);
+
+        verticalLayout->addWidget(label_temperatura);
+
+        graphicsView_temperatura = new QGraphicsView(centralwidget);
+        graphicsView_temperatura->setObjectName("graphicsView_temperatura");
+
+        verticalLayout->addWidget(graphicsView_temperatura);
+
+        listWidget_temperatura = new QListWidget(centralwidget);
+        listWidget_temperatura->setObjectName("listWidget_temperatura");
+
+        verticalLayout->addWidget(listWidget_temperatura);
+
+
+        horizontalLayout->addLayout(verticalLayout);
+
 
         verticalLayout_4->addLayout(horizontalLayout);
 
@@ -233,26 +264,26 @@ public:
         sizePolicy1.setHeightForWidth(pushButton_historial->sizePolicy().hasHeightForWidth());
         pushButton_historial->setSizePolicy(sizePolicy1);
         pushButton_historial->setMaximumSize(QSize(10000, 500));
-        QPalette palette5;
+        QPalette palette6;
         QBrush brush9(QColor(91, 90, 127, 255));
         brush9.setStyle(Qt::SolidPattern);
-        palette5.setBrush(QPalette::Active, QPalette::WindowText, brush9);
-        palette5.setBrush(QPalette::Active, QPalette::Button, brush8);
+        palette6.setBrush(QPalette::Active, QPalette::WindowText, brush9);
+        palette6.setBrush(QPalette::Active, QPalette::Button, brush8);
         QBrush brush10(QColor(255, 255, 255, 255));
         brush10.setStyle(Qt::SolidPattern);
-        palette5.setBrush(QPalette::Active, QPalette::Light, brush10);
+        palette6.setBrush(QPalette::Active, QPalette::Light, brush10);
         QBrush brush11(QColor(23, 23, 70, 255));
         brush11.setStyle(Qt::SolidPattern);
-        palette5.setBrush(QPalette::Active, QPalette::ButtonText, brush11);
-        palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
-        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush2);
-        palette5.setBrush(QPalette::Inactive, QPalette::Light, brush10);
-        palette5.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
-        palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush7);
-        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush8);
-        palette5.setBrush(QPalette::Disabled, QPalette::Light, brush10);
-        palette5.setBrush(QPalette::Disabled, QPalette::ButtonText, brush7);
-        pushButton_historial->setPalette(palette5);
+        palette6.setBrush(QPalette::Active, QPalette::ButtonText, brush11);
+        palette6.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
+        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush2);
+        palette6.setBrush(QPalette::Inactive, QPalette::Light, brush10);
+        palette6.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
+        palette6.setBrush(QPalette::Disabled, QPalette::WindowText, brush7);
+        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush8);
+        palette6.setBrush(QPalette::Disabled, QPalette::Light, brush10);
+        palette6.setBrush(QPalette::Disabled, QPalette::ButtonText, brush7);
+        pushButton_historial->setPalette(palette6);
         pushButton_historial->setFont(font2);
         pushButton_historial->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_historial->setFocusPolicy(Qt::NoFocus);
@@ -270,7 +301,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 599, 21));
+        menubar->setGeometry(QRect(0, 0, 601, 21));
         QFont font3;
         font3.setFamilies({QString::fromUtf8("MS Serif")});
         font3.setBold(false);
@@ -296,6 +327,7 @@ public:
         label_pulso->setText(QCoreApplication::translate("MainWindow", "PULSO", nullptr));
         label__oxigenacion->setText(QCoreApplication::translate("MainWindow", "OXIGENACION", nullptr));
         label_gas->setText(QCoreApplication::translate("MainWindow", "MONOXIDO DE CARBONO", nullptr));
+        label_temperatura->setText(QCoreApplication::translate("MainWindow", "TEMPERATURA", nullptr));
 #if QT_CONFIG(whatsthis)
         pushButton_historial->setWhatsThis(QCoreApplication::translate("MainWindow", "Ver historial de mediciones del usuario", nullptr));
 #endif // QT_CONFIG(whatsthis)
