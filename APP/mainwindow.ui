@@ -442,7 +442,17 @@
          </widget>
         </item>
         <item>
-         <widget class="QGraphicsView" name="graphicsView__oxigenacion"/>
+         <widget class="QLabel" name="label_ox_img">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>images/sangre.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLCDNumber" name="lcdNumber_ox"/>
@@ -505,7 +515,17 @@
          </widget>
         </item>
         <item>
-         <widget class="QGraphicsView" name="graphicsView_gas"/>
+         <widget class="QLabel" name="label_gas_img">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>images/estufa-de-gas.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLCDNumber" name="lcdNumber_gas"/>
@@ -577,7 +597,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_slider">
+           <widget class="QLabel" name="label_temp_img">
             <property name="text">
              <string/>
             </property>

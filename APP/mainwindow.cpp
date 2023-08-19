@@ -13,8 +13,12 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QPixmap pix_slider ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/caliente.png");
-    ui->label_slider->setPixmap(pix_slider);
+    QPixmap pix_temp ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/caliente.png");
+    ui->label_temp_img->setPixmap(pix_temp);
+    QPixmap pix_gas ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/estufa-de-gas.png");
+    ui->label_gas_img->setPixmap(pix_gas);
+    QPixmap pix_ox ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/sangre.png");
+    ui->label_ox_img->setPixmap(pix_ox);
 
     QLineSeries *oxi = new QLineSeries();
     oxi->append(0,6);
