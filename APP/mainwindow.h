@@ -28,6 +28,14 @@ public:
 private slots:
     void on_pushButton_historial_clicked();
 
+    void on_label_ox_img_linkHovered(const QString &link);
+
+    void on_pushButton_ox_clicked();
+
+    void on_pushButton_gas_clicked();
+
+    void on_pushButton_temp_clicked();
+
 private:
     Ui::MainWindow *ui;
     void tablaRefresh(void);
