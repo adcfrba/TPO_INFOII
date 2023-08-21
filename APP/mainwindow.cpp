@@ -29,7 +29,14 @@ MainWindow::MainWindow(QWidget *parent)
     QIcon icon_temp (boton_temp);
     ui->pushButton_temp->setIcon(icon_temp);
     ui->pushButton_temp->setIconSize(boton_temp.rect().size());
+    QPixmap boton_pulso ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/corazon.png");
+    QIcon icon_pulso (boton_pulso);
+    ui->pushButton_pulso->setIcon(icon_pulso);
+    ui->pushButton_pulso->setIconSize(boton_pulso.rect().size());
 
+    QPalette colores = ui->pushButton_gas->palette();
+    colores.setColor(QPalette::Window, QColor(Qt::white));
+    ui->pushButton_gas->setPalette(colores);
 
 
     //progress bar

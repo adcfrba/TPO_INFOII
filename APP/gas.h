@@ -2,6 +2,11 @@
 #define GAS_H
 
 #include <QDialog>
+#include <QtCharts>
+#include <QChartView>
+#include <QBarSeries>
+#include <QBarSet>
+
 
 namespace Ui {
 class gas;
