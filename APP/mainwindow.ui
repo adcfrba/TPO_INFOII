@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>716</width>
-    <height>451</height>
+    <width>727</width>
+    <height>274</height>
    </rect>
   </property>
   <property name="palette">
@@ -1906,6 +1906,19 @@
      </widget>
     </item>
     <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
      <widget class="Line" name="line_2">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
@@ -2149,7 +2162,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>716</width>
+     <width>727</width>
      <height>21</height>
     </rect>
    </property>
