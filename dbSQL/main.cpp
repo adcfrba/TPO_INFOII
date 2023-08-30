@@ -9,3 +9,7 @@ int main(int argc, char *argv[])
     w.show();
     return a.exec();
 }
+
+/*
+ Para la conexión utilizando QODBC https://wiki.qt.io/ODBC
+*/
