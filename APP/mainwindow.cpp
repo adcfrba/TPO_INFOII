@@ -19,8 +19,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     QFontDatabase::addApplicationFont(":/new/fonts/Baymax.otf");
-    QFont fontTitulo = QFont("Baymax",50,1);
-    QFont fontSecundario = QFont("Skull", 15,1);
+    QFontDatabase::addApplicationFont(":/new/fonts/Skull.otf");
+    QFont fontTitulo = QFont("Baymax",55,1);
+    QFont fontSecundario = QFont("Skull", 15,-1);
     ui->setupUi(this);
     ui->label_nombre->setFont(fontTitulo);
     ui->label_gas->setFont(fontSecundario);
@@ -48,6 +49,7 @@ MainWindow::MainWindow(QWidget *parent)
     QPixmap boton_historial("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/historial-medico.png");
     QIcon icon_historial (boton_historial);
     ui->pushButton_historial->setIcon(icon_historial);
+    ui->pushButton_historial->setFont(fontSecundario);
 
     m_db = QSqlDatabase::addDatabase("QSQLITE");
     m_db.setDatabaseName("C:/sqlite/gui/databases/mydb.sqlite"); //seteamos la base de datos

@@ -10,8 +10,8 @@ Historial::Historial(QWidget *parent) :
     mModel->setTable("Lecturas");
     mModel->select();
     ui->tableView_historial->setModel(mModel);
-    QFont font = QFont("Baymax", 25,1);
-    QFont fontSecundario = QFont("Skull", 15,1);
+    QFont font = QFont("Baymax", 30,1);
+    QFont fontSecundario = QFont("Skull", 12,1);
     ui->label_historialModal->setFont(font);
     ui->tableView_historial->setFont(fontSecundario);
 }
