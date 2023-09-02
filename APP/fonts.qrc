@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new/fonts">
+        <file>Baymax.otf</file>
+        <file>Skull.otf</file>
+    </qresource>
+</RCC>

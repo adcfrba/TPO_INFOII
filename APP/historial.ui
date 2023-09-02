@@ -22,18 +22,90 @@
      <colorrole role="WindowText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>85</red>
-        <green>85</green>
-        <blue>255</blue>
+        <red>39</red>
+        <green>44</green>
+        <blue>84</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>146</red>
+        <green>180</green>
+        <blue>244</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>207</red>
+        <green>222</green>
+        <blue>231</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>39</red>
+        <green>44</green>
+        <blue>84</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>68</red>
+        <green>114</green>
+        <blue>202</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>10</red>
+        <green>54</green>
+        <blue>157</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Highlight">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>146</red>
-        <green>180</green>
-        <blue>244</blue>
+        <red>189</red>
+        <green>155</green>
+        <blue>230</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Link">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>245</red>
+        <green>255</green>
+        <blue>56</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="LinkVisited">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>164</green>
+        <blue>89</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>10</red>
+        <green>54</green>
+        <blue>157</blue>
        </color>
       </brush>
      </colorrole>
@@ -42,13 +114,13 @@
      <colorrole role="WindowText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
+        <red>39</red>
+        <green>44</green>
+        <blue>84</blue>
        </color>
       </brush>
      </colorrole>
-     <colorrole role="Highlight">
+     <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>146</red>
@@ -57,14 +129,140 @@
        </color>
       </brush>
      </colorrole>
-    </inactive>
-    <disabled>
-     <colorrole role="WindowText">
+     <colorrole role="Text">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>120</red>
+        <red>207</red>
+        <green>222</green>
+        <blue>231</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>39</red>
+        <green>44</green>
+        <blue>84</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>68</red>
+        <green>114</green>
+        <blue>202</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>10</red>
+        <green>54</green>
+        <blue>157</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>240</red>
+        <green>240</green>
+        <blue>240</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Link">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>245</red>
+        <green>255</green>
+        <blue>56</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="LinkVisited">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>164</green>
+        <blue>89</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>10</red>
+        <green>54</green>
+        <blue>157</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>146</red>
+        <green>180</green>
+        <blue>244</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>10</red>
+        <green>54</green>
+        <blue>157</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>10</red>
+        <green>54</green>
+        <blue>157</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
         <green>120</green>
-        <blue>120</blue>
+        <blue>215</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Link">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>245</red>
+        <green>255</green>
+        <blue>56</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="LinkVisited">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>164</green>
+        <blue>89</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>10</red>
+        <green>54</green>
+        <blue>157</blue>
        </color>
       </brush>
      </colorrole>
@@ -90,9 +288,9 @@
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>85</red>
-           <green>85</green>
-           <blue>255</blue>
+           <red>207</red>
+           <green>222</green>
+           <blue>231</blue>
           </color>
          </brush>
         </colorrole>
@@ -110,9 +308,9 @@
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>0</red>
-           <green>0</green>
-           <blue>0</blue>
+           <red>207</red>
+           <green>222</green>
+           <blue>231</blue>
           </color>
          </brush>
         </colorrole>
@@ -146,20 +344,26 @@
        <bold>true</bold>
       </font>
      </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
      <property name="frameShape">
       <enum>QFrame::Box</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
+      <enum>QFrame::Raised</enum>
      </property>
      <property name="lineWidth">
-      <number>3</number>
+      <number>0</number>
      </property>
      <property name="midLineWidth">
-      <number>2</number>
+      <number>0</number>
      </property>
      <property name="text">
       <string>HISTORIAL DE USUARIO</string>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -167,191 +371,45 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QTreeWidget" name="treeWidget_historial">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>580</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="palette">
-        <palette>
-         <active>
-          <colorrole role="WindowText">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>153</red>
-             <green>174</green>
-             <blue>197</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Highlight">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>146</red>
-             <green>180</green>
-             <blue>244</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </active>
-         <inactive>
-          <colorrole role="WindowText">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>153</red>
-             <green>174</green>
-             <blue>197</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Highlight">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>146</red>
-             <green>180</green>
-             <blue>244</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </inactive>
-         <disabled>
-          <colorrole role="WindowText">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>120</red>
-             <green>120</green>
-             <blue>120</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </disabled>
-        </palette>
-       </property>
-       <property name="font">
-        <font>
-         <family>MS Serif</family>
-        </font>
-       </property>
-       <column>
-        <property name="text">
-         <string>Nombre</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>PPM</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Oxigenacion</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Gas </string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Temperatura</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Fecha</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Hora</string>
-        </property>
-       </column>
-       <item>
-        <property name="text">
-         <string>Olivia</string>
-        </property>
-        <property name="text">
-         <string>100</string>
-        </property>
-        <property name="text">
-         <string>97%</string>
-        </property>
-        <property name="text">
-         <string>1%</string>
-        </property>
-        <property name="text">
-         <string>35</string>
-        </property>
-        <property name="text">
-         <string>13/08/2023</string>
-        </property>
-        <property name="text">
-         <string>20:25:45</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Antonella</string>
-        </property>
-        <property name="text">
-         <string>96</string>
-        </property>
-        <property name="text">
-         <string>98%</string>
-        </property>
-        <property name="text">
-         <string>0.5%</string>
-        </property>
-        <property name="text">
-         <string>36.8</string>
-        </property>
-        <property name="text">
-         <string>13/08/2023</string>
-        </property>
-        <property name="text">
-         <string>19:55:13</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Ayden</string>
-        </property>
-        <property name="text">
-         <string>73</string>
-        </property>
-        <property name="text">
-         <string>99%</string>
-        </property>
-        <property name="text">
-         <string>0.1%</string>
-        </property>
-        <property name="text">
-         <string>36.5</string>
-        </property>
-        <property name="text">
-         <string>04/09/2020</string>
-        </property>
-        <property name="text">
-         <string>20:27:53</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Minimum</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QTableView" name="tableView_historial">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout"/>
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
      <property name="palette">
       <palette>
        <active>
@@ -370,6 +428,15 @@
            <red>146</red>
            <green>180</green>
            <blue>244</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>39</red>
+           <green>44</green>
+           <blue>84</blue>
           </color>
          </brush>
         </colorrole>
@@ -399,6 +466,15 @@
            <red>146</red>
            <green>180</green>
            <blue>244</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>39</red>
+           <green>44</green>
+           <blue>84</blue>
           </color>
          </brush>
         </colorrole>

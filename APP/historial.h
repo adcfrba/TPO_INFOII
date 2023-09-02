@@ -2,6 +2,7 @@
 #define HISTORIAL_H
 
 #include <QDialog>
+#include "includes.h"
 
 namespace Ui {
 class Historial;
@@ -22,6 +23,8 @@ private slots:
 
 private:
     Ui::Historial *ui;
+    QSqlTableModel *mModel;
+
 };
 
 #endif // HISTORIAL_H

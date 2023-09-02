@@ -6,16 +6,28 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "QMainWindow"
-#include "QMessageBox"
-#include <QApplication>
-#include <QtWidgets>
-#include <QThread>
+
+
+void setupMain(void)
+{
+
+
+}
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    QFontDatabase::addApplicationFont(":/new/fonts/Baymax.otf");
+    QFont fontTitulo = QFont("Baymax",50,1);
+    QFont fontSecundario = QFont("Skull", 15,1);
     ui->setupUi(this);
+    ui->label_nombre->setFont(fontTitulo);
+    ui->label_gas->setFont(fontSecundario);
+    ui->label_pulso->setFont(fontSecundario);
+    ui->label_temperatura->setFont(fontSecundario);
+    ui->label__oxigenacion->setFont(fontSecundario);
+    qDebug() <<"Drivers:" << QSqlDatabase::drivers(); //me tira la lista de los drivers disponibles
 
     QPixmap boton_gas ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/gas.png");
     QIcon icon_gas (boton_gas);
@@ -33,19 +45,23 @@ MainWindow::MainWindow(QWidget *parent)
     QIcon icon_pulso (boton_pulso);
     ui->pushButton_pulso->setIcon(icon_pulso);
     ui->pushButton_pulso->setIconSize(boton_pulso.rect().size());
+    QPixmap boton_historial("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/historial-medico.png");
+    QIcon icon_historial (boton_historial);
+    ui->pushButton_historial->setIcon(icon_historial);
 
-    QPalette colores = ui->pushButton_gas->palette();
-    colores.setColor(QPalette::Window, QColor(Qt::white));
-    ui->pushButton_gas->setPalette(colores);
+    m_db = QSqlDatabase::addDatabase("QSQLITE");
+    m_db.setDatabaseName("C:/sqlite/gui/databases/mydb.sqlite"); //seteamos la base de datos
 
-
-    //progress bar
-    for (int i = 0; i<100;i++)
+    if (!m_db.open()) //checqueamos si se conecto o no
     {
-        QThread::msleep(50);
-        ui->progressBar->setValue(i+1);
-        qApp->processEvents(QEventLoop::AllEvents);
+        qDebug() << "Error: connection with database failed";
     }
+    else
+    {
+        qDebug() << "Database: connection ok";
+        //QMessageBox::information(this, "Conectada", "Se logro che");
+    }
+
 }
 
 MainWindow::~MainWindow()
@@ -88,4 +104,5 @@ void MainWindow::on_pushButton_temp_clicked()
     temp objTemp;
     int rtn = objTemp.exec();
 }
+
 

@@ -1,16 +1,7 @@
 
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
-#include <QMainWindow>
-#include <QtCharts>
-#include <QChartView>
-#include <QLineSeries>
-#include <QBarSeries>
-#include <QBarSet>
-#include <QLegend>
-#include <QBarCategoryAxis>
-#include <QHorizontalStackedBarSeries>
+#include "includes.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,6 +15,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void setupMain(void);
 
 private slots:
     void on_pushButton_historial_clicked();
@@ -39,6 +31,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     void tablaRefresh(void);
+    QSqlDatabase m_db;
 };
 
 #endif // MAINWINDOW_H
