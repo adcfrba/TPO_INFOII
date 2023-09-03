@@ -8,8 +8,18 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+/*
     qDebug() <<"Drivers:" << QSqlDatabase::drivers(); //me tira la lista de los drivers disponibles
+    m_db = QSqlDatabase::addDatabase("QODBC");
+    m_db.setDatabaseName("Driver={MySQL ODBC 5.2 Driver}; DATABASE=localhost;");
+    m_db.setUserName("root");
+    if(!m_db.open())
+    {
+        QMessageBox::critical(this, "Error", m_db.lastError().text());
+        return;
+
+    }
+ */
     m_db = QSqlDatabase::addDatabase("QSQLITE");
     m_db.setDatabaseName("C:/sqlite/gui/databases/mydb.sqlite"); //seteamos la base de datos
 

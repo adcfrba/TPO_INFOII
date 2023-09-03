@@ -58,6 +58,13 @@
        </widget>
       </item>
       <item>
+       <widget class="QLineEdit" name="lineEdit_FECHA">
+        <property name="placeholderText">
+         <string>Fecha</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QLineEdit" name="lineEdit_GAS">
         <property name="placeholderText">
          <string>Gas</string>
