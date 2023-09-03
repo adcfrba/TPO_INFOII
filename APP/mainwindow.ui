@@ -674,7 +674,7 @@
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;BAYMAX &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="textFormat">
-         <enum>Qt::AutoText</enum>
+         <enum>Qt::RichText</enum>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -2267,7 +2267,7 @@
          <bool>true</bool>
         </property>
         <property name="text">
-         <string>HISTORIAL</string>
+         <string>Historial</string>
         </property>
         <property name="icon">
          <iconset>

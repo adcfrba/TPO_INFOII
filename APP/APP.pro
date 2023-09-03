@@ -13,6 +13,7 @@ CONFIG += c++17
 SOURCES += \
     gas.cpp \
     historial.cpp \
+    lectura.cpp \
     main.cpp \
     mainwindow.cpp \
     ox.cpp \
@@ -22,6 +23,7 @@ HEADERS += \
     gas.h \
     historial.h \
     includes.h \
+    lectura.h \
     mainwindow.h \
     ox.h \
     temp.h

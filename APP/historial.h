@@ -17,9 +17,9 @@ public:
     ~Historial();
 
 private slots:
-    void on_buttonBox_accepted();
+    void on_buttonBox_hist_accepted();
 
-    void on_buttonBox_rejected();
+    void on_buttonBox_hist_rejected();
 
 private:
     Ui::Historial *ui;

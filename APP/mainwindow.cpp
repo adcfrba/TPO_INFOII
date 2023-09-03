@@ -57,6 +57,10 @@ MainWindow::MainWindow(QWidget *parent)
     if (!m_db.open()) //checqueamos si se conecto o no
     {
         qDebug() << "Error: connection with database failed";
+        ui->lcdNumber_gas->display(datos.getGas());
+        ui->lcdNumber_ox->display(datos.getOxi());
+        ui->lcdNumber_pulso->display(datos.getPulso());
+        ui->lcdNumber_temperatura->display(datos.getTemp());
     }
     else
     {
@@ -76,7 +80,6 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_historial_clicked()
 {
     Historial objHistorial;
-
     int rtn = objHistorial.exec();//se abre
 }
 

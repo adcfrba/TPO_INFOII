@@ -32,6 +32,7 @@ private:
     Ui::MainWindow *ui;
     void tablaRefresh(void);
     QSqlDatabase m_db;
+    lectura datos;
 };
 
 #endif // MAINWINDOW_H

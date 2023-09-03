@@ -12,7 +12,6 @@
 #include <QLegend>
 #include <QBarCategoryAxis>
 #include <QHorizontalStackedBarSeries>
-#include <QSqlDatabase>
 #include <QDebug>
 #include <QtSql>
 #include <QSqlDatabase>
@@ -22,4 +21,8 @@
 #include <QApplication>
 #include <QtWidgets>
 #include <QThread>
+#include "lectura.h"
+#include <string>
+
+using namespace std;
 

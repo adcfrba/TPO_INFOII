@@ -21,14 +21,14 @@ Historial::~Historial()
     delete ui;
 }
 
-void Historial::on_buttonBox_accepted()
+void Historial::on_buttonBox_hist_accepted()
 {
 
    // ui->treeWidget_historial->addTopLevelItem();
 }
 
 
-void Historial::on_buttonBox_rejected()
+void Historial::on_buttonBox_hist_rejected()
 {
 
 }
