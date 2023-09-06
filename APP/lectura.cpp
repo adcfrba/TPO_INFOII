@@ -80,74 +80,56 @@ lectura::lectura(float _temp, int _pulso, float _oxi, float _gas, string _nombre
     fecha = _fecha;
 }
 
-int nuevoData(QSqlDatabase bd)
+void lectura::nuevoData(QSqlDatabase bd)
 {
-    if (!bd.open()) //checqueamos si se conecto o no
-    {
+    QSqlQuery qyInsert(bd);
+    qyInsert.prepare("INSERT INTO lecturas(NOMBRE, TEMP, OXI, PULSO, GAS, FECHA) VALUES(:NOMBRE, :TEMP, :OXI, :PULSO, :GAS, :FECHA)");
+    //ACA TENEMOS LAS LECTURAS
+    qyInsert.bindValue(":NOMBRE", QString::fromStdString(nombre));
+    qyInsert.bindValue(":TEMP",temp);
+    qyInsert.bindValue(":OXI",oxi);
+    qyInsert.bindValue(":PULSO",pulso);
+    qyInsert.bindValue(":GAS",gas);
+    qyInsert.bindValue(":FECHA", QString::fromStdString(fecha));
+    qyInsert.exec();
+}
+
+void lectura::leerData(QSqlDatabase bd)
+{
+    if (!bd.open())
         qDebug() << "Error: connection with database failed";
-        return(0);
-    }
     else
     {
         qDebug() << "Database: connection ok";
-    QSqlDatabase::database().transaction();
-    QSqlQuery qyInsert(bd);
-    qyInsert.prepare("INSERT INTO lecturas(NOMBRE, TEMP, OXI, PULSO, GAS) VALUES(:NOMBRE, :TEMP, :OXI, :PULSO, :GAS)");
-    //ACA TENEMOS LAS LECTURAS
-    qyInsert.bindValue(":NOMBRE",ui->lineEdit_NOMBRE->text());
-    qyInsert.bindValue(":TEMP",ui->lineEdit_TEMP->text());
-    qyInsert.bindValue(":OXI",ui->lineEdit_OXI->text());
-    qyInsert.bindValue(":PULSO",ui->lineEdit_PULSO->text());
-    qyInsert.bindValue(":GAS",ui->lineEdit_GAS->text());
-    qyInsert.exec();
-
-    QSqlDatabase::database().commit();
-    bd.close();
-    return(1);
-    }
-}
-
-int leerData(QSqlDatabase bd)
-{
-
-}
-int actData(QSqlDatabase bd)
-{
-    if (!bd.open())
-    {
-    qDebug() << "Error: connection with database failed";
-    return(0);
-    }
-    else
-    {
         QSqlDatabase::database().transaction();
+        QSqlQuery qyData(bd);
+        //qyData.prepare("SELECT * FROM lecturas WHERE ID IN (SELECT max(ID) FROM lecturas)");
+        qyData.exec("SELECT * FROM lecturas WHERE ID IN (SELECT max(ID) FROM lecturas)");
+        while(qyData.next())
+        {
+            nombre = qyData.value(1).toString().toStdString();
+            temp = qyData.value(2).toFloat();
+            oxi = qyData.value(3).toFloat();
+            fecha = qyData.value(6).toString().toStdString();
+            pulso = qyData.value(4).toInt();
+            gas = qyData.value(5).toFloat();
+            //qDebug()<<nombre<<temp<<oxi<<fecha<<pulso<<gas;
+        }
 
-        QSqlQuery qyUpdate(bd);
-        qyUpdate.prepare("UPDATE lecturas SET NOMBRE=:NOMBRE, TEMP=:TEMP, OXI=:OXI, PULSO=:PULSO, GAS=:GAS WHERE FECHA=:FECHA");
-        //NUEVMAENTE LAS LECTURAS
-        qyUpdate.bindValue(":TEMP",ui->lineEdit_TEMP->text());
-        qyUpdate.bindValue(":OXI",ui->lineEdit_OXI->text());
-        qyUpdate.bindValue(":PULSO",ui->lineEdit_PULSO->text());
-        qyUpdate.bindValue(":GAS",ui->lineEdit_GAS->text());
-        qyUpdate.bindValue(":NOMBRE",ui->lineEdit_NOMBRE->text());
-        qyUpdate.bindValue(":FECHA",ui->lineEdit_FECHA->text());//se usa la fecha
-        qyUpdate.exec();
-
-        qDebug() <<"Error: "<<qyUpdate.lastError();
-        QSqlDatabase::database().commit();
-        bd.close();
-        return(1);
     }
 }
-void tiempoRealData(QSqlDatabase bd)
+void lectura::actData(QSqlDatabase bd)
 {
-    if (!bd.open())
-    {
-        qDebug() << "Error: connection with database failed";
-        return;
-    }
-    else
-    {
-
-    }
+    QSqlDatabase::database().transaction();
+    QSqlQuery qyUpdate(bd);
+    qyUpdate.prepare("UPDATE lecturas SET NOMBRE=:NOMBRE, TEMP=:TEMP, OXI=:OXI, PULSO=:PULSO, GAS=:GAS WHERE FECHA=:FECHA");
+    //NUEVMAENTE LAS LECTURAS
+    qyUpdate.bindValue(":TEMP", temp);
+    qyUpdate.bindValue(":OXI", oxi);
+    qyUpdate.bindValue(":PULSO", pulso);
+    qyUpdate.bindValue(":GAS", gas);
+    qyUpdate.bindValue(":NOMBRE", QString::fromStdString(nombre));
+    qyUpdate.bindValue(":FECHA", QString::fromStdString(fecha));//se usa la fecha
+    qyUpdate.exec();
 }
+

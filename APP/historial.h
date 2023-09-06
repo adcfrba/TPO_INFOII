@@ -17,9 +17,8 @@ public:
     ~Historial();
 
 private slots:
-    void on_buttonBox_hist_accepted();
 
-    void on_buttonBox_hist_rejected();
+    void on_buttonBox_hist_clicked(QAbstractButton *button);
 
 private:
     Ui::Historial *ui;

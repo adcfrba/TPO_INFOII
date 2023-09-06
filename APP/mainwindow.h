@@ -16,6 +16,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void setupMain(void);
+    void cargarDatos(void);
+    void mostrarDatos(void);
 
 private slots:
     void on_pushButton_historial_clicked();

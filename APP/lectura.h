@@ -1,6 +1,7 @@
 #ifndef LECTURA_H
 #define LECTURA_H
 #include "includes.h"
+using namespace std;
 
 class lectura
 {
@@ -28,10 +29,9 @@ public:
     string getFecha() const;
     void setFecha(const string &newFecha);
 
-    int nuevoData(QSqlDatabase);
-    int leerData(QSqlDatabase);
-    int actData(QSqlDatabase);
-    void tiempoRealData(QSqlDatabase);
+    void nuevoData(QSqlDatabase);
+    void leerData(QSqlDatabase);
+    void actData(QSqlDatabase);
 };
 
 #endif // LECTURA_H

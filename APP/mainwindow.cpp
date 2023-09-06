@@ -28,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label_pulso->setFont(fontSecundario);
     ui->label_temperatura->setFont(fontSecundario);
     ui->label__oxigenacion->setFont(fontSecundario);
+
     qDebug() <<"Drivers:" << QSqlDatabase::drivers(); //me tira la lista de los drivers disponibles
 
     QPixmap boton_gas ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/gas.png");
@@ -57,16 +58,17 @@ MainWindow::MainWindow(QWidget *parent)
     if (!m_db.open()) //checqueamos si se conecto o no
     {
         qDebug() << "Error: connection with database failed";
-        ui->lcdNumber_gas->display(datos.getGas());
-        ui->lcdNumber_ox->display(datos.getOxi());
-        ui->lcdNumber_pulso->display(datos.getPulso());
-        ui->lcdNumber_temperatura->display(datos.getTemp());
     }
     else
     {
         qDebug() << "Database: connection ok";
-        //QMessageBox::information(this, "Conectada", "Se logro che");
+        QSqlDatabase::database().transaction();
+        datos.leerData(m_db); //obtenemos los datos y lo guardamos en el objeto
+        mostrarDatos();
+        QSqlDatabase::database().commit();
+        m_db.close();
     }
+
 
 }
 
@@ -108,6 +110,24 @@ void MainWindow::on_pushButton_temp_clicked()
 {
     temp objTemp;
     int rtn = objTemp.exec();
+}
+
+void MainWindow::cargarDatos(void) //funcion para tomar las lecturas del micro y añadirlas al objeto
+{
+    datos.setFecha("17/09/23");
+    datos.setNombre("Adam Bareiro");
+    datos.setOxi(99.8);
+    datos.setPulso(96);
+    datos.setTemp(37.76);
+    datos.setGas(0.01);
+}
+
+void MainWindow::mostrarDatos(void)
+{
+    ui->lcdNumber_gas->display(datos.getGas());
+    ui->lcdNumber_ox->display(datos.getOxi());
+    ui->lcdNumber_pulso->display(datos.getPulso());
+    ui->lcdNumber_temperatura->display(datos.getTemp());
 }
 
 

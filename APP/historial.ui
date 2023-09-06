@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>323</height>
+    <width>744</width>
+    <height>399</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -403,10 +403,16 @@
      <item>
       <widget class="QTableView" name="tableView_historial">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>250</height>
+        </size>
        </property>
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
@@ -420,6 +426,12 @@
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="dragDropOverwriteMode">
+        <bool>false</bool>
+       </property>
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -430,7 +442,7 @@
         <enum>Qt::DotLine</enum>
        </property>
        <property name="cornerButtonEnabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <attribute name="horizontalHeaderVisible">
         <bool>true</bool>
@@ -451,7 +463,7 @@
       <enum>Qt::Vertical</enum>
      </property>
      <property name="sizeType">
-      <enum>QSizePolicy::Preferred</enum>
+      <enum>QSizePolicy::MinimumExpanding</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>
@@ -697,7 +709,7 @@
      </property>
      <property name="font">
       <font>
-       <family>MS Serif</family>
+       <family>Consolas</family>
        <bold>true</bold>
       </font>
      </property>
@@ -710,13 +722,14 @@
      <property name="styleSheet">
       <string notr="true">background-color: rgb(164, 188, 207);
 selection-background-color: rgb(146, 180, 244);
-color: rgb(39, 44, 84);</string>
+color: rgb(39, 44, 84);
+</string>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::Close|QDialogButtonBox::Ok|QDialogButtonBox::Reset</set>
+      <set>QDialogButtonBox::Ok|QDialogButtonBox::Reset</set>
      </property>
      <property name="centerButtons">
       <bool>true</bool>
