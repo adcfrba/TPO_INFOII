@@ -96,26 +96,18 @@ void lectura::nuevoData(QSqlDatabase bd)
 
 void lectura::leerData(QSqlDatabase bd)
 {
-    if (!bd.open())
-        qDebug() << "Error: connection with database failed";
-    else
+    QSqlQuery qyData(bd);
+    //qyData.prepare("SELECT * FROM lecturas WHERE ID IN (SELECT max(ID) FROM lecturas)");
+    qyData.exec("SELECT * FROM lecturas WHERE ID IN (SELECT max(ID) FROM lecturas)");
+    while(qyData.next())
     {
-        qDebug() << "Database: connection ok";
-        QSqlDatabase::database().transaction();
-        QSqlQuery qyData(bd);
-        //qyData.prepare("SELECT * FROM lecturas WHERE ID IN (SELECT max(ID) FROM lecturas)");
-        qyData.exec("SELECT * FROM lecturas WHERE ID IN (SELECT max(ID) FROM lecturas)");
-        while(qyData.next())
-        {
-            nombre = qyData.value(1).toString().toStdString();
-            temp = qyData.value(2).toFloat();
-            oxi = qyData.value(3).toFloat();
-            fecha = qyData.value(6).toString().toStdString();
-            pulso = qyData.value(4).toInt();
-            gas = qyData.value(5).toFloat();
-            //qDebug()<<nombre<<temp<<oxi<<fecha<<pulso<<gas;
-        }
-
+        nombre = qyData.value(1).toString().toStdString();
+        temp = qyData.value(2).toFloat();
+        oxi = qyData.value(3).toFloat();
+        fecha = qyData.value(6).toString().toStdString();
+        pulso = qyData.value(4).toInt();
+        gas = qyData.value(5).toFloat();
+        qDebug()<<nombre<<temp<<oxi<<fecha<<pulso<<gas;
     }
 }
 void lectura::actData(QSqlDatabase bd)
@@ -132,4 +124,7 @@ void lectura::actData(QSqlDatabase bd)
     qyUpdate.bindValue(":FECHA", QString::fromStdString(fecha));//se usa la fecha
     qyUpdate.exec();
 }
+
+
+
 

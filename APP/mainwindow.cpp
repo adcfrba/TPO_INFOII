@@ -1,8 +1,3 @@
-#include "historial.h"
-#include "ox.h"
-#include "temp.h"
-#include "gas.h"
-
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "QMainWindow"
@@ -65,6 +60,7 @@ MainWindow::MainWindow(QWidget *parent)
         QSqlDatabase::database().transaction();
         datos.leerData(m_db); //obtenemos los datos y lo guardamos en el objeto
         mostrarDatos();
+        datosVector=leerVector(m_db);
         QSqlDatabase::database().commit();
         m_db.close();
     }
@@ -94,14 +90,17 @@ void MainWindow::on_label_ox_img_linkHovered(const QString &link)
 
 void MainWindow::on_pushButton_ox_clicked()
 {
-    ox objOx;
+    //objOx.set
     int rtn = objOx.exec();
 }
 
 
 void MainWindow::on_pushButton_gas_clicked()
 {
-    gas objGas;
+    //qDebug()<<"main"<<datos.getGas();
+    objGas.setDataGas(datos.getGas());
+    objGas.cargarData();
+    //qDebug()<<"main otra vez"<<objGas.getDataGas();
     int rtn = objGas.exec();
 }
 
@@ -119,7 +118,7 @@ void MainWindow::cargarDatos(void) //funcion para tomar las lecturas del micro y
     datos.setOxi(99.8);
     datos.setPulso(96);
     datos.setTemp(37.76);
-    datos.setGas(0.01);
+    datos.setGas(0.2);
 }
 
 void MainWindow::mostrarDatos(void)
@@ -128,6 +127,29 @@ void MainWindow::mostrarDatos(void)
     ui->lcdNumber_ox->display(datos.getOxi());
     ui->lcdNumber_pulso->display(datos.getPulso());
     ui->lcdNumber_temperatura->display(datos.getTemp());
+}
+vector<lectura> MainWindow::leerVector(QSqlDatabase bd)
+{
+    vector <lectura> vector;
+    lectura aux;
+    QSqlQuery qyDataVector(bd);
+    qyDataVector.exec("SELECT * FROM lecturas ORDER BY ID");
+
+    for(int i = 0; i < 3; i++)
+    {
+        while(qyDataVector.next())
+        {
+            aux.setNombre(qyDataVector.value(1).toString().toStdString());
+            aux.setTemp(qyDataVector.value(2).toFloat());
+            aux.setOxi(qyDataVector.value(3).toFloat());
+            aux.setFecha(qyDataVector.value(6).toString().toStdString());
+            aux.setPulso(qyDataVector.value(4).toInt());
+            aux.setGas(qyDataVector.value(5).toFloat());
+        }
+        qDebug()<<"A VER"<<aux.getNombre()<<aux.getTemp()<<aux.getOxi()<<aux.getFecha()<<aux.getPulso()<<aux.getGas();
+        vector.push_back(aux);
+    }
+    return(vector);
 }
 
 

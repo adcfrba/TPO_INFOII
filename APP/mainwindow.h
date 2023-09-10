@@ -18,6 +18,7 @@ public:
     void setupMain(void);
     void cargarDatos(void);
     void mostrarDatos(void);
+    vector<lectura>leerVector(QSqlDatabase);
 
 private slots:
     void on_pushButton_historial_clicked();
@@ -35,6 +36,9 @@ private:
     void tablaRefresh(void);
     QSqlDatabase m_db;
     lectura datos;
+    gas objGas;
+    ox objOx;
+    vector<lectura>datosVector;
 };
 
 #endif // MAINWINDOW_H

@@ -1,10 +1,6 @@
 #ifndef OX_H
 #define OX_H
-
-#include <QDialog>
-#include <QtCharts>
-#include <QChartView>
-#include <QLineSeries>
+#include <includes.h>
 
 namespace Ui {
 class ox;
@@ -18,8 +14,13 @@ public:
     explicit ox(QWidget *parent = nullptr);
     ~ox();
 
+
+    float getValor() const;
+    void setValor(float newValor);
+
 private:
     Ui::ox *ui;
+    float valor;
 };
 
 #endif // OX_H

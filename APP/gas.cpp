@@ -6,10 +6,13 @@ gas::gas(QWidget *parent) :
     ui(new Ui::gas)
 {
     ui->setupUi(this);
+}
 
-    QBarSet *mono = new QBarSet("Monoxido de Carbono");
-    *mono << 0.12;
-
+void gas::cargarData(void)
+{
+    mono = new QBarSet("Monoxido de Carbono");
+    mono->append(dataGas) ;//data
+    qDebug() <<"Data" << dataGas;
     QHorizontalBarSeries *series = new QHorizontalBarSeries();
     series->append(mono);
 
@@ -25,6 +28,7 @@ gas::gas(QWidget *parent) :
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);
     QValueAxis *axisX = new QValueAxis();
+    axisX->setMax((qreal)dataGas + (0.5*dataGas));
     chart->addAxis(axisX, Qt::AlignBottom);
     series->attachAxis(axisX);
     axisX->applyNiceNumbers();
@@ -40,10 +44,21 @@ gas::gas(QWidget *parent) :
     colores.setColor(QPalette::Window, QRgb(0x0a369d));
     colores.setColor(QPalette::WindowText, QRgb(0x4472ca));
     qApp->setPalette(colores);
-
 }
 
 gas::~gas()
 {
     delete ui;
 }
+
+float gas::getDataGas() const
+{
+    return dataGas;
+}
+
+void gas::setDataGas(const float newDataGas)
+{
+    dataGas = newDataGas;
+}
+
+

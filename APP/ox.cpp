@@ -58,3 +58,15 @@ ox::~ox()
 {
     delete ui;
 }
+
+float ox::getValor() const
+{
+    return valor;
+}
+
+void ox::setValor(float newValor)
+{
+    valor = newValor;
+}
+
+

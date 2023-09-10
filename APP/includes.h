@@ -22,7 +22,13 @@
 #include <QtWidgets>
 #include <QThread>
 #include "lectura.h"
+#include <QDialog>
+#include <QBarSet>
+#include "gas.h"
 #include <string>
-
+#include <QLineSeries>
+#include "ox.h"
+#include "temp.h"
+#include "historial.h"
 using namespace std;
 

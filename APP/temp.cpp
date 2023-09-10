@@ -21,6 +21,7 @@ temp::temp(QWidget *parent) :
     alto->setColor((QRgb(0xD70707)));
 
 
+
     QStackedBarSeries * seriesTemp = new QStackedBarSeries();
     seriesTemp->append(abajo);
     seriesTemp->append(bien);
