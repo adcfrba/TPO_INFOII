@@ -1,15 +1,38 @@
 #include "ox.h"
 #include "ui_ox.h"
+//#include <includes.h>
 
 ox::ox(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ox)
 {
     ui->setupUi(this);
-    this->layout()->setSizeConstraint(QLayout::SetFixedSize);
+}
 
+ox::~ox()
+{
+    delete ui;
+}
+
+vector<lectura> ox::getVectorOx(void)
+{
+    return vectorOx;
+}
+
+void ox::setVectorOx(vector<lectura> newVectorOx)
+{
+    vectorOx = newVectorOx;
+}
+
+void ox::cargarData(void)
+{
+    this->layout()->setSizeConstraint(QLayout::SetFixedSize);
+    qDebug() <<"oxigeno" << vectorOx[0].getOxi();
     QLineSeries *series = new QLineSeries();
-    *series << QPointF(0, 6) << QPointF(9, 4) << QPointF(15, 20) << QPointF(25, 12) << QPointF(29, 26);
+    series->append(0,vectorOx[2].getOxi());
+    series->append(5,vectorOx[1].getOxi());
+    series->append(10,vectorOx[0].getOxi());
+    //*series << QPointF(0, vectorOx[0].getOxi()) << QPointF(9, vectorOx[1].getOxi()) << QPointF(15, vectorOx[2].getOxi());
     QPen pen(QRgb(0x00A4BD));
 
     pen.setWidth(5);
@@ -28,15 +51,17 @@ ox::ox(QWidget *parent) :
     QCategoryAxis *axisX = new QCategoryAxis();
     QCategoryAxis *axisY = new QCategoryAxis();
 
-    axisX->append("15 dias", 10);
-    axisX->append("10 dias", 20);
-    axisX->append("5 dias", 30);
-    axisX->setRange(0, 30);
+    axisX->setRange(-1, 11);
+    axisX->append(QString::fromStdString(vectorOx[2].getFecha()), 0);
+    axisX->append(QString::fromStdString(vectorOx[1].getFecha()), 10);
+    axisX->append(QString::fromStdString(vectorOx[0].getFecha()), 12);
+    axisX->AxisLabelsPositionOnValue;
 
-    axisY->append("Bajo", 10);
-    axisY->append("Aceptable", 20);
-    axisY->append("Alto", 30);
-    axisY->setRange(0, 30);
+    axisY->append("Bajo", 50);
+    axisY->append("Aceptable", 100);
+    axisY->append("Alto", 150);
+    axisY->setRange(50, 150);
+    axisY->setGridLineColor(QRgb(0x0a369d));
 
     chart->addAxis(axisX, Qt::AlignBottom);
     chart->addAxis(axisY, Qt::AlignLeft);
@@ -54,19 +79,6 @@ ox::ox(QWidget *parent) :
     qApp->setPalette(colores);
 }
 
-ox::~ox()
-{
-    delete ui;
-}
 
-float ox::getValor() const
-{
-    return valor;
-}
-
-void ox::setValor(float newValor)
-{
-    valor = newValor;
-}
 
 

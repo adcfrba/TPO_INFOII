@@ -2,6 +2,11 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include "includes.h"
+#include "ox.h"
+#include "temp.h"
+#include "historial.h"
+#include "gas.h"
+#include "lectura.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -39,6 +44,7 @@ private:
     gas objGas;
     ox objOx;
     vector<lectura>datosVector;
+    temp objTemp;
 };
 
 #endif // MAINWINDOW_H

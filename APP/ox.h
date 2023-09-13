@@ -1,6 +1,8 @@
 #ifndef OX_H
 #define OX_H
-#include <includes.h>
+#include <lectura.h>
+#include <vector>
+using namespace std;
 
 namespace Ui {
 class ox;
@@ -14,13 +16,14 @@ public:
     explicit ox(QWidget *parent = nullptr);
     ~ox();
 
+    vector<lectura>getVectorOx(void);
+    void setVectorOx(vector<lectura> newVectorOx);
 
-    float getValor() const;
-    void setValor(float newValor);
+    void cargarData(void);
 
 private:
     Ui::ox *ui;
-    float valor;
+    vector<lectura>vectorOx;
 };
 
 #endif // OX_H

@@ -8,7 +8,6 @@
 #include <QChartView>
 #include <QLineSeries>
 #include <QBarSeries>
-#include <QBarSet>
 #include <QLegend>
 #include <QBarCategoryAxis>
 #include <QHorizontalStackedBarSeries>
@@ -21,14 +20,10 @@
 #include <QApplication>
 #include <QtWidgets>
 #include <QThread>
-#include "lectura.h"
 #include <QDialog>
 #include <QBarSet>
-#include "gas.h"
 #include <string>
 #include <QLineSeries>
-#include "ox.h"
-#include "temp.h"
-#include "historial.h"
+#include <vector>
 using namespace std;
 

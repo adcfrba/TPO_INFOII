@@ -7,12 +7,37 @@ temp::temp(QWidget *parent) :
     ui(new Ui::temp)
 {
     ui->setupUi(this);
+}
 
+temp::~temp()
+{
+    delete ui;
+}
+
+void temp::on_buttonBox_accepted()
+{
+    //chart->setAnimationOptions(QChart );
+}
+
+vector<lectura> temp::getVectorTemp(void)
+{
+    return vectorTemp;
+}
+
+void temp::setVectorTemp(const vector<lectura> newVectorTemp)
+{
+    vectorTemp = newVectorTemp;
+}
+
+void temp::cargarData(void)
+{
     this->layout()->setSizeConstraint(QLayout::SetFixedSize);
+    qDebug() <<"temp" << vectorTemp[0].getTemp();
 
     QBarSet *bien = new QBarSet ("Aceptable");
     *bien <<36.6 <<37.2 <<37 << 37 << 36.5 << 36 << 36.8;
     bien->setColor((QRgb(0x00A4BD)));
+    /*
     QBarSet *abajo = new QBarSet("Muy Bajo");
     *abajo << 28 << 29.8 << 30.5 << 34.5 << 32 << 34 << 35 << 34.8 << 34;
     abajo->setColor((QRgb(0x0a369d)));
@@ -20,12 +45,12 @@ temp::temp(QWidget *parent) :
     *alto << 38.2 << 38.5 << 37.9 << 38.7 << 38.1 << 37.8 << 37.6 << 39.3;
     alto->setColor((QRgb(0xD70707)));
 
-
+*/
 
     QStackedBarSeries * seriesTemp = new QStackedBarSeries();
-    seriesTemp->append(abajo);
+   // seriesTemp->append(abajo);
     seriesTemp->append(bien);
-    seriesTemp->append(alto);
+    //seriesTemp->append(alto);
 
     QChart *chart = new QChart();
 
@@ -33,7 +58,7 @@ temp::temp(QWidget *parent) :
     chart->setTitle("Ultimas temperaturas");
     //chart->setTitleFont(QFont::Fantasy);
     chart->setAnimationOptions(QChart::AllAnimations);
-    QStringList dias ={ "Lunes" , "Martes" , "Miercoles" , "Jueves" , "Viernes" , "Sabado" , "Domingo"};
+    QStringList dias ={ QString::fromStdString(vectorTemp[4].getFecha()) , QString::fromStdString(vectorTemp[3].getFecha()) , QString::fromStdString(vectorTemp[2].getFecha()) , QString::fromStdString(vectorTemp[1].getFecha()) , QString::fromStdString(vectorTemp[0].getFecha())};
 
     QBarCategoryAxis *axisX = new QBarCategoryAxis();
     axisX->append(dias);
@@ -56,17 +81,6 @@ temp::temp(QWidget *parent) :
     colores.setColor(QPalette::Window, QRgb(0x0a369d));
     colores.setColor(QPalette::WindowText, QRgb(0x4472ca));
     qApp->setPalette(colores);
-
-}
-
-temp::~temp()
-{
-    delete ui;
-}
-
-void temp::on_buttonBox_accepted()
-{
-    //chart->setAnimationOptions(QChart );
 }
 
 
