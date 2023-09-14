@@ -18,7 +18,6 @@ void gas::cargarData(void)
 
     QChart *chart = new QChart();
     chart->addSeries(series);
-    chart->setTitle("Niveles de C02 en el ambiente");
     chart->setAnimationOptions(QChart::AllAnimations);
 
     QStringList gases;
@@ -35,6 +34,7 @@ void gas::cargarData(void)
 
     chart->legend()->setVisible(true);
     chart->legend()->setAlignment(Qt::AlignBottom);
+    chart->setTitle("Ultima medicion");
 
     QChartView *chartView = new QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);

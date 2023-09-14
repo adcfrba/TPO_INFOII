@@ -34,8 +34,8 @@ void temp::cargarData(void)
     this->layout()->setSizeConstraint(QLayout::SetFixedSize);
     qDebug() <<"temp" << vectorTemp[0].getTemp();
 
-    QBarSet *bien = new QBarSet ("Aceptable");
-    *bien <<36.6 <<37.2 <<37 << 37 << 36.5 << 36 << 36.8;
+    QBarSet *bien = new QBarSet ("Ultimas temperaturas");
+    *bien << vectorTemp[4].getTemp() << vectorTemp[3].getTemp() << vectorTemp[2].getTemp() << vectorTemp[1].getTemp() << vectorTemp[0].getTemp();
     bien->setColor((QRgb(0x00A4BD)));
     /*
     QBarSet *abajo = new QBarSet("Muy Bajo");
@@ -55,7 +55,6 @@ void temp::cargarData(void)
     QChart *chart = new QChart();
 
     chart->addSeries(seriesTemp);
-    chart->setTitle("Ultimas temperaturas");
     //chart->setTitleFont(QFont::Fantasy);
     chart->setAnimationOptions(QChart::AllAnimations);
     QStringList dias ={ QString::fromStdString(vectorTemp[4].getFecha()) , QString::fromStdString(vectorTemp[3].getFecha()) , QString::fromStdString(vectorTemp[2].getFecha()) , QString::fromStdString(vectorTemp[1].getFecha()) , QString::fromStdString(vectorTemp[0].getFecha())};

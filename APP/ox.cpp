@@ -32,7 +32,6 @@ void ox::cargarData(void)
     series->append(0,vectorOx[2].getOxi());
     series->append(5,vectorOx[1].getOxi());
     series->append(10,vectorOx[0].getOxi());
-    //*series << QPointF(0, vectorOx[0].getOxi()) << QPointF(9, vectorOx[1].getOxi()) << QPointF(15, vectorOx[2].getOxi());
     QPen pen(QRgb(0x00A4BD));
 
     pen.setWidth(5);
@@ -53,14 +52,16 @@ void ox::cargarData(void)
 
     axisX->setRange(-1, 11);
     axisX->append(QString::fromStdString(vectorOx[2].getFecha()), 0);
-    axisX->append(QString::fromStdString(vectorOx[1].getFecha()), 10);
-    axisX->append(QString::fromStdString(vectorOx[0].getFecha()), 12);
+    axisX->append(QString::fromStdString(vectorOx[1].getFecha()), 9.5);
+    axisX->append(QString::fromStdString(vectorOx[0].getFecha()), 10);
     axisX->AxisLabelsPositionOnValue;
+    axisX->setGridLineVisible(true);
 
     axisY->append("Bajo", 50);
     axisY->append("Aceptable", 100);
     axisY->append("Alto", 150);
     axisY->setRange(50, 150);
+    axisY->setGridLineVisible(true);
     axisY->setGridLineColor(QRgb(0x0a369d));
 
     chart->addAxis(axisX, Qt::AlignBottom);
