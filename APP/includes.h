@@ -25,5 +25,6 @@
 #include <string>
 #include <QLineSeries>
 #include <vector>
+#include <QSerialPort>
 using namespace std;
 

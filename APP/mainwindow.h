@@ -23,6 +23,7 @@ public:
     void setupMain(void);
     void cargarDatos(void);
     void mostrarDatos(void);
+    void conexionSerial(void);
     vector<lectura>leerVector(QSqlDatabase);
 
 private slots:
@@ -36,6 +37,8 @@ private slots:
 
     void on_pushButton_temp_clicked();
 
+    void recibirSerial(void);
+
 private:
     Ui::MainWindow *ui;
     void tablaRefresh(void);
@@ -45,6 +48,8 @@ private:
     ox objOx;
     vector<lectura>datosVector;
     temp objTemp;
+    QSerialPort *serial;
+    QString dataSerial="";
 };
 
 #endif // MAINWINDOW_H

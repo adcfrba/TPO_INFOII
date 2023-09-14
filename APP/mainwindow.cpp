@@ -2,51 +2,14 @@
 #include "ui_mainwindow.h"
 #include "QMainWindow"
 
-
-void setupMain(void)
-{
-
-
-}
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    QFontDatabase::addApplicationFont(":/new/fonts/Baymax.otf");
-    QFontDatabase::addApplicationFont(":/new/fonts/Skull.otf");
-    QFont fontTitulo = QFont("Baymax",55,1);
-    QFont fontSecundario = QFont("Skull", 15,-1);
     ui->setupUi(this);
-    ui->label_nombre->setFont(fontTitulo);
-    ui->label_gas->setFont(fontSecundario);
-    ui->label_pulso->setFont(fontSecundario);
-    ui->label_temperatura->setFont(fontSecundario);
-    ui->label__oxigenacion->setFont(fontSecundario);
-
+    setupMain();
+    conexionSerial();
     qDebug() <<"Drivers:" << QSqlDatabase::drivers(); //me tira la lista de los drivers disponibles
-
-    QPixmap boton_gas ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/gas.png");
-    QIcon icon_gas (boton_gas);
-    ui->pushButton_gas->setIcon(icon_gas);
-    ui->pushButton_gas->setIconSize(boton_gas.rect().size());
-    QPixmap boton_ox ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/celulas.png");
-    QIcon icon_ox (boton_ox);
-    ui->pushButton_ox->setIcon(icon_ox);
-    ui->pushButton_ox->setIconSize(boton_ox.rect().size());
-    QPixmap boton_temp ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/temperatura.png");
-    QIcon icon_temp (boton_temp);
-    ui->pushButton_temp->setIcon(icon_temp);
-    ui->pushButton_temp->setIconSize(boton_temp.rect().size());
-    QPixmap boton_pulso ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/corazon.png");
-    QIcon icon_pulso (boton_pulso);
-    ui->pushButton_pulso->setIcon(icon_pulso);
-    ui->pushButton_pulso->setIconSize(boton_pulso.rect().size());
-    QPixmap boton_historial("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/historial-medico.png");
-    QIcon icon_historial (boton_historial);
-    ui->pushButton_historial->setIcon(icon_historial);
-    ui->pushButton_historial->setFont(fontSecundario);
-
     m_db = QSqlDatabase::addDatabase("QSQLITE");
     m_db.setDatabaseName("C:/sqlite/gui/databases/mydb.sqlite"); //seteamos la base de datos
 
@@ -72,6 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    serial->close(); //tenemos que cerrarlo
 }
 
 
@@ -154,3 +118,62 @@ vector<lectura> MainWindow::leerVector(QSqlDatabase bd)
 }
 
 
+void MainWindow::setupMain(void)
+{
+    QFontDatabase::addApplicationFont(":/new/fonts/Baymax.otf");
+    QFontDatabase::addApplicationFont(":/new/fonts/Skull.otf");
+    QFont fontTitulo = QFont("Baymax",55,1);
+    QFont fontSecundario = QFont("Skull", 15,-1);
+
+    ui->label_nombre->setFont(fontTitulo);
+    ui->label_gas->setFont(fontSecundario);
+    ui->label_pulso->setFont(fontSecundario);
+    ui->label_temperatura->setFont(fontSecundario);
+    ui->label__oxigenacion->setFont(fontSecundario);
+
+    QPixmap boton_gas ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/gas.png");
+    QIcon icon_gas (boton_gas);
+    ui->pushButton_gas->setIcon(icon_gas);
+    ui->pushButton_gas->setIconSize(boton_gas.rect().size());
+    QPixmap boton_ox ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/celulas.png");
+    QIcon icon_ox (boton_ox);
+    ui->pushButton_ox->setIcon(icon_ox);
+    ui->pushButton_ox->setIconSize(boton_ox.rect().size());
+    QPixmap boton_temp ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/temperatura.png");
+    QIcon icon_temp (boton_temp);
+    ui->pushButton_temp->setIcon(icon_temp);
+    ui->pushButton_temp->setIconSize(boton_temp.rect().size());
+    QPixmap boton_pulso ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/corazon.png");
+    QIcon icon_pulso (boton_pulso);
+    ui->pushButton_pulso->setIcon(icon_pulso);
+    ui->pushButton_pulso->setIconSize(boton_pulso.rect().size());
+    QPixmap boton_historial("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/historial-medico.png");
+    QIcon icon_historial (boton_historial);
+    ui->pushButton_historial->setIcon(icon_historial);
+    ui->pushButton_historial->setFont(fontSecundario);
+}
+
+void MainWindow::conexionSerial(void)
+{
+    serial = new QSerialPort();
+    //CONFIGURACIÓN DE LA CONEXIÓN SERIAL
+    serial->setPortName("COM3"); //tenemos que verlo en el micro, lo configuramos despues
+    serial->setBaudRate(QSerialPort::Baud9600); //nuevamente, se puede configurar
+    serial->setParity(QSerialPort::NoParity);
+    serial->setDataBits(QSerialPort::Data8);
+    serial->setFlowControl(QSerialPort::NoFlowControl);
+    serial->setStopBits(QSerialPort::OneStop);
+
+    serial->open(QIODevice::ReadOnly); //SOLO LECTURA
+    connect(serial, SIGNAL(readyRead()),this, SLOT(recibirSerial()));//esperamos la señal que nos genera el obj cuando un dispositivo se conecta y lo mandamos al obj del main
+}
+
+void MainWindow::recibirSerial(void)
+{
+    QByteArray buff;
+    buff = serial->readLine(); //lo que se reciba, se guarda temporalmente
+    dataSerial += buff;
+
+
+    //procesamiento de la info
+}
