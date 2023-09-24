@@ -176,4 +176,6 @@ void MainWindow::recibirSerial(void)
 
 
     //procesamiento de la info
+    //agrego a datos
+    datos.nuevoData(m_db);//se agrega a la base de datos
 }
