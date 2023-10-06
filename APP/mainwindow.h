@@ -21,15 +21,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void setupMain(void);
-    void cargarDatos(void);
     void mostrarDatos(void);
-    void conexionSerial(void);
     vector<lectura>leerVector(QSqlDatabase);
 
 private slots:
     void on_pushButton_historial_clicked();
-
-    void on_label_ox_img_linkHovered(const QString &link);
 
     void on_pushButton_ox_clicked();
 
@@ -37,7 +33,14 @@ private slots:
 
     void on_pushButton_temp_clicked();
 
-    void recibirSerial(void);
+    void deviceDiscovered(const QBluetoothDeviceInfo &info);
+
+    void conectarBT(QListWidgetItem *item);
+
+    void receive();
+    void analizarTrama(QStringList, lectura);
+
+
 
 private:
     Ui::MainWindow *ui;
@@ -48,8 +51,17 @@ private:
     ox objOx;
     vector<lectura>datosVector;
     temp objTemp;
-    QSerialPort *serial;
-    QString dataSerial="";
+
+    QTimer connectTimer;
+    QString string, DatosRecibidos, trama;
+    QStringList tramaExtraida;
+    qint64 CantBytesRecibidos;
+    bool k = false;
+    bool finalizarTrama = false;
+    QDateTime fecha;
+    QBluetoothDeviceDiscoveryAgent *agent = new QBluetoothDeviceDiscoveryAgent;
+    QBluetoothDeviceInfo remoteDeviceInfo;
+    QBluetoothSocket *socket;
 };
 
 #endif // MAINWINDOW_H

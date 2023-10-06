@@ -107,9 +107,9 @@ void lectura::leerData(QSqlDatabase bd)
         fecha = qyData.value(6).toString().toStdString();
         pulso = qyData.value(4).toInt();
         gas = qyData.value(5).toFloat();
-        qDebug()<<nombre<<temp<<oxi<<fecha<<pulso<<gas;
     }
 }
+
 void lectura::actData(QSqlDatabase bd)
 {
     QSqlDatabase::database().transaction();

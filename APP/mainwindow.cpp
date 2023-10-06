@@ -8,7 +8,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setupMain();
-    conexionSerial();
     qDebug() <<"Drivers:" << QSqlDatabase::drivers(); //me tira la lista de los drivers disponibles
     m_db = QSqlDatabase::addDatabase("QSQLITE");
     m_db.setDatabaseName("C:/sqlite/gui/databases/mydb.sqlite"); //seteamos la base de datos
@@ -29,16 +28,27 @@ MainWindow::MainWindow(QWidget *parent)
         m_db.close();
     }
 
-
+    //BLUETOOTH
+    connect(agent, SIGNAL(deviceDiscovered(QBluetoothDeviceInfo)),this, SLOT(deviceDiscovered(QBluetoothDeviceInfo)));
+    agent->start(); //inicia la busqueda de dispositivos
+    socket = new QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    serial->close(); //tenemos que cerrarlo
+    socket->disconnectFromService();
+    socket->close();
 }
 
-
+void MainWindow::deviceDiscovered(const QBluetoothDeviceInfo &info)
+{
+    //Imprime información sobre el dispositivo descubierto
+    qDebug() << "Nombre del dispositivo:" << info.name();
+    qDebug() << "Dirección MAC del dispositivo:" << info.address().toString();
+    if (info.name() == "HC-05")
+        conectarBT(&info);
+}
 
 void MainWindow::on_pushButton_historial_clicked()
 {
@@ -47,46 +57,70 @@ void MainWindow::on_pushButton_historial_clicked()
 }
 
 
-void MainWindow::on_label_ox_img_linkHovered(const QString &link)
-{
-    //cout << "HOLA"<<endl;
-}
-
-
 void MainWindow::on_pushButton_ox_clicked()
 {
-    objOx.setVectorOx(datosVector);
-    objOx.cargarData();
-    int rtn = objOx.exec();
+    if (!m_db.open())
+    {
+        qDebug() << "Error: connection with database failed";
+    }
+    else
+    {
+        QSqlDatabase::database().transaction();
+        datos.leerData(m_db);
+        mostrarDatos();
+        datosVector=leerVector(m_db);
+        objOx.setVectorOx(datosVector);
+        objOx.cargarData();
+        QSqlDatabase::database().commit();
+        m_db.close();
+        int rtn = objOx.exec();
+    }
+
 }
 
 
 void MainWindow::on_pushButton_gas_clicked()
 {
-    //qDebug()<<"main"<<datos.getGas();
-    objGas.setDataGas(datos.getGas());
-    objGas.cargarData();
-    //qDebug()<<"main otra vez"<<objGas.getDataGas();
-    int rtn = objGas.exec();
+    if (!m_db.open())
+    {
+        qDebug() << "Error: connection with database failed";
+    }
+    else
+    {
+        QSqlDatabase::database().transaction();
+        datos.leerData(m_db);
+        mostrarDatos();
+        objGas.setDataGas(datos.getGas());
+        objGas.cargarData();
+        QSqlDatabase::database().commit();
+        m_db.close();
+        int rtn = objGas.exec();
+    }
+
 }
 
 
 void MainWindow::on_pushButton_temp_clicked()
 {
-    objTemp.setVectorTemp(datosVector);
-    objTemp.cargarData();
-    int rtn = objTemp.exec();
+    if (!m_db.open())
+    {
+        qDebug() << "Error: connection with database failed";
+    }
+    else
+    {
+        QSqlDatabase::database().transaction();
+        datos.leerData(m_db);
+        mostrarDatos();
+        datosVector=leerVector(m_db);
+        objTemp.setVectorTemp(datosVector);
+        objTemp.cargarData();
+        QSqlDatabase::database().commit();
+        m_db.close();
+        int rtn = objTemp.exec();
+    }
+
 }
 
-void MainWindow::cargarDatos(void) //funcion para tomar las lecturas del micro y añadirlas al objeto
-{
-    datos.setFecha("17/09/23");
-    datos.setNombre("Adam Bareiro");
-    datos.setOxi(99.8);
-    datos.setPulso(96);
-    datos.setTemp(37.76);
-    datos.setGas(0.2);
-}
 
 void MainWindow::mostrarDatos(void)
 {
@@ -95,6 +129,7 @@ void MainWindow::mostrarDatos(void)
     ui->lcdNumber_pulso->display(datos.getPulso());
     ui->lcdNumber_temperatura->display(datos.getTemp());
 }
+
 vector<lectura> MainWindow::leerVector(QSqlDatabase bd)
 {
     vector <lectura> vector;
@@ -153,29 +188,68 @@ void MainWindow::setupMain(void)
     ui->pushButton_historial->setFont(fontSecundario);
 }
 
-void MainWindow::conexionSerial(void)
+void MainWindow::conectarBT(QListWidgetItem *item)
 {
-    serial = new QSerialPort();
-    //CONFIGURACIÓN DE LA CONEXIÓN SERIAL
-    serial->setPortName("COM3"); //tenemos que verlo en el micro, lo configuramos despues
-    serial->setBaudRate(QSerialPort::Baud9600); //nuevamente, se puede configurar
-    serial->setParity(QSerialPort::NoParity);
-    serial->setDataBits(QSerialPort::Data8);
-    serial->setFlowControl(QSerialPort::NoFlowControl);
-    serial->setStopBits(QSerialPort::OneStop);
-
-    serial->open(QIODevice::ReadOnly); //SOLO LECTURA
-    connect(serial, SIGNAL(readyRead()),this, SLOT(recibirSerial()));//esperamos la señal que nos genera el obj cuando un dispositivo se conecta y lo mandamos al obj del main
+    string = item->text(); //nos guarda la dirección del device en nuestro string
+    static const QString serviceUuid (QStringLiteral("00001101-0000-1000-8000-00805F9B34FB"));
+    socket->connectToService(QBluetoothAddress(string), QBluetoothUuid(serviceUuid),QIODevice::ReadWrite);
+    qDebug() << "Conexión: "<< string;
+    connect(socket, SIGNAL(readyRead()), this, SLOT(receive()));
 }
 
-void MainWindow::recibirSerial(void)
+
+void MainWindow::receive()
 {
-    QByteArray buff;
-    buff = serial->readLine(); //lo que se reciba, se guarda temporalmente
-    dataSerial += buff;
+    CantBytesRecibidos = socket->bytesAvailable();
+    DatosRecibidos = socket->readAll();
+    trama += DatosRecibidos;
 
+    if(trama.back() =='>' && finalizarTrama == false)
+    {
+        finalizarTrama = true;
 
-    //procesamiento de la info
-    //agrego a datos
-    datos.nuevoData(m_db);//se agrega a la base de datos
+        tramaExtraida = trama.split('-',Qt::SkipEmptyParts);
+        if(tramaExtraida.size() == 7)
+        {
+            analizarTrama(tramaExtraida, datos);
+            //ui->listWidget->addItem(trama);
+        }
+        trama.clear();
+        finalizarTrama = false;
+    }
+    trama.clear();
 }
+
+void MainWindow::analizarTrama(QStringList tramaAnalizar, lectura datos)
+{
+    double checksum =0;
+
+    for(int i = 1; i < CHECKSUM; i++)
+        checksum+= tramaAnalizar[i].toDouble();
+
+    if(checksum == tramaAnalizar[CHECKSUM].toDouble() && m_db.open())
+    {
+        qDebug() << "Database: connection ok";
+        QSqlDatabase::database().transaction();
+        qDebug()<<"Trama sin fallas";
+        fecha = QDateTime::currentDateTime();
+        datos.setFecha(fecha.toString("dd/MM/yy").toStdString());
+        datos.setTemp((float)tramaAnalizar[1].toDouble());
+        datos.setGas((float)tramaAnalizar[2].toDouble());
+        datos.setOxi((float)tramaAnalizar[3].toDouble());
+        datos.setPulso(tramaAnalizar[4].toInt());
+        datos.setNombre("ANTO");
+        datos.nuevoData(m_db);
+        QSqlDatabase::database().commit();
+        m_db.close();
+        //mando data con datos
+    }
+    else
+    {
+        qDebug()<<"Trama con fallas" << checksum; //OJO QUE EL CHECKSUM SUMA TODO, TENGO QUE RESTAR EL CHECKSUM Y LOS BARRAS
+
+    }
+
+}
+
+

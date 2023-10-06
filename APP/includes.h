@@ -25,6 +25,16 @@
 #include <string>
 #include <QLineSeries>
 #include <vector>
-#include <QSerialPort>
+#include <QBluetoothLocalDevice>
+#include <QBluetoothAddress>
+#include <QtBluetooth>
+#include <QBluetoothDeviceDiscoveryAgent>
+#include <QBluetoothSocket>
+#include <QTimer>
+#include <QDateTime>
+#include <QByteArray>
+
 using namespace std;
+#define CHECKSUM 5
+
 
