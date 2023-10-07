@@ -37,25 +37,13 @@ void temp::cargarData(void)
     QBarSet *bien = new QBarSet ("Ultimas temperaturas");
     *bien << vectorTemp[4].getTemp() << vectorTemp[3].getTemp() << vectorTemp[2].getTemp() << vectorTemp[1].getTemp() << vectorTemp[0].getTemp();
     bien->setColor((QRgb(0x00A4BD)));
-    /*
-    QBarSet *abajo = new QBarSet("Muy Bajo");
-    *abajo << 28 << 29.8 << 30.5 << 34.5 << 32 << 34 << 35 << 34.8 << 34;
-    abajo->setColor((QRgb(0x0a369d)));
-    QBarSet *alto = new QBarSet("Muy alto");
-    *alto << 38.2 << 38.5 << 37.9 << 38.7 << 38.1 << 37.8 << 37.6 << 39.3;
-    alto->setColor((QRgb(0xD70707)));
-
-*/
 
     QStackedBarSeries * seriesTemp = new QStackedBarSeries();
-   // seriesTemp->append(abajo);
     seriesTemp->append(bien);
-    //seriesTemp->append(alto);
 
     QChart *chart = new QChart();
 
     chart->addSeries(seriesTemp);
-    //chart->setTitleFont(QFont::Fantasy);
     chart->setAnimationOptions(QChart::AllAnimations);
     QStringList dias ={ QString::fromStdString(vectorTemp[4].getFecha()) , QString::fromStdString(vectorTemp[3].getFecha()) , QString::fromStdString(vectorTemp[2].getFecha()) , QString::fromStdString(vectorTemp[1].getFecha()) , QString::fromStdString(vectorTemp[0].getFecha())};
 
@@ -63,9 +51,11 @@ void temp::cargarData(void)
     axisX->append(dias);
     axisX->setTitleText("Días");
     chart->addAxis(axisX, Qt::AlignBottom);
+
     QValueAxis *axisY = new QValueAxis();
-    axisY->setRange(27,50);
+    axisY->setRange(33,45);
     axisY->setTitleText("[&deg;C]");
+    axisY->applyNiceNumbers();
     chart->addAxis(axisY, Qt::AlignLeft);
     seriesTemp->attachAxis(axisX);
     seriesTemp->attachAxis(axisY);

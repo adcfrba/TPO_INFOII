@@ -46,8 +46,8 @@ void MainWindow::deviceDiscovered(const QBluetoothDeviceInfo &info)
     //Imprime información sobre el dispositivo descubierto
     qDebug() << "Nombre del dispositivo:" << info.name();
     qDebug() << "Dirección MAC del dispositivo:" << info.address().toString();
-    if (info.name() == "HC-05")
-        conectarBT(&info);
+    if (info.name() == "HC-06")
+        conectarBT(info);
 }
 
 void MainWindow::on_pushButton_historial_clicked()
@@ -166,6 +166,10 @@ void MainWindow::setupMain(void)
     ui->label_temperatura->setFont(fontSecundario);
     ui->label__oxigenacion->setFont(fontSecundario);
 
+    QPixmap boton_recarga ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/cargando-flechas");
+    QIcon icon_recarga (boton_recarga);
+    ui->pushButton_recargar->setIcon(icon_recarga);
+    ui->pushButton_recargar->setIconSize(boton_recarga.rect().size());
     QPixmap boton_gas ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/gas.png");
     QIcon icon_gas (boton_gas);
     ui->pushButton_gas->setIcon(icon_gas);
@@ -188,13 +192,18 @@ void MainWindow::setupMain(void)
     ui->pushButton_historial->setFont(fontSecundario);
 }
 
-void MainWindow::conectarBT(QListWidgetItem *item)
+void MainWindow::conectarBT(const QBluetoothDeviceInfo &info)
 {
-    string = item->text(); //nos guarda la dirección del device en nuestro string
+    string = info.address().toString(); //nos guarda la dirección del device en nuestro string
     static const QString serviceUuid (QStringLiteral("00001101-0000-1000-8000-00805F9B34FB"));
     socket->connectToService(QBluetoothAddress(string), QBluetoothUuid(serviceUuid),QIODevice::ReadWrite);
-    qDebug() << "Conexión: "<< string;
-    connect(socket, SIGNAL(readyRead()), this, SLOT(receive()));
+    if(socket->state()==1) //ServiceLookupState
+    {
+        socket->write("OK");
+        qDebug() << "Conexión: "<< string;
+        connect(socket, SIGNAL(readyRead()), this, SLOT(receive()));
+        //QMessageBox::information(this, tr("BEYMAX"), tr("Conexión con BT exitosa"));
+    }
 }
 
 
@@ -233,7 +242,7 @@ void MainWindow::analizarTrama(QStringList tramaAnalizar, lectura datos)
         QSqlDatabase::database().transaction();
         qDebug()<<"Trama sin fallas";
         fecha = QDateTime::currentDateTime();
-        datos.setFecha(fecha.toString("dd/MM/yy").toStdString());
+        datos.setFecha(fecha.toString("dd/MM/yy h:m:s ap").toStdString());
         datos.setTemp((float)tramaAnalizar[1].toDouble());
         datos.setGas((float)tramaAnalizar[2].toDouble());
         datos.setOxi((float)tramaAnalizar[3].toDouble());
@@ -252,4 +261,22 @@ void MainWindow::analizarTrama(QStringList tramaAnalizar, lectura datos)
 
 }
 
+
+
+void MainWindow::on_pushButton_recargar_clicked()
+{
+    if (!m_db.open())
+    {
+        qDebug() << "Error: connection with database failed";
+    }
+    else
+    {
+        QSqlDatabase::database().transaction();
+        datos.leerData(m_db);
+        mostrarDatos();
+        QSqlDatabase::database().commit();
+        m_db.close();
+    }
+
+}
 

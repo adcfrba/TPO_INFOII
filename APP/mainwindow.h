@@ -35,12 +35,14 @@ private slots:
 
     void deviceDiscovered(const QBluetoothDeviceInfo &info);
 
-    void conectarBT(QListWidgetItem *item);
+    void conectarBT(const QBluetoothDeviceInfo &info);
 
     void receive();
     void analizarTrama(QStringList, lectura);
 
 
+
+    void on_pushButton_recargar_clicked();
 
 private:
     Ui::MainWindow *ui;
