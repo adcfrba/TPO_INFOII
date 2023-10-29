@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LPC845_GPIO_Parpadeo_Led/src/Pulsador&apos; to &apos;Pulsador.c&apos;" description="Rename resource &apos;Pulsador&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Pulsador" name="Pulsador.c" stamp="1691538491605" updateReferences="true"/>
+</session>

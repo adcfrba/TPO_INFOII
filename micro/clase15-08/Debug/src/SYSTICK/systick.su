@@ -1,0 +1,3 @@
+../src/SYSTICK/systick.cpp:10:1:systick::systick()	16	static
+../src/SYSTICK/systick.cpp:15:1:systick::~systick()	16	static
+../src/SYSTICK/systick.cpp:15:1:virtual systick::~systick()	16	static

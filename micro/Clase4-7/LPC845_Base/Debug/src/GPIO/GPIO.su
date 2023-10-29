@@ -1,0 +1,5 @@
+../src/GPIO/GPIO.cpp:9:1:ClaseGPIO::ClaseGPIO()	16	static
+../src/GPIO/GPIO.cpp:17:1:ClaseGPIO::ClaseGPIO(uint32_t, uint32_t, uint32_t)	24	static
+../src/GPIO/GPIO.cpp:30:6:void ClaseGPIO::set(uint32_t)	16	static
+../src/GPIO/GPIO.cpp:38:6:void ClaseGPIO::dir(uint32_t)	16	static
+../src/GPIO/GPIO.cpp:46:10:uint32_t ClaseGPIO::read(uint32_t, uint32_t)	24	static

@@ -1,0 +1,5 @@
+../src/DRIVER_GPIO/OS_GPIO_DRIVER.c:17:6:GPIO_Inicializacion	8	static
+../src/DRIVER_GPIO/OS_GPIO_DRIVER.c:207:6:GPIO_Set	24	static
+../src/DRIVER_GPIO/OS_GPIO_DRIVER.c:217:6:GPIO_Dir	24	static
+../src/DRIVER_GPIO/OS_GPIO_DRIVER.c:226:10:GPIO_Read	24	static
+../src/DRIVER_GPIO/OS_GPIO_DRIVER.c:237:9:IOCON_config_io	32	static

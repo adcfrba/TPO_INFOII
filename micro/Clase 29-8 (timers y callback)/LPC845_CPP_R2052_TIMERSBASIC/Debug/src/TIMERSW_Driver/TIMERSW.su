@@ -1,0 +1,5 @@
+../src/TIMERSW_Driver/TIMERSW.cpp:12:1:TIMERSW::TIMERSW(const TIMERSW&)	16	static
+../src/TIMERSW_Driver/TIMERSW.cpp:19:1:TIMERSW::TIMERSW()	16	static
+../src/TIMERSW_Driver/TIMERSW.cpp:26:6:void TIMERSW::Start(uint32_t, uint32_t, void (*)())	24	static
+../src/TIMERSW_Driver/TIMERSW.cpp:33:6:virtual void TIMERSW::Descontar()	16	static
+../src/TIMERSW_Driver/TIMERSW.cpp:43:6:void TIMERSW::Accion()	16	static

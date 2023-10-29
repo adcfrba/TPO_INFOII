@@ -1,0 +1,92 @@
+21:38:31 **** Incremental Build of configuration Debug for project LPC845_Base ****
+make -r -j4 all 
+Building file: ../src/GPIO/GPIO.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\src\GPIO" -I"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\inc" -include"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\inc\define.h" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIO/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIO/GPIO.d" -MT"src/GPIO/GPIO.o" -MT"src/GPIO/GPIO.d" -o "src/GPIO/GPIO.o" "../src/GPIO/GPIO.cpp"
+Finished building: ../src/GPIO/GPIO.cpp
+ 
+Building target: LPC845_Base.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_Base.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "LPC845_Base_Debug.ld" -o "LPC845_Base.axf" ./src/GPIO/GPIO.o  ./src/LPC845_Base.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1264 B        64 KB      1.93%
+        RamLoc16:         296 B        16 KB      1.81%
+Finished building target: LPC845_Base.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_Base.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_Base.axf" "LPC845_Base.bin" ; # checksum -p LPC845 -d "LPC845_Base.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	    296	   1560	    618	LPC845_Base.axf
+ 
+21:38:36 **** Incremental Build of configuration Debug for project LPC845_Base ****
+make -r -j4 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "LPC845_Base.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_Base.axf" "LPC845_Base.bin" ; # checksum -p LPC845 -d "LPC845_Base.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	    296	   1560	    618	LPC845_Base.axf
+ 
+21:40:08 **** Incremental Build of configuration Debug for project LPC845_Base ****
+make -r -j4 all 
+Building file: ../src/LPC845_Base.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\src\GPIO" -I"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\inc" -include"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\inc\define.h" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/LPC845_Base.d" -MT"src/LPC845_Base.o" -MT"src/LPC845_Base.d" -o "src/LPC845_Base.o" "../src/LPC845_Base.cpp"
+../src/LPC845_Base.cpp: In function 'int main()':
+../src/LPC845_Base.cpp:18:6: error: 'led' was not declared in this scope
+   18 |      led.Red(1);
+      |      ^~~
+make[1]: *** [src/subdir.mk:40: src/LPC845_Base.o] Error 1
+make: *** [makefile:51: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+21:40:44 **** Incremental Build of configuration Debug for project LPC845_Base ****
+make -r -j4 all 
+Building file: ../src/LPC845_Base.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\src\GPIO" -I"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\inc" -include"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\inc\define.h" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/LPC845_Base.d" -MT"src/LPC845_Base.o" -MT"src/LPC845_Base.d" -o "src/LPC845_Base.o" "../src/LPC845_Base.cpp"
+../src/LPC845_Base.cpp: In function 'int main()':
+../src/LPC845_Base.cpp:19:6: error: 'led' was not declared in this scope
+   19 |      led.Green(0); //le seteamos un 1 y un 0 en el port y pin
+      |      ^~~
+make[1]: *** [src/subdir.mk:40: src/LPC845_Base.o] Error 1
+make: *** [makefile:51: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+21:41:14 **** Incremental Build of configuration Debug for project LPC845_Base ****
+make -r -j4 all 
+Building file: ../src/LPC845_Base.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\src\GPIO" -I"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\inc" -include"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\inc\define.h" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/LPC845_Base.d" -MT"src/LPC845_Base.o" -MT"src/LPC845_Base.d" -o "src/LPC845_Base.o" "../src/LPC845_Base.cpp"
+Finished building: ../src/LPC845_Base.cpp
+ 
+Building target: LPC845_Base.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_Base.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "LPC845_Base_Debug.ld" -o "LPC845_Base.axf" ./src/GPIO/GPIO.o  ./src/LPC845_Base.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1304 B        64 KB      1.99%
+        RamLoc16:         300 B        16 KB      1.83%
+Finished building target: LPC845_Base.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_Base.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_Base.axf" "LPC845_Base.bin" ; # checksum -p LPC845 -d "LPC845_Base.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1304	      0	    300	   1604	    644	LPC845_Base.axf
+ 
+21:43:38 **** Incremental Build of configuration Debug for project LPC845_Base ****
+make -r -j4 all 
+Building file: ../src/LPC845_Base.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\src\GPIO" -I"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\inc" -include"C:\Users\notebook\Documents\INFO II 2023\micro\Clase4-7\LPC845_Base\inc\define.h" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/LPC845_Base.d" -MT"src/LPC845_Base.o" -MT"src/LPC845_Base.d" -o "src/LPC845_Base.o" "../src/LPC845_Base.cpp"
+Finished building: ../src/LPC845_Base.cpp
+ 
+Building target: LPC845_Base.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_Base.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "LPC845_Base_Debug.ld" -o "LPC845_Base.axf" ./src/GPIO/GPIO.o  ./src/LPC845_Base.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1456 B        64 KB      2.22%
+        RamLoc16:         304 B        16 KB      1.86%
+Finished building target: LPC845_Base.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_Base.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_Base.axf" "LPC845_Base.bin" ; # checksum -p LPC845 -d "LPC845_Base.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1456	      0	    304	   1760	    6e0	LPC845_Base.axf
+ 

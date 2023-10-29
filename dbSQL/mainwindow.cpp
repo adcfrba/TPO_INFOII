@@ -1,91 +1,153 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QSqlError>
-#include <QSqlTableModel>
 
+using namespace std;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-/*
-    qDebug() <<"Drivers:" << QSqlDatabase::drivers(); //me tira la lista de los drivers disponibles
-    m_db = QSqlDatabase::addDatabase("QODBC");
-    m_db.setDatabaseName("Driver={MySQL ODBC 5.2 Driver}; DATABASE=localhost;");
-    m_db.setUserName("root");
-    if(!m_db.open())
-    {
-        QMessageBox::critical(this, "Error", m_db.lastError().text());
-        return;
-
-    }
- */
     m_db = QSqlDatabase::addDatabase("QSQLITE");
     m_db.setDatabaseName("C:/sqlite/gui/databases/mydb.sqlite"); //seteamos la base de datos
-
-    if (!m_db.open()) //checqueamos si se conecto o no
-    {
+    if (!m_db.open())
         qDebug() << "Error: connection with database failed";
-    }
     else
     {
         qDebug() << "Database: connection ok";
-        QMessageBox::information(this, "Conectada", "Se logro che");
+        QSqlDatabase::database().transaction();
+        datos.leerData(m_db); //obtenemos los datos y lo guardamos en el objeto
+        //mostrarDatos();
+        QSqlDatabase::database().commit();
+        m_db.close();
     }
-    mModel = new QSqlTableModel(this);
-    mModel->setTable("Lecturas");
-    mModel->select();
-    ui->tableView->setModel(mModel);
-    /*
-    QSqlDatabase::addDatabase("QSQLITE");
-    mDatabase.setHostName("127.0.0.1");//datos de la base de datos
-    mDatabase.setDatabaseName("baymaxdata");
-    mDatabase.setUserName("root");
-    mDatabase.setPassword("bAYMAX.TP0");
-    mDatabase.setPort(3306);
 
 
-
-    if(!mDatabase.open())
-    {
-        QMessageBox::critical(this, "Error", mDatabase.lastError().text());
-        return;
-    }
-    mModel = new QSqlTableModel(this);
-    mModel->setTable("users");
-    mModel->select();
-    ui->tableView->setModel(mModel);
-*/
+    // BLUETOOTH
+    connect(agent, SIGNAL(deviceDiscovered(QBluetoothDeviceInfo)),this, SLOT(deviceDiscovered(QBluetoothDeviceInfo)));
+    agent->start(); //inicia la busqueda de dispositivos
+    socket = new QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    socket->disconnectFromService();
+    socket->close();
 }
 
+//BT
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::deviceDiscovered(const QBluetoothDeviceInfo &info)
 {
+    ui->listWidget->addItem(info.address().toString());
+    // Imprime información sobre el dispositivo descubierto
+    //qDebug() << "Nombre del dispositivo:" << info.name();
+    //qDebug() << "Dirección MAC del dispositivo:" << info.address().toString();
+}
+
+void MainWindow::on_pushButton_find_clicked()
+{
+    ui->listWidget->clear();
+    agent->stop();
+    agent->start();
+    qDebug() << "error"<< socket->errorString();
+}
+
+
+void MainWindow::on_pushButton_on_clicked()
+{
+    socket->write("A");
+}
+
+
+void MainWindow::on_pushButton_off_clicked()
+{
+    ui->listWidget->clear();
+}
+
+
+void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
+{
+    string = item->text(); //nos guarda la dirección del device en nuestro string
+    static const QString serviceUuid (QStringLiteral("00001101-0000-1000-8000-00805F9B34FB"));
+    socket->connectToService(QBluetoothAddress(string), QBluetoothUuid(serviceUuid),QIODevice::ReadWrite);
+    qDebug() << "Conexión: "<< socket->errorString();
+    connect(socket, SIGNAL(readyRead()), this, SLOT(receive()));
+}
+
+
+void MainWindow::receive()
+{
+    CantBytesRecibidos = socket->bytesAvailable();
+    DatosRecibidos = socket->readAll();
+    trama += DatosRecibidos;
+
+    if(trama.back() =='>' && finalizarTrama == false)
+    {
+        finalizarTrama = true;
+
+        tramaExtraida = trama.split('-',Qt::SkipEmptyParts);
+        if(tramaExtraida.size() == 7)
+        {
+            analizarTrama(tramaExtraida, datos);
+            ui->listWidget->addItem(trama);
+        }
+        trama.clear();
+        finalizarTrama = false;
+    }
+    trama.clear();
+}
+
+void MainWindow::analizarTrama(QStringList tramaAnalizar, lectura datos)
+{
+    double checksum =0;
+
+    for(int i = 1; i < CHECKSUM; i++)
+        checksum+= tramaAnalizar[i].toDouble();
+
+    if(checksum == tramaAnalizar[CHECKSUM].toDouble() && m_db.open())
+    {
+        qDebug() << "Database: connection ok";
+        QSqlDatabase::database().transaction();
+        qDebug()<<"Trama sin fallas";
+        fecha = QDateTime::currentDateTime();
+        datos.setFecha(fecha.toString("dd/MM/yy").toStdString());
+        datos.setTemp((float)tramaAnalizar[1].toDouble());
+        datos.setGas((float)tramaAnalizar[2].toDouble());
+        datos.setOxi((float)tramaAnalizar[3].toDouble());
+        datos.setPulso(tramaAnalizar[4].toInt());
+        datos.setNombre("ANTO");
+        datos.nuevoData(m_db);
+        QSqlDatabase::database().commit();
+        m_db.close();
+        //mando data con datos
+    }
+    else
+    {
+        qDebug()<<"Trama con fallas" << checksum << endl; //OJO QUE EL CHECKSUM SUMA TODO, TENGO QUE RESTAR EL CHECKSUM Y LOS BARRAS
+
+    }
 
 }
 
+
+// DATABASE
 
 void MainWindow::on_pushButton_nu_clicked()
 {
-    //mModel->insertRow(mModel->rowCount());
-    m_db.open();
-    QSqlDatabase::database().transaction();
-    QSqlQuery qyInsert(m_db);
-    qyInsert.prepare("INSERT INTO lecturas(NOMBRE, TEMP, OXI, PULSO, GAS) VALUES(:NOMBRE, :TEMP, :OXI, :PULSO, :GAS)");
-    qyInsert.bindValue(":NOMBRE",ui->lineEdit_NOMBRE->text());
-    qyInsert.bindValue(":TEMP",ui->lineEdit_TEMP->text());
-    qyInsert.bindValue(":OXI",ui->lineEdit_OXI->text());
-    qyInsert.bindValue(":PULSO",ui->lineEdit_PULSO->text());
-    qyInsert.bindValue(":GAS",ui->lineEdit_GAS->text());
-    qyInsert.exec();
-
-    QSqlDatabase::database().commit();
-    m_db.close();
+    if (!m_db.open()) //checqueamos si se conecto o no
+       qDebug() << "Error: connection with database failed";
+    else
+    {
+        qDebug() << "Database: connection ok";
+        QSqlDatabase::database().transaction();
+        cargarDatos(); //la idea es que aca los datos se agreguen con las lecturas
+        datos.nuevoData(m_db);
+        cout << "testeo: "<<datos.getTemp()<<endl;
+        QSqlDatabase::database().commit();
+        m_db.close();
+        qDebug() << "Database: desconectada";
+    }
 }
 
 
@@ -103,39 +165,32 @@ void MainWindow::on_pushButton_el_clicked()
     qDebug() <<"Error: "<<qyDelete.lastError();
     QSqlDatabase::database().commit();
     m_db.close();
+    qDebug() << "Database: desconectada";
 }
 
 
 void MainWindow::on_pushButton_act_clicked()
 {
-    m_db.open();
-    QSqlDatabase::database().transaction();
-
-    QSqlQuery qyUpdate(m_db);
-    qyUpdate.prepare("UPDATE lecturas SET TEMP=:TEMP, OXI=:OXI, PULSO=:PULSO, GAS=:GAS WHERE NOMBRE=:NOMBRE");
-    qyUpdate.bindValue(":TEMP",ui->lineEdit_TEMP->text());
-    qyUpdate.bindValue(":OXI",ui->lineEdit_OXI->text());
-    qyUpdate.bindValue(":PULSO",ui->lineEdit_PULSO->text());
-    qyUpdate.bindValue(":GAS",ui->lineEdit_GAS->text());
-    qyUpdate.bindValue(":NOMBRE",ui->lineEdit_NOMBRE->text()); //se usa el NOMBRE para reconocer cual editar
-    qyUpdate.exec();
-
-    qDebug() <<"Error: "<<qyUpdate.lastError();
-    QSqlDatabase::database().commit();
-    m_db.close();
-
+    if (!m_db.open())
+        qDebug() << "Error: connection with database failed";
+    else
+    {
+        QSqlDatabase::database().transaction();
+        cargarDatos(); //nueva info
+        datos.actData(m_db);
+        QSqlDatabase::database().commit();
+        m_db.close();
+        qDebug() << "Database: desconectada";
+    }
 }
 
 
-void MainWindow::on_pushButton_MOSTRAR_clicked()
+void MainWindow::cargarDatos(void) //funcion para tomar las lecturas del micro y añadirlas al objeto
 {
-    /*
-    m_db.open();
-    QSqlDatabase::database().transaction();
-    mModel->select();
-
-    QSqlDatabase::database().commit();
-    m_db.close();
-*/
+    datos.setFecha("17/09/23");
+    datos.setNombre("Adam Bareiro");
+    datos.setOxi(99.8);
+    datos.setPulso(96);
+    datos.setTemp(37.76);
+    datos.setGas(0.01);
 }
-

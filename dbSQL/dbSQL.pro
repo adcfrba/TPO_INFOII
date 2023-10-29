@@ -1,4 +1,7 @@
 QT       += core gui sql
+QT += bluetooth
+QT       += core gui serialport
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

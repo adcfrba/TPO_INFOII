@@ -1,0 +1,3 @@
+../src/DRIVER_ADC/DRIVER_ADC.c:21:6:ADC_Inicializar	8	static
+../src/DRIVER_ADC/DRIVER_ADC.c:61:6:ADC_Disparo	16	static
+../src/DRIVER_ADC/DRIVER_ADC.c:68:6:ADC_SEQA_IRQHandler	24	static

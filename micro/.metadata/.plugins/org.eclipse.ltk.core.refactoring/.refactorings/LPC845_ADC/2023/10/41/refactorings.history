@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LPC845_ADC/src/LPC845_CPP_R2052.cpp&apos; to &apos;mainADC.cpp&apos;" description="Rename resource &apos;LPC845_CPP_R2052.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/LPC845_CPP_R2052.cpp" name="mainADC.cpp" stamp="1696977877938" updateReferences="true"/>
+</session>

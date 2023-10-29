@@ -1,0 +1,13 @@
+debug/gas.o
+debug/historial.o
+debug/lectura.o
+debug/main.o
+debug/mainwindow.o
+debug/ox.o
+debug/temp.o
+debug/qrc_fonts.o
+debug/moc_gas.o
+debug/moc_historial.o
+debug/moc_mainwindow.o
+debug/moc_ox.o
+debug/moc_temp.o

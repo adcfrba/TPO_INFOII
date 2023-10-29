@@ -1,0 +1,2 @@
+../src/main.c:17:5:main	24	static
+../src/main.c:87:6:PLL_Init	8	static

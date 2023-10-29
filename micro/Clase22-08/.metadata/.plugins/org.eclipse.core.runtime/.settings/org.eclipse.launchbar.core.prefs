@@ -1,0 +1,7 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LPC845_GPIO_Parpadeo_Led LinkServer Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LPC845_GPIO_Parpadeo_Led LinkServer Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LPC845_CPP_R2052 LinkServer Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LPC845_CPP_R2052 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LPC845_CPP_R2052 LinkServer Debug
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LPC845_GPIO_Parpadeo_Led\ LinkServer\ Debug\ (1)/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LPC845_GPIO_Parpadeo_Led\ LinkServer\ Debug\ (1)/activeLaunchTarget=null\:---

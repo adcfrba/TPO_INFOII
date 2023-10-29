@@ -1,0 +1,89 @@
+/*
+===============================================================================
+ Name        : main.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+#include <cr_section_macros.h>
+
+#include "Defines.h"
+#include <stdio.h>
+
+
+void Led(void);
+void Print(void);
+
+SYSTICK Systick(1000);
+Gpio ledG(1, 0, 1);
+Gpio ledB(1, 1, 1);
+Gpio ledR(1, 2, 1);
+
+GPIOF Pulsador(0,4,0);
+uint8_t flag = 0;
+uint8_t		Buffer[15];
+extern uint32_t	ADC_Cuentas[2];
+
+//TIMERSW Timer1;
+
+//TIMERSW Timer2;
+
+int main(void) {
+
+    ADC_Inicializar();
+
+    //con ADC_Cuentas[] leo el resultado del adc
+	uart0Init(9600); //inicializamos la uart a utilizar
+
+	ledG.Set(1);
+	ledB.Set(1);
+	ledR.Set(1);
+
+    while(1)
+    {
+    	//printf("HOLA");
+    	//sprintf((char*)Buffer, "ADC=%01d.%d", ADC_Cuentas[0]/1000, ADC_Cuentas[0] %1000);
+    	sprintf(Buffer, "ADC=%01d.%d", ADC_Cuentas[0]/1000, ADC_Cuentas[0] %1000);
+
+    	uart0Send( (uint8_t *)Buffer, (uint32_t)0);
+/*
+		if(0==Pulsador.Read())
+		{
+			ledB.Set(0);
+	    	//uart0Send( (uint8_t *)Buffer, (uint32_t)0);
+			uart0Send( (uint8_t *)"<-37.2-0.1-99-100-236.3->", (uint32_t)0);
+		}
+		else
+			ledB.Set(1);
+*/
+    }
+}
+
+void Led(void){
+	static uint8_t status = 0;
+
+	if(status){
+		status = 0;
+		ledB.Set(1);
+	}else{
+		status = 1;
+		ledB.Set(0);
+	}
+}
+
+void Print(void){
+	static uint8_t status = 0;
+
+	if(status){
+		status = 0;
+		ledG.Set(1);
+	}else{
+		status = 1;
+		ledG.Set(0);
+	}
+}
+
+
+

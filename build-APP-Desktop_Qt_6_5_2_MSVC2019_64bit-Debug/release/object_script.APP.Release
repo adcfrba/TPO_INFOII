@@ -1,0 +1,13 @@
+release/gas.o
+release/historial.o
+release/lectura.o
+release/main.o
+release/mainwindow.o
+release/ox.o
+release/temp.o
+release/qrc_fonts.o
+release/moc_gas.o
+release/moc_historial.o
+release/moc_mainwindow.o
+release/moc_ox.o
+release/moc_temp.o

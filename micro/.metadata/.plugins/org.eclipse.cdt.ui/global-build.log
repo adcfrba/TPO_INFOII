@@ -1,0 +1,766 @@
+22:03:50 **** Clean-only build of configuration Debug for project LPC845_ADC ****
+make -r -j4 clean 
+rm -rf ./src/UTILS/CALLBACK/CALLBACK.d ./src/UTILS/CALLBACK/CALLBACK.o
+rm -rf ./src/UART0_Driver/uart0.d ./src/UART0_Driver/uart0.o
+rm -rf ./src/TIMERSW_Driver/TIMERSW.d ./src/TIMERSW_Driver/TIMERSW.o
+rm -rf ./src/TECLADO_Driver/teclado.d ./src/TECLADO_Driver/teclado.o
+rm -rf ./src/SYSTICK_Driver/SYSTICK.d ./src/SYSTICK_Driver/SYSTICK.o
+rm -rf ./src/GPIO_Driver/GPIO.d ./src/GPIO_Driver/GPIO.o
+rm -rf ./src/GPIOF_Driver/GPIOF.d ./src/GPIOF_Driver/GPIOF.o
+rm -rf ./src/ADC_Driver/ADC.d ./src/ADC_Driver/ADC.o
+rm -rf ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.d ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.d ./src/cr_startup_lpc84x.o ./src/crp.d ./src/crp.o ./src/mainADC.d ./src/mainADC.o ./src/mtb.d ./src/mtb.o
+rm -rf LPC845_ADC.axf
+ 
+22:03:52 **** Incremental Build of configuration Debug for project LPC845_ADC ****
+make -r -j4 all 
+Building file: ../src/UTILS/CALLBACK/CALLBACK.cpp
+Building file: ../src/UART0_Driver/uart0.cpp
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Building file: ../src/TECLADO_Driver/teclado.cpp
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/UTILS/CALLBACK/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/UTILS/CALLBACK/CALLBACK.d" -MT"src/UTILS/CALLBACK/CALLBACK.o" -MT"src/UTILS/CALLBACK/CALLBACK.d" -o "src/UTILS/CALLBACK/CALLBACK.o" "../src/UTILS/CALLBACK/CALLBACK.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/UART0_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/UART0_Driver/uart0.d" -MT"src/UART0_Driver/uart0.o" -MT"src/UART0_Driver/uart0.d" -o "src/UART0_Driver/uart0.o" "../src/UART0_Driver/uart0.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TECLADO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TECLADO_Driver/teclado.d" -MT"src/TECLADO_Driver/teclado.o" -MT"src/TECLADO_Driver/teclado.d" -o "src/TECLADO_Driver/teclado.o" "../src/TECLADO_Driver/teclado.cpp"
+../src/TECLADO_Driver/teclado.cpp: In member function 'uint8_t teclado::TECLADO_Read()':
+../src/TECLADO_Driver/teclado.cpp:81:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   81 | }
+      | ^
+../src/TECLADO_Driver/teclado.cpp: In member function 'uint8_t teclado::leer()':
+../src/TECLADO_Driver/teclado.cpp:58:1: warning: control reaches end of non-void function [-Wreturn-type]
+   58 | }
+      | ^
+../src/TECLADO_Driver/teclado.cpp: In member function 'void teclado::antirebote()':
+../src/TECLADO_Driver/teclado.cpp:28:20: warning: 'codTeclaActual' is used uninitialized in this function [-Wuninitialized]
+   28 |  if(codTeclaActual == NO_TECLA)
+Finished building: ../src/TIMERSW_Driver/TIMERSW.cpp
+ 
+Building file: ../src/SYSTICK_Driver/SYSTICK.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/SYSTICK_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/SYSTICK_Driver/SYSTICK.d" -MT"src/SYSTICK_Driver/SYSTICK.o" -MT"src/SYSTICK_Driver/SYSTICK.d" -o "src/SYSTICK_Driver/SYSTICK.o" "../src/SYSTICK_Driver/SYSTICK.cpp"
+Finished building: ../src/TECLADO_Driver/teclado.cpp
+Finished building: ../src/UART0_Driver/uart0.cpp
+ 
+ 
+Building file: ../src/GPIO_Driver/GPIO.cpp
+Building file: ../src/GPIOF_Driver/GPIOF.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIO_Driver/GPIO.d" -MT"src/GPIO_Driver/GPIO.o" -MT"src/GPIO_Driver/GPIO.d" -o "src/GPIO_Driver/GPIO.o" "../src/GPIO_Driver/GPIO.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIOF_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIOF_Driver/GPIOF.d" -MT"src/GPIOF_Driver/GPIOF.o" -MT"src/GPIOF_Driver/GPIOF.d" -o "src/GPIOF_Driver/GPIOF.o" "../src/GPIOF_Driver/GPIOF.cpp"
+Finished building: ../src/SYSTICK_Driver/SYSTICK.cpp
+ 
+Building file: ../src/ADC_Driver/ADC.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/ADC_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/ADC_Driver/ADC.d" -MT"src/ADC_Driver/ADC.o" -MT"src/ADC_Driver/ADC.d" -o "src/ADC_Driver/ADC.o" "../src/ADC_Driver/ADC.cpp"
+Finished building: ../src/GPIO_Driver/GPIO.cpp
+ 
+Building file: ../src/aeabi_romdiv_patch.s
+Invoking: MCU Assembler
+arm-none-eabi-gcc -c -x assembler-with-cpp -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC84X__ -g3 -mcpu=cortex-m0 -mthumb -o "src/aeabi_romdiv_patch.o" "../src/aeabi_romdiv_patch.s"
+Finished building: ../src/GPIOF_Driver/GPIOF.cpp
+ 
+Building file: ../src/cr_cpp_config.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/cr_cpp_config.d" -MT"src/cr_cpp_config.o" -MT"src/cr_cpp_config.d" -o "src/cr_cpp_config.o" "../src/cr_cpp_config.cpp"
+Finished building: ../src/UTILS/CALLBACK/CALLBACK.cpp
+ 
+Building file: ../src/cr_startup_lpc84x.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/cr_startup_lpc84x.d" -MT"src/cr_startup_lpc84x.o" -MT"src/cr_startup_lpc84x.d" -o "src/cr_startup_lpc84x.o" "../src/cr_startup_lpc84x.cpp"
+Finished building: ../src/cr_cpp_config.cpp
+ 
+Building file: ../src/crp.c
+../src/ADC_Driver/ADC.cpp: In function 'void ADC_SEQA_IRQHandler()':
+../src/ADC_Driver/ADC.cpp:55:11: warning: variable 'RS' set but not used [-Wunused-but-set-variable]
+   55 |  uint32_t RS;
+      |           ^~
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/ADC_Driver/ADC.cpp
+Finished building: ../src/cr_startup_lpc84x.cpp
+ 
+ 
+Building file: ../src/mainADC.cpp
+Building file: ../src/mtb.c
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/mainADC.d" -MT"src/mainADC.o" -MT"src/mainADC.d" -o "src/mainADC.o" "../src/mainADC.cpp"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UTILS" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_ADC\src\UART0_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/mtb.d" -MT"src/mtb.o" -MT"src/mtb.d" -o "src/mtb.o" "../src/mtb.c"
+Finished building: ../src/aeabi_romdiv_patch.s
+Finished building: ../src/crp.c
+ 
+ 
+Finished building: ../src/mtb.c
+ 
+Finished building: ../src/mainADC.cpp
+ 
+Building target: LPC845_ADC.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_ADC.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_ADC_Debug.ld -o "LPC845_ADC.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mainADC.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54720 B        64 KB     83.50%
+        RamLoc16:        3156 B        16 KB     19.26%
+Finished building target: LPC845_ADC.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_ADC.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_ADC.axf" "LPC845_ADC.bin" ; # checksum -p LPC845 -d "LPC845_ADC.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52232	   2488	    668	  55388	   d85c	LPC845_ADC.axf
+ 
+22:04:31 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/ADC_Driver/ADC.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/ADC_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/ADC_Driver/ADC.d" -MT"src/ADC_Driver/ADC.o" -MT"src/ADC_Driver/ADC.d" -o "src/ADC_Driver/ADC.o" "../src/ADC_Driver/ADC.cpp"
+../src/ADC_Driver/ADC.cpp: In function 'void ADC_SEQA_IRQHandler()':
+../src/ADC_Driver/ADC.cpp:55:11: warning: variable 'RS' set but not used [-Wunused-but-set-variable]
+   55 |  uint32_t RS;
+      |           ^~
+Finished building: ../src/ADC_Driver/ADC.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54688 B        64 KB     83.45%
+        RamLoc16:        3156 B        16 KB     19.26%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52200	   2488	    668	  55356	   d83c	LPC845_TPO.axf
+ 
+22:44:40 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54688 B        64 KB     83.45%
+        RamLoc16:        3156 B        16 KB     19.26%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52200	   2488	    668	  55356	   d83c	LPC845_TPO.axf
+ 
+22:54:24 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+../src/TPOmain.cpp: In function 'void botonPanico()':
+../src/TPOmain.cpp:115:16: error: incompatible types in assignment of 'const char [10]' to 'uint8_t [10]' {aka 'unsigned char [10]'}
+  115 |  mensajePanico = "¡ALERTA!";
+      |  ~~~~~~~~~~~~~~^~~~~~~~~~~~
+make[1]: *** [src/subdir.mk:40: src/TPOmain.o] Error 1
+make: *** [makefile:58: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+22:55:36 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54696 B        64 KB     83.46%
+        RamLoc16:        3180 B        16 KB     19.41%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52208	   2488	    692	  55388	   d85c	LPC845_TPO.axf
+ 
+22:56:47 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54832 B        64 KB     83.67%
+        RamLoc16:        3196 B        16 KB     19.51%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52344	   2488	    708	  55540	   d8f4	LPC845_TPO.axf
+ 
+22:57:42 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54832 B        64 KB     83.67%
+        RamLoc16:        3196 B        16 KB     19.51%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52344	   2488	    708	  55540	   d8f4	LPC845_TPO.axf
+ 
+22:58:11 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54832 B        64 KB     83.67%
+        RamLoc16:        3196 B        16 KB     19.51%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52344	   2488	    708	  55540	   d8f4	LPC845_TPO.axf
+ 
+00:36:55 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/UTILS/CALLBACK/CALLBACK.cpp
+Building file: ../src/UART0_Driver/uart0.cpp
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Building file: ../src/TECLADO_Driver/teclado.cpp
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/UTILS/CALLBACK/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/UTILS/CALLBACK/CALLBACK.d" -MT"src/UTILS/CALLBACK/CALLBACK.o" -MT"src/UTILS/CALLBACK/CALLBACK.d" -o "src/UTILS/CALLBACK/CALLBACK.o" "../src/UTILS/CALLBACK/CALLBACK.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/UART0_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/UART0_Driver/uart0.d" -MT"src/UART0_Driver/uart0.o" -MT"src/UART0_Driver/uart0.d" -o "src/UART0_Driver/uart0.o" "../src/UART0_Driver/uart0.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TECLADO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TECLADO_Driver/teclado.d" -MT"src/TECLADO_Driver/teclado.o" -MT"src/TECLADO_Driver/teclado.d" -o "src/TECLADO_Driver/teclado.o" "../src/TECLADO_Driver/teclado.cpp"
+../src/TECLADO_Driver/teclado.cpp: In member function 'uint8_t teclado::TECLADO_Read()':
+../src/TECLADO_Driver/teclado.cpp:81:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   81 | }
+      | ^
+../src/TECLADO_Driver/teclado.cpp: In member function 'uint8_t teclado::leer()':
+../src/TECLADO_Driver/teclado.cpp:58:1: warning: control reaches end of non-void function [-Wreturn-type]
+   58 | }
+      | ^
+../src/TECLADO_Driver/teclado.cpp: In member function 'void teclado::antirebote()':
+../src/TECLADO_Driver/teclado.cpp:28:20: warning: 'codTeclaActual' is used uninitialized in this function [-Wuninitialized]
+   28 |  if(codTeclaActual == NO_TECLA)
+Finished building: ../src/UTILS/CALLBACK/CALLBACK.cpp
+Finished building: ../src/TIMERSW_Driver/TIMERSW.cpp
+ 
+ 
+Building file: ../src/SYSTICK_Driver/SYSTICK.cpp
+Building file: ../src/GPIO_Driver/GPIO.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/SYSTICK_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/SYSTICK_Driver/SYSTICK.d" -MT"src/SYSTICK_Driver/SYSTICK.o" -MT"src/SYSTICK_Driver/SYSTICK.d" -o "src/SYSTICK_Driver/SYSTICK.o" "../src/SYSTICK_Driver/SYSTICK.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIO_Driver/GPIO.d" -MT"src/GPIO_Driver/GPIO.o" -MT"src/GPIO_Driver/GPIO.d" -o "src/GPIO_Driver/GPIO.o" "../src/GPIO_Driver/GPIO.cpp"
+Finished building: ../src/TECLADO_Driver/teclado.cpp
+ 
+Building file: ../src/GPIOF_Driver/GPIOF.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIOF_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIOF_Driver/GPIOF.d" -MT"src/GPIOF_Driver/GPIOF.o" -MT"src/GPIOF_Driver/GPIOF.d" -o "src/GPIOF_Driver/GPIOF.o" "../src/GPIOF_Driver/GPIOF.cpp"
+Finished building: ../src/GPIO_Driver/GPIO.cpp
+Finished building: ../src/SYSTICK_Driver/SYSTICK.cpp
+ 
+ 
+Building file: ../src/ADC_Driver/ADC.cpp
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/ADC_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/ADC_Driver/ADC.d" -MT"src/ADC_Driver/ADC.o" -MT"src/ADC_Driver/ADC.d" -o "src/ADC_Driver/ADC.o" "../src/ADC_Driver/ADC.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/UART0_Driver/uart0.cpp
+ 
+Finished building: ../src/GPIOF_Driver/GPIOF.cpp
+ 
+../src/ADC_Driver/ADC.cpp: In function 'void ADC_SEQA_IRQHandler()':
+../src/ADC_Driver/ADC.cpp:55:11: warning: variable 'RS' set but not used [-Wunused-but-set-variable]
+   55 |  uint32_t RS;
+      |           ^~
+../src/TPOmain.cpp: In function 'void LedV()':
+../src/TPOmain.cpp:99:3: error: 'ledV' was not declared in this scope; did you mean 'ledR'?
+   99 |   ledV.Set(0);
+      |   ^~~~
+      |   ledR
+../src/TPOmain.cpp:102:3: error: 'ledV' was not declared in this scope; did you mean 'ledR'?
+  102 |   ledV.Set(1);
+      |   ^~~~
+      |   ledR
+../src/TPOmain.cpp: In function 'void armarTrama(uint8_t, uint8_t, uint8_t, uint8_t)':
+../src/TPOmain.cpp:149:10: error: invalid conversion from 'uint8_t*' {aka 'unsigned char*'} to 'char*' [-fpermissive]
+  149 |  sprintf(bufferTrama, "<-%03d-%02f-%03f-%03f-%04f->",temp, gas, oxi, pulso,temp+gas+oxi+pulso);
+      |          ^~~~~~~~~~~
+      |          |
+      |          uint8_t* {aka unsigned char*}
+In file included from ../src/TPOmain.cpp:13:
+c:\nxp\mcuxpressoide_11.7.1_9221\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.7.1.202301190959\tools\arm-none-eabi\include\stdio.h:244:14: note:   initializing argument 1 of 'int sprintf(char*, const char*, ...)'
+  244 | int sprintf (char *__restrict, const char *__restrict, ...)
+      |              ^~~~~~
+../src/TPOmain.cpp:149:34: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat=]
+  149 |  sprintf(bufferTrama, "<-%03d-%02f-%03f-%03f-%04f->",temp, gas, oxi, pulso,temp+gas+oxi+pulso);
+      |                               ~~~^                         ~~~
+      |                                  |                         |
+      |                                  double                    int
+      |                               %02d
+../src/TPOmain.cpp:149:39: warning: format '%f' expects argument of type 'double', but argument 5 has type 'int' [-Wformat=]
+  149 |  sprintf(bufferTrama, "<-%03d-%02f-%03f-%03f-%04f->",temp, gas, oxi, pulso,temp+gas+oxi+pulso);
+      |                                    ~~~^                         ~~~
+      |                                       |                         |
+      |                                       double                    int
+      |                                    %03d
+../src/TPOmain.cpp:149:44: warning: format '%f' expects argument of type 'double', but argument 6 has type 'int' [-Wformat=]
+  149 |  sprintf(bufferTrama, "<-%03d-%02f-%03f-%03f-%04f->",temp, gas, oxi, pulso,temp+gas+oxi+pulso);
+      |                                         ~~~^                         ~~~~~
+      |                                            |                         |
+      |                                            double                    int
+      |                                         %03d
+../src/TPOmain.cpp:149:49: warning: format '%f' expects argument of type 'double', but argument 7 has type 'int' [-Wformat=]
+  149 |  sprintf(bufferTrama, "<-%03d-%02f-%03f-%03f-%04f->",temp, gas, oxi, pulso,temp+gas+oxi+pulso);
+      |                                              ~~~^                          ~~~~~~~~~~~~~~~~~~
+      |                                                 |                                      |
+      |                                                 double                                 int
+      |                                              %04d
+make[1]: *** [src/subdir.mk:40: src/TPOmain.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Finished building: ../src/ADC_Driver/ADC.cpp
+ 
+make: *** [makefile:58: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+00:37:20 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+../src/TPOmain.cpp: In function 'void LedV()':
+../src/TPOmain.cpp:99:3: error: 'ledV' was not declared in this scope; did you mean 'ledR'?
+   99 |   ledV.Set(0);
+      |   ^~~~
+      |   ledR
+../src/TPOmain.cpp:102:3: error: 'ledV' was not declared in this scope; did you mean 'ledR'?
+  102 |   ledV.Set(1);
+      |   ^~~~
+      |   ledR
+make[1]: *** [src/subdir.mk:40: src/TPOmain.o] Error 1
+make: *** [makefile:58: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+00:37:46 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54984 B        64 KB     83.90%
+        RamLoc16:        3208 B        16 KB     19.58%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52488	   2496	    712	  55696	   d990	LPC845_TPO.axf
+ 
+00:50:02 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54992 B        64 KB     83.91%
+        RamLoc16:        3208 B        16 KB     19.58%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52496	   2496	    712	  55704	   d998	LPC845_TPO.axf
+ 
+00:53:33 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/UTILS/CALLBACK/CALLBACK.cpp
+Building file: ../src/UART0_Driver/uart0.cpp
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Building file: ../src/TECLADO_Driver/teclado.cpp
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/UTILS/CALLBACK/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/UTILS/CALLBACK/CALLBACK.d" -MT"src/UTILS/CALLBACK/CALLBACK.o" -MT"src/UTILS/CALLBACK/CALLBACK.d" -o "src/UTILS/CALLBACK/CALLBACK.o" "../src/UTILS/CALLBACK/CALLBACK.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/UART0_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/UART0_Driver/uart0.d" -MT"src/UART0_Driver/uart0.o" -MT"src/UART0_Driver/uart0.d" -o "src/UART0_Driver/uart0.o" "../src/UART0_Driver/uart0.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TECLADO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TECLADO_Driver/teclado.d" -MT"src/TECLADO_Driver/teclado.o" -MT"src/TECLADO_Driver/teclado.d" -o "src/TECLADO_Driver/teclado.o" "../src/TECLADO_Driver/teclado.cpp"
+../src/TECLADO_Driver/teclado.cpp: In member function 'uint8_t teclado::TECLADO_Read()':
+../src/TECLADO_Driver/teclado.cpp:81:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   81 | }
+      | ^
+../src/TECLADO_Driver/teclado.cpp: In member function 'uint8_t teclado::leer()':
+../src/TECLADO_Driver/teclado.cpp:58:1: warning: control reaches end of non-void function [-Wreturn-type]
+   58 | }
+      | ^
+../src/TECLADO_Driver/teclado.cpp: In member function 'void teclado::antirebote()':
+../src/TECLADO_Driver/teclado.cpp:28:20: warning: 'codTeclaActual' is used uninitialized in this function [-Wuninitialized]
+   28 |  if(codTeclaActual == NO_TECLA)
+Finished building: ../src/TIMERSW_Driver/TIMERSW.cpp
+Finished building: ../src/UART0_Driver/uart0.cpp
+Finished building: ../src/UTILS/CALLBACK/CALLBACK.cpp
+ 
+ 
+Building file: ../src/SYSTICK_Driver/SYSTICK.cpp
+ 
+Building file: ../src/GPIO_Driver/GPIO.cpp
+Invoking: MCU C++ Compiler
+Building file: ../src/GPIOF_Driver/GPIOF.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/SYSTICK_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/SYSTICK_Driver/SYSTICK.d" -MT"src/SYSTICK_Driver/SYSTICK.o" -MT"src/SYSTICK_Driver/SYSTICK.d" -o "src/SYSTICK_Driver/SYSTICK.o" "../src/SYSTICK_Driver/SYSTICK.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIO_Driver/GPIO.d" -MT"src/GPIO_Driver/GPIO.o" -MT"src/GPIO_Driver/GPIO.d" -o "src/GPIO_Driver/GPIO.o" "../src/GPIO_Driver/GPIO.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIOF_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIOF_Driver/GPIOF.d" -MT"src/GPIOF_Driver/GPIOF.o" -MT"src/GPIOF_Driver/GPIOF.d" -o "src/GPIOF_Driver/GPIOF.o" "../src/GPIOF_Driver/GPIOF.cpp"
+Finished building: ../src/TECLADO_Driver/teclado.cpp
+ 
+Building file: ../src/ADC_Driver/ADC.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/ADC_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/ADC_Driver/ADC.d" -MT"src/ADC_Driver/ADC.o" -MT"src/ADC_Driver/ADC.d" -o "src/ADC_Driver/ADC.o" "../src/ADC_Driver/ADC.cpp"
+Finished building: ../src/SYSTICK_Driver/SYSTICK.cpp
+Finished building: ../src/GPIO_Driver/GPIO.cpp
+ 
+ 
+Building file: ../src/TPOmain.cpp
+../src/ADC_Driver/ADC.cpp: In function 'void ADC_SEQA_IRQHandler()':
+../src/ADC_Driver/ADC.cpp:55:11: warning: variable 'RS' set but not used [-Wunused-but-set-variable]
+   55 |  uint32_t RS;
+      |           ^~
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/GPIOF_Driver/GPIOF.cpp
+ 
+Finished building: ../src/ADC_Driver/ADC.cpp
+ 
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54936 B        64 KB     83.83%
+        RamLoc16:        3208 B        16 KB     19.58%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52440	   2496	    712	  55648	   d960	LPC845_TPO.axf
+ 
+00:54:42 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52440	   2496	    712	  55648	   d960	LPC845_TPO.axf
+ 
+01:00:33 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/UTILS/CALLBACK/CALLBACK.cpp
+Building file: ../src/UART0_Driver/uart0.cpp
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Building file: ../src/TECLADO_Driver/teclado.cpp
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/UTILS/CALLBACK/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/UTILS/CALLBACK/CALLBACK.d" -MT"src/UTILS/CALLBACK/CALLBACK.o" -MT"src/UTILS/CALLBACK/CALLBACK.d" -o "src/UTILS/CALLBACK/CALLBACK.o" "../src/UTILS/CALLBACK/CALLBACK.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/UART0_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/UART0_Driver/uart0.d" -MT"src/UART0_Driver/uart0.o" -MT"src/UART0_Driver/uart0.d" -o "src/UART0_Driver/uart0.o" "../src/UART0_Driver/uart0.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TECLADO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TECLADO_Driver/teclado.d" -MT"src/TECLADO_Driver/teclado.o" -MT"src/TECLADO_Driver/teclado.d" -o "src/TECLADO_Driver/teclado.o" "../src/TECLADO_Driver/teclado.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+../src/TECLADO_Driver/teclado.cpp: In member function 'uint8_t teclado::TECLADO_Read()':
+../src/TECLADO_Driver/teclado.cpp:81:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   81 | }
+      | ^
+../src/TECLADO_Driver/teclado.cpp: In member function 'uint8_t teclado::leer()':
+../src/TECLADO_Driver/teclado.cpp:58:1: warning: control reaches end of non-void function [-Wreturn-type]
+   58 | }
+      | ^
+../src/TECLADO_Driver/teclado.cpp: In member function 'void teclado::antirebote()':
+../src/TECLADO_Driver/teclado.cpp:28:20: warning: 'codTeclaActual' is used uninitialized in this function [-Wuninitialized]
+   28 |  if(codTeclaActual == NO_TECLA)
+Finished building: ../src/UART0_Driver/uart0.cpp
+ 
+Building file: ../src/SYSTICK_Driver/SYSTICK.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/SYSTICK_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/SYSTICK_Driver/SYSTICK.d" -MT"src/SYSTICK_Driver/SYSTICK.o" -MT"src/SYSTICK_Driver/SYSTICK.d" -o "src/SYSTICK_Driver/SYSTICK.o" "../src/SYSTICK_Driver/SYSTICK.cpp"
+Finished building: ../src/UTILS/CALLBACK/CALLBACK.cpp
+ 
+Building file: ../src/GPIO_Driver/GPIO.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIO_Driver/GPIO.d" -MT"src/GPIO_Driver/GPIO.o" -MT"src/GPIO_Driver/GPIO.d" -o "src/GPIO_Driver/GPIO.o" "../src/GPIO_Driver/GPIO.cpp"
+Finished building: ../src/TECLADO_Driver/teclado.cpp
+ 
+Building file: ../src/GPIOF_Driver/GPIOF.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIOF_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIOF_Driver/GPIOF.d" -MT"src/GPIOF_Driver/GPIOF.o" -MT"src/GPIOF_Driver/GPIOF.d" -o "src/GPIOF_Driver/GPIOF.o" "../src/GPIOF_Driver/GPIOF.cpp"
+Finished building: ../src/TIMERSW_Driver/TIMERSW.cpp
+ 
+Building file: ../src/ADC_Driver/ADC.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/ADC_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/ADC_Driver/ADC.d" -MT"src/ADC_Driver/ADC.o" -MT"src/ADC_Driver/ADC.d" -o "src/ADC_Driver/ADC.o" "../src/ADC_Driver/ADC.cpp"
+Finished building: ../src/SYSTICK_Driver/SYSTICK.cpp
+ 
+Finished building: ../src/GPIO_Driver/GPIO.cpp
+Building file: ../src/TPOmain.cpp
+ 
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/GPIOF_Driver/GPIOF.cpp
+../src/ADC_Driver/ADC.cpp: In function 'void ADC_SEQA_IRQHandler()':
+../src/ADC_Driver/ADC.cpp:55:11: warning: variable 'RS' set but not used [-Wunused-but-set-variable]
+   55 |  uint32_t RS;
+      |           ^~
+ 
+Finished building: ../src/ADC_Driver/ADC.cpp
+ 
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       55008 B        64 KB     83.94%
+        RamLoc16:        3224 B        16 KB     19.68%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52512	   2496	    728	  55736	   d9b8	LPC845_TPO.axf
+ 
+01:05:00 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+Finished building: ../src/TIMERSW_Driver/TIMERSW.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54960 B        64 KB     83.86%
+        RamLoc16:        3224 B        16 KB     19.68%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52464	   2496	    728	  55688	   d988	LPC845_TPO.axf
+ 
+01:09:46 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/UTILS/CALLBACK/CALLBACK.cpp
+Building file: ../src/UART0_Driver/uart0.cpp
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Building file: ../src/TECLADO_Driver/teclado.cpp
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/UTILS/CALLBACK/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/UTILS/CALLBACK/CALLBACK.d" -MT"src/UTILS/CALLBACK/CALLBACK.o" -MT"src/UTILS/CALLBACK/CALLBACK.d" -o "src/UTILS/CALLBACK/CALLBACK.o" "../src/UTILS/CALLBACK/CALLBACK.cpp"
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/UART0_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/UART0_Driver/uart0.d" -MT"src/UART0_Driver/uart0.o" -MT"src/UART0_Driver/uart0.d" -o "src/UART0_Driver/uart0.o" "../src/UART0_Driver/uart0.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TECLADO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TECLADO_Driver/teclado.d" -MT"src/TECLADO_Driver/teclado.o" -MT"src/TECLADO_Driver/teclado.d" -o "src/TECLADO_Driver/teclado.o" "../src/TECLADO_Driver/teclado.cpp"
+../src/TECLADO_Driver/teclado.cpp: In member function 'uint8_t teclado::TECLADO_Read()':
+../src/TECLADO_Driver/teclado.cpp:81:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   81 | }
+      | ^
+../src/TECLADO_Driver/teclado.cpp: In member function 'uint8_t teclado::leer()':
+../src/TECLADO_Driver/teclado.cpp:58:1: warning: control reaches end of non-void function [-Wreturn-type]
+   58 | }
+      | ^
+../src/TECLADO_Driver/teclado.cpp: In member function 'void teclado::antirebote()':
+../src/TECLADO_Driver/teclado.cpp:28:20: warning: 'codTeclaActual' is used uninitialized in this function [-Wuninitialized]
+   28 |  if(codTeclaActual == NO_TECLA)
+Finished building: ../src/UART0_Driver/uart0.cpp
+Finished building: ../src/UTILS/CALLBACK/CALLBACK.cpp
+ 
+ 
+Building file: ../src/SYSTICK_Driver/SYSTICK.cpp
+Building file: ../src/GPIO_Driver/GPIO.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/SYSTICK_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/SYSTICK_Driver/SYSTICK.d" -MT"src/SYSTICK_Driver/SYSTICK.o" -MT"src/SYSTICK_Driver/SYSTICK.d" -o "src/SYSTICK_Driver/SYSTICK.o" "../src/SYSTICK_Driver/SYSTICK.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIO_Driver/GPIO.d" -MT"src/GPIO_Driver/GPIO.o" -MT"src/GPIO_Driver/GPIO.d" -o "src/GPIO_Driver/GPIO.o" "../src/GPIO_Driver/GPIO.cpp"
+Finished building: ../src/TECLADO_Driver/teclado.cpp
+ 
+Building file: ../src/GPIOF_Driver/GPIOF.cpp
+Invoking: MCU C++ Compiler
+Finished building: ../src/TIMERSW_Driver/TIMERSW.cpp
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIOF_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIOF_Driver/GPIOF.d" -MT"src/GPIOF_Driver/GPIOF.o" -MT"src/GPIOF_Driver/GPIOF.d" -o "src/GPIOF_Driver/GPIOF.o" "../src/GPIOF_Driver/GPIOF.cpp"
+ 
+Building file: ../src/ADC_Driver/ADC.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/ADC_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/ADC_Driver/ADC.d" -MT"src/ADC_Driver/ADC.o" -MT"src/ADC_Driver/ADC.d" -o "src/ADC_Driver/ADC.o" "../src/ADC_Driver/ADC.cpp"
+Finished building: ../src/GPIO_Driver/GPIO.cpp
+ 
+Building file: ../src/TPOmain.cpp
+Finished building: ../src/SYSTICK_Driver/SYSTICK.cpp
+Invoking: MCU C++ Compiler
+ 
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+../src/ADC_Driver/ADC.cpp: In function 'void ADC_SEQA_IRQHandler()':
+../src/ADC_Driver/ADC.cpp:55:11: warning: variable 'RS' set but not used [-Wunused-but-set-variable]
+   55 |  uint32_t RS;
+      |           ^~
+Finished building: ../src/ADC_Driver/ADC.cpp
+ 
+Finished building: ../src/GPIOF_Driver/GPIOF.cpp
+ 
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54968 B        64 KB     83.87%
+        RamLoc16:        3224 B        16 KB     19.68%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52472	   2496	    728	  55696	   d990	LPC845_TPO.axf
+ 
+01:11:48 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54872 B        64 KB     83.73%
+        RamLoc16:        3224 B        16 KB     19.68%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52376	   2496	    728	  55600	   d930	LPC845_TPO.axf
+ 
+01:15:28 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54872 B        64 KB     83.73%
+        RamLoc16:        3224 B        16 KB     19.68%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52376	   2496	    728	  55600	   d930	LPC845_TPO.axf
+ 
+01:17:32 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+../src/TPOmain.cpp: In function 'int main()':
+../src/TPOmain.cpp:86:12: error: lvalue required as left operand of assignment
+   86 |   else if (1=Pulsador.Read())
+      |            ^
+make[1]: *** [src/subdir.mk:40: src/TPOmain.o] Error 1
+make: *** [makefile:58: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+01:17:57 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       54904 B        64 KB     83.78%
+        RamLoc16:        3224 B        16 KB     19.68%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52408	   2496	    728	  55632	   d950	LPC845_TPO.axf
+ 
+01:19:24 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+Building file: ../src/TPOmain.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_TPO\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/TPOmain.cpp
+ 
+Building target: LPC845_TPO.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       55024 B        64 KB     83.96%
+        RamLoc16:        3224 B        16 KB     19.68%
+Finished building target: LPC845_TPO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52528	   2496	    728	  55752	   d9c8	LPC845_TPO.axf
+ 
+01:47:43 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+make -r -j4 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  52528	   2496	    728	  55752	   d9c8	LPC845_TPO.axf
+ 

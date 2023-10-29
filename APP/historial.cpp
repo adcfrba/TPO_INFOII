@@ -27,8 +27,8 @@ Historial::~Historial()
 
 void Historial::on_buttonBox_hist_clicked(QAbstractButton *button)
 {
-    //mModel->clear();
-    //ui->tableView_historial->setModel(mModel);
+    mModel->clear();
+    mModel = new QSqlTableModel(this); //traigo todo
     mModel->setTable("Lecturas");
     mModel->select();
     ui->tableView_historial->setModel(mModel);

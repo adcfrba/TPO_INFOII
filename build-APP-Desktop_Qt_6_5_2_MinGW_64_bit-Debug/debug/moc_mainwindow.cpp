@@ -32,6 +32,8 @@
 #include <QtCore/qabstractitemmodel.h>
 #include <QtCharts/qxyseries.h>
 #include <QtCore/qabstractitemmodel.h>
+#include <QtNetwork/QSslPreSharedKeyAuthenticator>
+#include <QtNetwork/QSslError>
 #include <QtCore/qmetatype.h>
 
 #if __has_include(<QtCore/qtmochelpers.h>)
@@ -65,14 +67,34 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::stringData(
     "MainWindow",
     "on_pushButton_historial_clicked",
-    ""
+    "",
+    "on_pushButton_ox_clicked",
+    "on_pushButton_gas_clicked",
+    "on_pushButton_temp_clicked",
+    "deviceDiscovered",
+    "QBluetoothDeviceInfo",
+    "info",
+    "conectarBT",
+    "receive",
+    "analizarTrama",
+    "lectura"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[6];
+    uint offsetsAndSizes[26];
     char stringdata0[11];
     char stringdata1[32];
     char stringdata2[1];
+    char stringdata3[25];
+    char stringdata4[26];
+    char stringdata5[27];
+    char stringdata6[17];
+    char stringdata7[21];
+    char stringdata8[5];
+    char stringdata9[11];
+    char stringdata10[8];
+    char stringdata11[14];
+    char stringdata12[8];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -80,11 +102,31 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     {
         QT_MOC_LITERAL(0, 10),  // "MainWindow"
         QT_MOC_LITERAL(11, 31),  // "on_pushButton_historial_clicked"
-        QT_MOC_LITERAL(43, 0)   // ""
+        QT_MOC_LITERAL(43, 0),  // ""
+        QT_MOC_LITERAL(44, 24),  // "on_pushButton_ox_clicked"
+        QT_MOC_LITERAL(69, 25),  // "on_pushButton_gas_clicked"
+        QT_MOC_LITERAL(95, 26),  // "on_pushButton_temp_clicked"
+        QT_MOC_LITERAL(122, 16),  // "deviceDiscovered"
+        QT_MOC_LITERAL(139, 20),  // "QBluetoothDeviceInfo"
+        QT_MOC_LITERAL(160, 4),  // "info"
+        QT_MOC_LITERAL(165, 10),  // "conectarBT"
+        QT_MOC_LITERAL(176, 7),  // "receive"
+        QT_MOC_LITERAL(184, 13),  // "analizarTrama"
+        QT_MOC_LITERAL(198, 7)   // "lectura"
     },
     "MainWindow",
     "on_pushButton_historial_clicked",
-    ""
+    "",
+    "on_pushButton_ox_clicked",
+    "on_pushButton_gas_clicked",
+    "on_pushButton_temp_clicked",
+    "deviceDiscovered",
+    "QBluetoothDeviceInfo",
+    "info",
+    "conectarBT",
+    "receive",
+    "analizarTrama",
+    "lectura"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -96,7 +138,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -104,10 +146,24 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x08,    1 /* Private */,
+       1,    0,   62,    2, 0x08,    1 /* Private */,
+       3,    0,   63,    2, 0x08,    2 /* Private */,
+       4,    0,   64,    2, 0x08,    3 /* Private */,
+       5,    0,   65,    2, 0x08,    4 /* Private */,
+       6,    1,   66,    2, 0x08,    5 /* Private */,
+       9,    1,   69,    2, 0x08,    7 /* Private */,
+      10,    0,   72,    2, 0x08,    9 /* Private */,
+      11,    2,   73,    2, 0x08,   10 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 7,    8,
+    QMetaType::Void, 0x80000000 | 7,    8,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QStringList, 0x80000000 | 12,    2,    2,
 
        0        // eod
 };
@@ -122,7 +178,25 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
         // method 'on_pushButton_historial_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_ox_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_gas_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_temp_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'deviceDiscovered'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QBluetoothDeviceInfo &, std::false_type>,
+        // method 'conectarBT'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QBluetoothDeviceInfo &, std::false_type>,
+        // method 'receive'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'analizarTrama'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QStringList, std::false_type>,
+        QtPrivate::TypeAndForceComplete<lectura, std::false_type>
     >,
     nullptr
 } };
@@ -134,10 +208,34 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         (void)_t;
         switch (_id) {
         case 0: _t->on_pushButton_historial_clicked(); break;
+        case 1: _t->on_pushButton_ox_clicked(); break;
+        case 2: _t->on_pushButton_gas_clicked(); break;
+        case 3: _t->on_pushButton_temp_clicked(); break;
+        case 4: _t->deviceDiscovered((*reinterpret_cast< std::add_pointer_t<QBluetoothDeviceInfo>>(_a[1]))); break;
+        case 5: _t->conectarBT((*reinterpret_cast< std::add_pointer_t<QBluetoothDeviceInfo>>(_a[1]))); break;
+        case 6: _t->receive(); break;
+        case 7: _t->analizarTrama((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<lectura>>(_a[2]))); break;
         default: ;
         }
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+        case 4:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 0:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QBluetoothDeviceInfo >(); break;
+            }
+            break;
+        case 5:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 0:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QBluetoothDeviceInfo >(); break;
+            }
+            break;
+        }
     }
-    (void)_a;
 }
 
 const QMetaObject *MainWindow::metaObject() const
@@ -159,13 +257,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        if (_id < 8)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 8;
     }
     return _id;
 }

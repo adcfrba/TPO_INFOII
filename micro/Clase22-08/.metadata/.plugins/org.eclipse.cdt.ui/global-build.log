@@ -1,0 +1,325 @@
+21:26:00 **** Clean-only build of configuration Debug for project LPC845_CPP_R2052 ****
+make -r -j4 clean 
+rm -rf ./src/SYSTICK_Driver/SYSTICK.d ./src/SYSTICK_Driver/SYSTICK.o
+rm -rf ./src/GPIO_Driver/GPIO.d ./src/GPIO_Driver/GPIO.o
+rm -rf ./src/LPC845_CPP_R2052.d ./src/LPC845_CPP_R2052.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.d ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.d ./src/cr_startup_lpc84x.o ./src/crp.d ./src/crp.o ./src/mtb.d ./src/mtb.o
+rm -rf LPC845_CPP_R2052.axf
+ 
+21:26:02 **** Build of configuration Debug for project LPC845_CPP_R2052 ****
+make -r -j4 all 
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Building file: ../src/SYSTICK_Driver/SYSTICK.cpp
+Building file: ../src/LPC845_CPP_R2052.cpp
+Building file: ../src/GPIO_Driver/GPIO.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/SYSTICK_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/SYSTICK_Driver/SYSTICK.d" -MT"src/SYSTICK_Driver/SYSTICK.o" -MT"src/SYSTICK_Driver/SYSTICK.d" -o "src/SYSTICK_Driver/SYSTICK.o" "../src/SYSTICK_Driver/SYSTICK.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/LPC845_CPP_R2052.d" -MT"src/LPC845_CPP_R2052.o" -MT"src/LPC845_CPP_R2052.d" -o "src/LPC845_CPP_R2052.o" "../src/LPC845_CPP_R2052.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIO_Driver/GPIO.d" -MT"src/GPIO_Driver/GPIO.o" -MT"src/GPIO_Driver/GPIO.d" -o "src/GPIO_Driver/GPIO.o" "../src/GPIO_Driver/GPIO.cpp"
+In file included from ../src/TIMERSW_Driver/TIMERSW.cpp:8:
+../src/TIMERSW_Driver/TIMERSW.h:13:2: error: 'uint32_t' does not name a type
+   13 |  uint32_t tiempo;
+      |  ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:14:2: error: 'uint32_t' does not name a type
+   14 |  uint32_t fin;
+      |  ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:15:2: error: 'uint32_t' does not name a type
+   15 |  uint32_t tiempoRecarga;
+      |  ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:22:13: error: 'uint32_t' has not been declared
+   22 |  void start(uint32_t, uint32_t, void*);
+      |             ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:22:23: error: 'uint32_t' has not been declared
+   22 |  void start(uint32_t, uint32_t, void*);
+      |                       ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:24:2: error: 'uint32_t' does not name a type
+   24 |  uint32_t getFin() const {
+      |  ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:28:14: error: 'uint32_t' has not been declared
+   28 |  void setFin(uint32_t fin) {
+      |              ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:32:2: error: 'uint32_t' does not name a type
+   32 |  uint32_t getTiempo() const {
+      |  ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:36:17: error: 'uint32_t' has not been declared
+   36 |  void setTiempo(uint32_t tiempo) {
+      |                 ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:40:2: error: 'uint32_t' does not name a type
+   40 |  uint32_t getTiempoRecarga() const {
+      |  ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:44:24: error: 'uint32_t' has not been declared
+   44 |  void setTiempoRecarga(uint32_t tiempoRecarga) {
+      |                        ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:48:8: error: expected ';' at end of member declaration
+   48 |  void *getFunc const(void)
+      |        ^~~~~~~
+      |               ;
+../src/TIMERSW_Driver/TIMERSW.h:48:22: error: expected unqualified-id before 'void'
+   48 |  void *getFunc const(void)
+      |                      ^~~~
+../src/TIMERSW_Driver/TIMERSW.h:48:22: error: expected ')' before 'void'
+   48 |  void *getFunc const(void)
+      |                     ~^~~~
+      |                      )
+../src/TIMERSW_Driver/TIMERSW.h: In member function 'void TIMERSW::setFin(int)':
+../src/TIMERSW_Driver/TIMERSW.h:29:9: error: 'class TIMERSW' has no member named 'fin'
+   29 |   this->fin = fin;
+      |         ^~~
+../src/TIMERSW_Driver/TIMERSW.h: In member function 'void TIMERSW::setTiempo(int)':
+../src/TIMERSW_Driver/TIMERSW.h:37:9: error: 'class TIMERSW' has no member named 'tiempo'; did you mean 'setTiempo'?
+   37 |   this->tiempo = tiempo;
+      |         ^~~~~~
+      |         setTiempo
+../src/TIMERSW_Driver/TIMERSW.h: In member function 'void TIMERSW::setTiempoRecarga(int)':
+../src/TIMERSW_Driver/TIMERSW.h:45:9: error: 'class TIMERSW' has no member named 'tiempoRecarga'; did you mean 'setTiempoRecarga'?
+   45 |   this->tiempoRecarga = tiempoRecarga;
+      |         ^~~~~~~~~~~~~
+      |         setTiempoRecarga
+../src/TIMERSW_Driver/TIMERSW.h: In member function 'void TIMERSW::setFunc(void*)':
+../src/TIMERSW_Driver/TIMERSW.h:55:3: error: invalid use of member function 'void* TIMERSW::func()' (did you forget the '()' ?)
+   55 |   func = fun;
+      |   ^~~~
+      |       ()
+../src/TIMERSW_Driver/TIMERSW.cpp: At global scope:
+../src/TIMERSW_Driver/TIMERSW.cpp:19:6: error: variable or field 'start' declared void
+   19 | void TIMERSW::start(uint32_t tiempoTotal, uint32_t tiempoRec, void* func(void))
+      |      ^~~~~~~
+../src/TIMERSW_Driver/TIMERSW.cpp:19:21: error: 'uint32_t' was not declared in this scope
+   19 | void TIMERSW::start(uint32_t tiempoTotal, uint32_t tiempoRec, void* func(void))
+      |                     ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.cpp:19:43: error: 'uint32_t' was not declared in this scope
+   19 | void TIMERSW::start(uint32_t tiempoTotal, uint32_t tiempoRec, void* func(void))
+      |                                           ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.cpp:19:63: error: expected primary-expression before 'void'
+   19 | void TIMERSW::start(uint32_t tiempoTotal, uint32_t tiempoRec, void* func(void))
+      |                                                               ^~~~
+make[1]: *** [src/TIMERSW_Driver/subdir.mk:20: src/TIMERSW_Driver/TIMERSW.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Finished building: ../src/SYSTICK_Driver/SYSTICK.cpp
+Finished building: ../src/LPC845_CPP_R2052.cpp
+Finished building: ../src/GPIO_Driver/GPIO.cpp
+ 
+ 
+ 
+make: *** [makefile:53: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+21:35:33 **** Incremental Build of configuration Debug for project LPC845_CPP_R2052 ****
+make -r -j4 all 
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Building file: ../src/SYSTICK_Driver/SYSTICK.cpp
+Building file: ../src/GPIO_Driver/GPIO.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+Building file: ../src/LPC845_CPP_R2052.cpp
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/SYSTICK_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/SYSTICK_Driver/SYSTICK.d" -MT"src/SYSTICK_Driver/SYSTICK.o" -MT"src/SYSTICK_Driver/SYSTICK.d" -o "src/SYSTICK_Driver/SYSTICK.o" "../src/SYSTICK_Driver/SYSTICK.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIO_Driver/GPIO.d" -MT"src/GPIO_Driver/GPIO.o" -MT"src/GPIO_Driver/GPIO.d" -o "src/GPIO_Driver/GPIO.o" "../src/GPIO_Driver/GPIO.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/LPC845_CPP_R2052.d" -MT"src/LPC845_CPP_R2052.o" -MT"src/LPC845_CPP_R2052.d" -o "src/LPC845_CPP_R2052.o" "../src/LPC845_CPP_R2052.cpp"
+In file included from ../src/TIMERSW_Driver/TIMERSW.cpp:8:
+../src/TIMERSW_Driver/TIMERSW.h:13:2: error: 'uint32_t' does not name a type
+   13 |  uint32_t tiempo;
+      |  ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:14:2: error: 'uint32_t' does not name a type
+   14 |  uint32_t fin;
+      |  ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:15:2: error: 'uint32_t' does not name a type
+   15 |  uint32_t tiempoRecarga;
+      |  ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:22:13: error: 'uint32_t' has not been declared
+   22 |  void start(uint32_t, uint32_t, void*);
+      |             ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.h:22:23: error: 'uint32_t' has not been declared
+   22 |  void start(uint32_t, uint32_t, void*);
+      |                       ^~~~~~~~
+../src/TIMERSW_Driver/TIMERSW.cpp:20:6: error: no declaration matches 'void TIMERSW::start(uint32_t, uint32_t, void* (*)())'
+   20 | void TIMERSW::start(uint32_t tiempoTotal, uint32_t tiempoRec, void* func(void))
+      |      ^~~~~~~
+In file included from ../src/TIMERSW_Driver/TIMERSW.cpp:8:
+../src/TIMERSW_Driver/TIMERSW.h:22:7: note: candidate is: 'void TIMERSW::start(int, int, void*)'
+   22 |  void start(uint32_t, uint32_t, void*);
+      |       ^~~~~
+../src/TIMERSW_Driver/TIMERSW.h:11:7: note: 'class TIMERSW' defined here
+   11 | class TIMERSW {
+      |       ^~~~~~~
+../src/TIMERSW_Driver/TIMERSW.cpp: In member function 'void TIMERSW::descontar()':
+../src/TIMERSW_Driver/TIMERSW.cpp:31:5: error: 'tiempo' was not declared in this scope
+   31 |  if(tiempo>0)
+      |     ^~~~~~
+../src/TIMERSW_Driver/TIMERSW.cpp:33:9: error: 'tiempo' was not declared in this scope
+   33 |  if(0 ==tiempo)
+      |         ^~~~~~
+../src/TIMERSW_Driver/TIMERSW.cpp:35:3: error: 'fin' was not declared in this scope
+   35 |   fin =1;
+      |   ^~~
+../src/TIMERSW_Driver/TIMERSW.cpp:36:12: error: 'tiempoRecarga' was not declared in this scope
+   36 |   tiempo = tiempoRecarga;
+      |            ^~~~~~~~~~~~~
+make[1]: *** [src/TIMERSW_Driver/subdir.mk:20: src/TIMERSW_Driver/TIMERSW.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Finished building: ../src/LPC845_CPP_R2052.cpp
+Finished building: ../src/SYSTICK_Driver/SYSTICK.cpp
+Finished building: ../src/GPIO_Driver/GPIO.cpp
+ 
+ 
+ 
+make: *** [makefile:53: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+21:41:47 **** Incremental Build of configuration Debug for project LPC845_CPP_R2052 ****
+make -r -j4 all 
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Building file: ../src/SYSTICK_Driver/SYSTICK.cpp
+Building file: ../src/GPIO_Driver/GPIO.cpp
+Building file: ../src/LPC845_CPP_R2052.cpp
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/SYSTICK_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/SYSTICK_Driver/SYSTICK.d" -MT"src/SYSTICK_Driver/SYSTICK.o" -MT"src/SYSTICK_Driver/SYSTICK.d" -o "src/SYSTICK_Driver/SYSTICK.o" "../src/SYSTICK_Driver/SYSTICK.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIO_Driver/GPIO.d" -MT"src/GPIO_Driver/GPIO.o" -MT"src/GPIO_Driver/GPIO.d" -o "src/GPIO_Driver/GPIO.o" "../src/GPIO_Driver/GPIO.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/LPC845_CPP_R2052.d" -MT"src/LPC845_CPP_R2052.o" -MT"src/LPC845_CPP_R2052.d" -o "src/LPC845_CPP_R2052.o" "../src/LPC845_CPP_R2052.cpp"
+../src/TIMERSW_Driver/TIMERSW.cpp:18:6: error: no declaration matches 'void TIMERSW::start(uint32_t, uint32_t, void* (*)())'
+   18 | void TIMERSW::start(uint32_t tiempoTotal, uint32_t tiempoRec, void* func(void))
+      |      ^~~~~~~
+In file included from C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc/Defines.h:14,
+                 from ../src/TIMERSW_Driver/TIMERSW.cpp:7:
+C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver/TIMERSW.h:22:7: note: candidate is: 'void TIMERSW::start(uint32_t, uint32_t, void*)'
+   22 |  void start(uint32_t, uint32_t, void*);
+      |       ^~~~~
+C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver/TIMERSW.h:11:7: note: 'class TIMERSW' defined here
+   11 | class TIMERSW {
+      |       ^~~~~~~
+make[1]: *** [src/TIMERSW_Driver/subdir.mk:20: src/TIMERSW_Driver/TIMERSW.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Finished building: ../src/LPC845_CPP_R2052.cpp
+ 
+Finished building: ../src/SYSTICK_Driver/SYSTICK.cpp
+Finished building: ../src/GPIO_Driver/GPIO.cpp
+ 
+ 
+make: *** [makefile:53: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+21:42:17 **** Incremental Build of configuration Debug for project LPC845_CPP_R2052 ****
+make -r -j4 all 
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Building file: ../src/SYSTICK_Driver/SYSTICK.cpp
+Building file: ../src/GPIO_Driver/GPIO.cpp
+Building file: ../src/LPC845_CPP_R2052.cpp
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/SYSTICK_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/SYSTICK_Driver/SYSTICK.d" -MT"src/SYSTICK_Driver/SYSTICK.o" -MT"src/SYSTICK_Driver/SYSTICK.d" -o "src/SYSTICK_Driver/SYSTICK.o" "../src/SYSTICK_Driver/SYSTICK.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIO_Driver/GPIO.d" -MT"src/GPIO_Driver/GPIO.o" -MT"src/GPIO_Driver/GPIO.d" -o "src/GPIO_Driver/GPIO.o" "../src/GPIO_Driver/GPIO.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/LPC845_CPP_R2052.d" -MT"src/LPC845_CPP_R2052.o" -MT"src/LPC845_CPP_R2052.d" -o "src/LPC845_CPP_R2052.o" "../src/LPC845_CPP_R2052.cpp"
+../src/TIMERSW_Driver/TIMERSW.cpp:18:6: error: no declaration matches 'void TIMERSW::start(uint32_t, uint32_t, void* (*)())'
+   18 | void TIMERSW::start(uint32_t tiempoTotal, uint32_t tiempoRec, void* func(void))
+      |      ^~~~~~~
+In file included from C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc/Defines.h:14,
+                 from ../src/TIMERSW_Driver/TIMERSW.cpp:7:
+C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver/TIMERSW.h:21:7: note: candidate is: 'void TIMERSW::start(uint32_t, uint32_t, void*)'
+   21 |  void start(uint32_t, uint32_t, void*);
+      |       ^~~~~
+C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver/TIMERSW.h:10:7: note: 'class TIMERSW' defined here
+   10 | class TIMERSW {
+      |       ^~~~~~~
+make[1]: *** [src/TIMERSW_Driver/subdir.mk:20: src/TIMERSW_Driver/TIMERSW.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Finished building: ../src/SYSTICK_Driver/SYSTICK.cpp
+Finished building: ../src/LPC845_CPP_R2052.cpp
+Finished building: ../src/GPIO_Driver/GPIO.cpp
+ 
+ 
+ 
+make: *** [makefile:53: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+21:42:52 **** Incremental Build of configuration Debug for project LPC845_CPP_R2052 ****
+make -r -j4 all 
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Building file: ../src/SYSTICK_Driver/SYSTICK.cpp
+Building file: ../src/GPIO_Driver/GPIO.cpp
+Invoking: MCU C++ Compiler
+Building file: ../src/LPC845_CPP_R2052.cpp
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/GPIO_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/GPIO_Driver/GPIO.d" -MT"src/GPIO_Driver/GPIO.o" -MT"src/GPIO_Driver/GPIO.d" -o "src/GPIO_Driver/GPIO.o" "../src/GPIO_Driver/GPIO.cpp"
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/SYSTICK_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/SYSTICK_Driver/SYSTICK.d" -MT"src/SYSTICK_Driver/SYSTICK.o" -MT"src/SYSTICK_Driver/SYSTICK.d" -o "src/SYSTICK_Driver/SYSTICK.o" "../src/SYSTICK_Driver/SYSTICK.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/LPC845_CPP_R2052.d" -MT"src/LPC845_CPP_R2052.o" -MT"src/LPC845_CPP_R2052.d" -o "src/LPC845_CPP_R2052.o" "../src/LPC845_CPP_R2052.cpp"
+../src/TIMERSW_Driver/TIMERSW.cpp: In member function 'void TIMERSW::start(uint32_t, uint32_t, void* (*)())':
+../src/TIMERSW_Driver/TIMERSW.cpp:23:8: error: 'class TIMERSW' has no member named 'setFin'
+   23 |  this->setFin(0);
+      |        ^~~~~~
+../src/TIMERSW_Driver/TIMERSW.cpp:24:8: error: invalid use of member function 'void* TIMERSW::func()' (did you forget the '()' ?)
+   24 |  this->func =func;
+      |  ~~~~~~^~~~
+      |            ()
+make[1]: *** [src/TIMERSW_Driver/subdir.mk:20: src/TIMERSW_Driver/TIMERSW.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Finished building: ../src/SYSTICK_Driver/SYSTICK.cpp
+Finished building: ../src/GPIO_Driver/GPIO.cpp
+ 
+ 
+Finished building: ../src/LPC845_CPP_R2052.cpp
+ 
+make: *** [makefile:53: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+21:44:06 **** Incremental Build of configuration Debug for project LPC845_CPP_R2052 ****
+make -r -j4 all 
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Building file: ../src/aeabi_romdiv_patch.s
+Building file: ../src/cr_cpp_config.cpp
+Invoking: MCU C++ Compiler
+Building file: ../src/cr_startup_lpc84x.cpp
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+Invoking: MCU Assembler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/cr_cpp_config.d" -MT"src/cr_cpp_config.o" -MT"src/cr_cpp_config.d" -o "src/cr_cpp_config.o" "../src/cr_cpp_config.cpp"
+arm-none-eabi-gcc -c -x assembler-with-cpp -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC84X__ -g3 -mcpu=cortex-m0 -mthumb -o "src/aeabi_romdiv_patch.o" "../src/aeabi_romdiv_patch.s"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/cr_startup_lpc84x.d" -MT"src/cr_startup_lpc84x.o" -MT"src/cr_startup_lpc84x.d" -o "src/cr_startup_lpc84x.o" "../src/cr_startup_lpc84x.cpp"
+../src/TIMERSW_Driver/TIMERSW.cpp: In member function 'void TIMERSW::start(uint32_t, uint32_t, void* (*)())':
+../src/TIMERSW_Driver/TIMERSW.cpp:23:8: error: invalid use of member function 'void* TIMERSW::func()' (did you forget the '()' ?)
+   23 |  this->func =func();
+      |  ~~~~~~^~~~
+      |            ()
+make[1]: *** [src/TIMERSW_Driver/subdir.mk:20: src/TIMERSW_Driver/TIMERSW.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Finished building: ../src/cr_startup_lpc84x.cpp
+ 
+Finished building: ../src/cr_cpp_config.cpp
+ 
+Finished building: ../src/aeabi_romdiv_patch.s
+ 
+make: *** [makefile:53: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+21:44:30 **** Incremental Build of configuration Debug for project LPC845_CPP_R2052 ****
+make -r -j4 all 
+Building file: ../src/TIMERSW_Driver/TIMERSW.cpp
+Building file: ../src/crp.c
+Building file: ../src/mtb.c
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\inc" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_CPP_R2052\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/TIMERSW_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TIMERSW_Driver/TIMERSW.d" -MT"src/TIMERSW_Driver/TIMERSW.o" -MT"src/TIMERSW_Driver/TIMERSW.d" -o "src/TIMERSW_Driver/TIMERSW.o" "../src/TIMERSW_Driver/TIMERSW.cpp"
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/mtb.d" -MT"src/mtb.o" -MT"src/mtb.d" -o "src/mtb.o" "../src/mtb.c"
+../src/TIMERSW_Driver/TIMERSW.cpp: In member function 'void TIMERSW::start(uint32_t, uint32_t, void* (*)())':
+../src/TIMERSW_Driver/TIMERSW.cpp:23:12: error: lvalue required as left operand of assignment
+   23 |  this->func() =func();
+      |  ~~~~~~~~~~^~
+make[1]: *** [src/TIMERSW_Driver/subdir.mk:20: src/TIMERSW_Driver/TIMERSW.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Finished building: ../src/mtb.c
+Finished building: ../src/crp.c
+ 
+ 
+make: *** [makefile:53: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.

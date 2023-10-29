@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LPC845_GPIO_Parpadeo_Led&apos; to &apos;LPC845_GPIO_PROYECTOS&apos;" description="Rename resource &apos;LPC845_GPIO_Parpadeo_Led&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/LPC845_GPIO_Parpadeo_Led" name="LPC845_GPIO_PROYECTOS" stamp="1691538602288" updateReferences="true"/>
+</session>
