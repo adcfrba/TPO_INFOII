@@ -13,7 +13,6 @@ public:
 	uint32_t tiempo;
 	uint8_t fin;
 	uint32_t tiempoRecarga;
-	uint32_t activo;
 	void (*func)(void);
 
 	TIMERSW();

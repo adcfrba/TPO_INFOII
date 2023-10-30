@@ -13,7 +13,6 @@ TIMERSW::TIMERSW(){
 	this->tiempo = 0;
 	this->tiempoRecarga = 0;
 	this->fin = 0;
-	this->activo = 0;
 	this->func = nullptr;
 }
 
@@ -22,14 +21,14 @@ void TIMERSW::Start(uint32_t tiempo, uint32_t tiempoRecarga, void (*func)(void))
 	this->tiempoRecarga = tiempoRecarga;
 	this->fin = 0;
 	this->func = func;
-	this->activo = 1;
 
 	vCallBack.push_back(this);
 }
 
 void TIMERSW::Stop(void)
 {
-	this->activo = 0;
+	this->tiempo = 0;
+	this->fin = 1;
 }
 
 void TIMERSW::Callback(void)
@@ -38,7 +37,7 @@ void TIMERSW::Callback(void)
 }
 
 void TIMERSW::Descontar(void){
-	if(tiempo > 0 && activo==1){
+	if(tiempo > 0 ){
 		tiempo--;
 		if(0 == tiempo){
 			func();

@@ -6,7 +6,7 @@
  * Generated linker script file for LPC845
  * Created from memory.ldt by FMCreateLinkMemory
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.7.1 [Build 9221] [2023-03-28] on 29 oct. 2023 01:47:43
+ * MCUXpresso IDE v11.7.1 [Build 9221] [2023-03-28] on 30 oct. 2023 19:08:32
  */
 
 MEMORY

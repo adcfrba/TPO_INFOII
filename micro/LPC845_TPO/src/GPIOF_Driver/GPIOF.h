@@ -7,7 +7,7 @@
 #include "defines.h"
 #ifndef GPIOF_DRIVER_GPIOF_H_
 #define GPIOF_DRIVER_GPIOF_H_
-#define CANT_ESTADOS_ESTABLES 4
+#define CANT_ESTADOS_ESTABLES 5
 #define CANT_ENTRADAS 8
 
 class GPIOF : public Gpio, public CALLBACK{
