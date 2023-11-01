@@ -1,6 +1,0 @@
-../src/LPC845_CPP_R2052.cpp:27:5:int main()	8	static
-../src/LPC845_CPP_R2052.cpp:46:6:void Led()	8	static
-../src/LPC845_CPP_R2052.cpp:58:6:void Print()	8	static
-../src/LPC845_CPP_R2052.cpp:71:6:void maqEstados()	8	static
-../src/LPC845_CPP_R2052.cpp:75:1:void __static_initialization_and_destruction_0(int, int)	16	static
-../src/LPC845_CPP_R2052.cpp:75:1:cpp)	8	static

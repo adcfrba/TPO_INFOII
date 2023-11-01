@@ -1,6 +1,0 @@
-"Task Aware Debugger for GDB" version 11.7.1 (202303141002)
-(c) 2016-2022 NXP Semiconductors, Inc.
-==================================
-16:46:16.706 INFO: [ZephyrRTOS] .config file could not be read [C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\Debug\.config (El sistema no puede encontrar el archivo especificado)]
-16:46:16.706 INFO: [TadModel] DSF session ID 5 has started.
-16:46:24.913 INFO: [TadModel] DSF session ID 5 has ended.

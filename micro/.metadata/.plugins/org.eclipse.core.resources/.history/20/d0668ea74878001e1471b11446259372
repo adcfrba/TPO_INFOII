@@ -1,0 +1,17 @@
+/*
+ * lcd.h
+ *
+ *  Created on: 31 oct. 2023
+ *      Author: notebook
+ */
+
+#ifndef LCD_DRIVER_LCD_H_
+#define LCD_DRIVER_LCD_H_
+
+class lcd {
+public:
+	lcd();
+	virtual ~lcd();
+};
+
+#endif /* LCD_DRIVER_LCD_H_ */

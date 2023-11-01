@@ -16,10 +16,10 @@
 #include "uart0.h"
 #include <math.h>
 
-#define TEMPERATURA 0
-#define GAS 1
-#define RL 10000
-#define RO 0.025 //ANALIZAR
+#define TEMPERATURA 1
+#define GAS 0
+#define RL 1000 //LA CAMBIAMOS EN EL MODULO
+#define RO 50 //ANALIZAR
 #define ALERTA 0
 #define OK 1
 #include <stdint.h>

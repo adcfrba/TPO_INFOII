@@ -1,9 +1,0 @@
-../src/i2c_driver.c:29:6:IIC_Start	8	static
-../src/i2c_driver.c:66:6:IIC_Stop	8	static
-../src/i2c_driver.c:79:9:IIC_Read_Clock	16	static
-../src/i2c_driver.c:111:6:IIC_Clock	8	static
-../src/i2c_driver.c:127:9:IIC_Write	24	static
-../src/i2c_driver.c:147:9:IIC_Read	24	static
-../src/i2c_driver.c:179:9:IIC_Escribir	32	static
-../src/i2c_driver.c:208:9:IIC_Leer	32	static
-../src/i2c_driver.c:235:6:Demora_FOR	24	static

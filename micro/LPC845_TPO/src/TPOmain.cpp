@@ -55,7 +55,7 @@ TIMERSW timerPanico;
 
 int main(void) {
 
-	inicializacion(0, 9600, 1);
+	inicializacion(0, (uint8_t)9600, 1);
 
     while(1) {
     	if((1==Pulsador.Read()) && (0==flagPanico))
@@ -134,10 +134,13 @@ void leerData(void)
 {
 	//analisis uno por uno del sensor
 	static uint8_t CanalADC = 0;
+	gas = ADC_Cuentas[CanalADC];
+
 	if (0 == CanalADC)
 	{
 		temp = ADC_Cuentas[CanalADC];
 		//ANALISIS DE VALORES VALIDOS
+		//AGREGAR FILTROS
 		CanalADC++;
 	}
 	else if (1 == CanalADC)
@@ -152,6 +155,7 @@ void leerData(void)
 		gas = -1;
 		CanalADC = 0;
 	}
+
 	//sprintf((char*)bufferADC, "ADC=%01d.%d", ADC_Cuentas[0]/1000, ADC_Cuentas[0] %1000);
 	//sprintf((char*)Buffer, "ADC=%d", ADC_Cuentas[0]); POTE
 
@@ -167,8 +171,8 @@ void inicializacion(uint8_t adc, uint8_t baudrate, uint8_t leds)
     ADC_Inicializar(adc); //HABILITO EL DEL PIN07, DONDE ESTA EL POTE
 	uart0Init(baudrate); //inicializamos la uart a utilizar
 
-	//timerDisparoADC.Start(200,200, disparoADC); //CADA 0.2 SEG LEE
-	//timerLecturaADC.Start(1000, 1000, leerData); //CADA 1 SEG LO MANDA A UN BUFFER TEMPORAL
+	timerDisparoADC.Start(200,200, disparoADC); //CADA 0.2 SEG LEE
+	timerLecturaADC.Start(1000, 1000, leerData); //CADA 1 SEG LO MANDA A UN BUFFER TEMPORAL
 	timerUART0.Start(1000,1000, enviarTrama); //CADA 2 SEG ENVIA
 
 	//SETEO DE LEDS APAGADOS

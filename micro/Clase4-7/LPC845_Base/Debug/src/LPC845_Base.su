@@ -1,3 +1,0 @@
-../src/LPC845_Base.cpp:8:5:int main()	56	static
-../src/LPC845_Base.cpp:38:1:void __static_initialization_and_destruction_0(int, int)	16	static
-../src/LPC845_Base.cpp:38:1:cpp)	8	static

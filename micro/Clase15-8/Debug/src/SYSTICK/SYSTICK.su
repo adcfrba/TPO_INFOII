@@ -1,2 +1,0 @@
-../src/SYSTICK/SYSTICK.c:15:6:SysTick_Handler	8	static
-../src/SYSTICK/SYSTICK.c:55:10:SysTick_Inic	16	static

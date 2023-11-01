@@ -1,2 +1,0 @@
-../src/DRIVER_TIMER/TIMER_DRIVER.c:17:6:SysTick_Handler	8	static
-../src/DRIVER_TIMER/TIMER_DRIVER.c:67:10:SysTick_Inic	16	static

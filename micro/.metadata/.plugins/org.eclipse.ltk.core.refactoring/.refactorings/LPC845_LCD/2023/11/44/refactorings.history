@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LPC845_LCD/src/mainADC.cpp&apos; to &apos;mainLCD.cpp&apos;" description="Rename resource &apos;mainADC.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/mainADC.cpp" name="mainLCD.cpp" stamp="1698798195735" updateReferences="true"/>
+</session>

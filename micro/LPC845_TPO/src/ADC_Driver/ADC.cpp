@@ -51,8 +51,8 @@ void ADC_SEQA_IRQHandler(void)
 
 	uint32_t	Temporal = ADC0->SEQ_GDAT[0];
 	uint32_t 	Canal = (Temporal >> 26) & 0x0f;
-	uint32_t	Valor_Temporal;
-	uint32_t	RS;
+	float	Valor_Temporal;
+	float	RS;
 
 //	Temporal = Temporal >> 4;
 //	Temporal &= 0xfff;
@@ -63,11 +63,11 @@ void ADC_SEQA_IRQHandler(void)
 	case GAS:
 		Valor_Temporal = (Valor_Temporal * 5000) / 4096; //VOLTAJE en mV
 		RS = ((5000-Valor_Temporal)/Valor_Temporal)*RL; //usamos la ecuacion calculada 124
-		Valor_Temporal = 125*pow(RS/RO, -1,607);
+		Valor_Temporal = 125*pow(RS/RO, -1.607);
 		break;
 	case TEMPERATURA:
 		Valor_Temporal = (Valor_Temporal *5000) / 4096;
-		//Valor_Temporal = (Valor_Temporal *1000) /50;//LM35 10mV=1C
+		Valor_Temporal = (Valor_Temporal *1000) /50;//LM35 10mV=1C
 		break;
 	default:
 		return;

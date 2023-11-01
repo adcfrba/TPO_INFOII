@@ -3200,3 +3200,1514 @@ org.eclipse.swt.SWTException: Widget is disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SESSION 2023-10-31 11:40:45.398 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2023-10-31 11:41:34.300
+!MESSAGE Recreating part support. No part support available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-10-31 11:41:39.249
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\notebook'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:07:57.281
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:07:58.299
+!MESSAGE RedlinkServer telnet session connected on port 3025->52696 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:08:27.156
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:08:30.844
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=52706, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 15:08:34.299
+!MESSAGE Telnet session connected on port 3330->52722 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:23:28.707
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:23:30.998
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:23:32.011
+!MESSAGE RedlinkServer telnet session connected on port 3025->52911 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:23:32.776
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=52912, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 15:23:35.505
+!MESSAGE Telnet session connected on port 3330->52924 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:27:56.286
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:27:58.529
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:27:59.542
+!MESSAGE RedlinkServer telnet session connected on port 3025->52954 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:28:00.306
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=52955, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 15:28:03.242
+!MESSAGE Telnet session connected on port 3330->52969 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:35:25.528
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:35:28.081
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:35:29.111
+!MESSAGE RedlinkServer telnet session connected on port 3025->53022 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:35:29.916
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53023, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 15:35:32.942
+!MESSAGE Telnet session connected on port 3330->53037 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:43:50.012
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:43:52.351
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:43:53.367
+!MESSAGE RedlinkServer telnet session connected on port 3025->53054 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:43:54.146
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53055, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 15:43:57.098
+!MESSAGE Telnet session connected on port 3330->53069 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:46:52.594
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:46:54.782
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:46:55.796
+!MESSAGE RedlinkServer telnet session connected on port 3025->53098 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:46:56.567
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53099, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 15:46:59.243
+!MESSAGE Telnet session connected on port 3330->53113 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:47:31.217
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:47:33.473
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:47:34.484
+!MESSAGE RedlinkServer telnet session connected on port 3025->53115 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:47:35.244
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53116, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 15:47:37.962
+!MESSAGE Telnet session connected on port 3330->53129 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:49:00.761
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@7e2013b1): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@2a9f88ed): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@66e6d2a6): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@2a9f88ed): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3' resulted in a rejected execution exception.]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2023-10-31 15:49:00.761
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@2a9f88ed): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 15:49:00.761
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@66e6d2a6): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@2a9f88ed): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:49:00.763
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb.ui 4 0 2023-10-31 15:49:00.763
+!MESSAGE Service is not available.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 15:49:00.763
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.GdbDisconnectCommand$1@24411231): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=0 Service is not available.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:49:00.764
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:49:07.441
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:49:10.059
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53132, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 15:49:13.070
+!MESSAGE Telnet session connected on port 3330->53146 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:51:44.431
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@b934e1a): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@3c25476d): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@5c0f62e8): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@3c25476d): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3' resulted in a rejected execution exception.]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2023-10-31 15:51:44.431
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@3c25476d): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 15:51:44.431
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@5c0f62e8): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@3c25476d): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:51:44.433
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb.ui 4 0 2023-10-31 15:51:44.433
+!MESSAGE Service is not available.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 15:51:44.433
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.GdbDisconnectCommand$1@76fc5fc7): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=0 Service is not available.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:51:44.434
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:51:47.163
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:51:49.643
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53159, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 15:51:52.403
+!MESSAGE Telnet session connected on port 3330->53171 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:52:20.695
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@3df999b8): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:52:20.696
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@53cfa2a3): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:53:39.185
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@548d63e0): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:53:39.187
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@25b9a6c4): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:53:49.418
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:53:51.709
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:53:52.720
+!MESSAGE RedlinkServer telnet session connected on port 3025->53175 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:53:53.481
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53176, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 15:53:56.393
+!MESSAGE Telnet session connected on port 3330->53190 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:54:24.407
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@1e8f7fa7): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:54:24.408
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@626154c9): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:54:25.828
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@76602938): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:54:25.830
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@4c508222): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:54:26.746
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@56f30b06): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:54:26.747
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@2b2ffb04): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:54:49.127
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@7eb618c1): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:54:49.131
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@115695eb): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:54:56.394
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@4e468c17): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:54:56.396
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@5468684a): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:55:00.837
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:55:03.026
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:55:04.042
+!MESSAGE RedlinkServer telnet session connected on port 3025->53192 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:55:04.828
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53193, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 15:55:07.555
+!MESSAGE Telnet session connected on port 3330->53206 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:55:40.467
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@21eaabd4): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:55:40.468
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@6fb9c73c): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:55:42.442
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@314ca2a7): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:55:42.443
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@542a6430): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:56:10.023
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@dc2448d): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@790b29b4): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@256f6220): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@790b29b4): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3' resulted in a rejected execution exception.]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2023-10-31 15:56:10.023
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@790b29b4): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 15:56:10.023
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@256f6220): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@790b29b4): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:56:10.025
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb.ui 4 0 2023-10-31 15:56:10.025
+!MESSAGE Service is not available.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 15:56:10.025
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.GdbDisconnectCommand$1@6e79f60d): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=0 Service is not available.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 15:56:10.026
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 15:56:17.435
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 15:56:20.507
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53236, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 15:56:23.434
+!MESSAGE Telnet session connected on port 3330->53250 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 10004 2023-10-31 17:17:38.749
+!MESSAGE Failed to execute MI command:
+-data-list-register-values x 25
+Error message from debugger back end:
+Selected thread is running.
+!STACK 0
+java.lang.Exception: Selected thread is running.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-10-31 17:17:38.984
+!MESSAGE 10: Could not start execution from stop: Ee(AD). Probe disconnected - Check connection and power
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-10-31 17:17:38.984
+!MESSAGE 10: Could not start execution from stop: Ee(AD). Probe disconnected - Check connection and power
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-10-31 17:17:38.984
+!MESSAGE Debugging context: LPC845_ADC LinkServer Debug (1)
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-10-31 17:17:41.810
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 17:17:41.900
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@b72f6af): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2023-10-31 17:17:41.900
+!MESSAGE Connection is shut down
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 17:19:20.042
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 17:19:22.364
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 17:19:23.378
+!MESSAGE RedlinkServer telnet session connected on port 3025->53771 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 17:19:40.339
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 17:19:42.457
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 17:19:43.468
+!MESSAGE RedlinkServer telnet session connected on port 3025->53773 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 17:19:44.231
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53774, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 17:19:46.964
+!MESSAGE Telnet session connected on port 3330->53786 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 10004 2023-10-31 18:47:02.460
+!MESSAGE Failed to execute MI command:
+-data-list-register-values x 25
+Error message from debugger back end:
+Selected thread is running.
+!STACK 0
+java.lang.Exception: Selected thread is running.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-10-31 18:47:02.683
+!MESSAGE 10: Could not start execution from stop: Ee(A5). Wire protocol for probe is not initialized
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-10-31 18:47:02.683
+!MESSAGE 10: Could not start execution from stop: Ee(A5). Wire protocol for probe is not initialized
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-10-31 18:47:02.683
+!MESSAGE Debugging context: LPC845_ADC LinkServer Debug (1)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 18:47:05.507
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@59be500a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2023-10-31 18:47:05.507
+!MESSAGE Connection is shut down
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 18:47:11.159
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 18:47:13.416
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 18:47:14.433
+!MESSAGE RedlinkServer telnet session connected on port 3025->54746 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 18:47:15.208
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=54747, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 18:47:17.983
+!MESSAGE Telnet session connected on port 3330->54759 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 19:27:58.167
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 19:28:00.508
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 19:28:01.519
+!MESSAGE RedlinkServer telnet session connected on port 3025->55085 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 19:28:02.282
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55086, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 19:28:05.392
+!MESSAGE Telnet session connected on port 3330->55101 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:02:19.866
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:02:22.676
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:02:23.691
+!MESSAGE RedlinkServer telnet session connected on port 3025->55382 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:02:24.521
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55383, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 20:02:27.408
+!MESSAGE Telnet session connected on port 3330->55395 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.583
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.583
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.583
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@7c3d17ab): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.585
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.585
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.585
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@21b429e0): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.586
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.586
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.586
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@52fb4011): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.587
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.587
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.587
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@311dc58): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.588
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.588
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.589
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@5aca71): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.590
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.590
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.590
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@55d44652): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.591
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.591
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.591
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@69736da2): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.592
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.592
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.592
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@51f34fb3): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.593
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.593
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.593
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@6ab001fc): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.595
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.595
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.595
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@6459a3d3): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.596
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.596
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.596
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@c1d571d): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.597
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.597
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.597
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@45ac3781): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.598
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.598
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:02:33.598
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@71826efb): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:09:23.506
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:09:25.849
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:09:26.859
+!MESSAGE RedlinkServer telnet session connected on port 3025->55578 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:09:27.640
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55579, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 20:09:30.157
+!MESSAGE Telnet session connected on port 3331->55591 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:42.526
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@46363b69): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:42.527
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@15719ce): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:42.528
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@6cde9c4d): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:43.975
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@44752c80): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:43.977
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@3ec1d7e8): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:43.979
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@adb3185): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.258
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.258
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.258
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@59c509ac): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.259
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.259
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.259
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@29a938bf): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.260
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.260
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.260
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@4fd4d486): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.261
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.261
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.261
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@267cb149): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.262
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.262
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.262
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@70a970f6): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.264
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.264
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.264
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@155744f5): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.265
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.265
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.265
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@59de2118): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.266
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.266
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.266
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@61929d1a): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.267
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.267
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.267
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@63ed83f9): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.269
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.269
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.269
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@2a35f8f4): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.270
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.270
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.270
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@72bc5a87): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.271
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.271
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:45.271
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@399fbf47): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  children=[]' resulted in a rejected execution exception.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:47.625
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@68ebad35): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:47.627
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@67709ecf): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:47.629
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@87b17c6): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:52.578
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@3e0020bb): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:52.579
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@3bcafeea): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:11:52.581
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@6e115878): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:12:12.380
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:12:14.690
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:12:15.705
+!MESSAGE RedlinkServer telnet session connected on port 3025->55605 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:12:16.482
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55606, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 20:12:19.023
+!MESSAGE Telnet session connected on port 3331->55617 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:13:00.748
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@3d1cf346): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:13:00.750
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@38273966): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:13:00.752
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@3e3c809b): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:14:01.315
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@23994ade): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:14:01.317
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@5fcc15d5): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:14:01.318
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@7eb6b077): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:15:04.608
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@62ae2512): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:15:04.610
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@185feb8c): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:15:04.611
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@52125154): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:15:06.958
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@1479d0d7): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:15:06.959
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@1c048f41): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:15:06.960
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@1cd382c5): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:17:35.363
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@77394ed9): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:17:35.364
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@23def9d2): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:17:35.365
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@e305f70): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:17:37.805
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@4aaa1c6b): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:17:37.807
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@2b8a4025): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:17:37.809
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@364eef4): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:17:51.423
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@453de87f): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:17:51.426
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@44f8bf66): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:17:51.427
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@4176cb20): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:17:59.742
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:18:02.088
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:18:03.098
+!MESSAGE RedlinkServer telnet session connected on port 3025->55657 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:18:11.452
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:18:13.593
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:18:14.607
+!MESSAGE RedlinkServer telnet session connected on port 3025->55661 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:18:15.389
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55662, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 20:18:18.066
+!MESSAGE Telnet session connected on port 3331->55675 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:25:02.193
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:25:04.478
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:25:05.490
+!MESSAGE RedlinkServer telnet session connected on port 3025->55691 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:25:06.256
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55692, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 20:25:08.929
+!MESSAGE Telnet session connected on port 3331->55705 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:26:16.364
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@7b2c4896): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:26:16.366
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@6304fa8c): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:26:16.368
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@13a46bba): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:26:16.369
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@40d35360): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:26:16.370
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@7b141d44): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:26:16.371
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@19e4c5e0): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:26:16.373
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@62ff5ed2): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:26:16.374
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@53e360b): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:26:16.375
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@167c5fcd): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:28:25.572
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:28:27.805
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:28:28.819
+!MESSAGE RedlinkServer telnet session connected on port 3025->55735 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:28:29.601
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55736, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 20:28:32.137
+!MESSAGE Telnet session connected on port 3331->55748 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:34:08.005
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:34:10.275
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:34:11.289
+!MESSAGE RedlinkServer telnet session connected on port 3025->55765 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:34:12.047
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55766, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 20:34:14.551
+!MESSAGE Telnet session connected on port 3331->55777 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:34:48.062
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@55a15708): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:34:48.064
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@63044a43): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:34:48.065
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@18b3b69c): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:34:53.553
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@6756f821): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:34:53.554
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@7d3aade6): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-31 20:34:53.555
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@1c054979): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:35:19.043
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:35:21.166
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:35:22.178
+!MESSAGE RedlinkServer telnet session connected on port 3025->55782 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:35:22.957
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55783, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 20:35:25.445
+!MESSAGE Telnet session connected on port 3331->55795 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:36:54.653
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:36:56.921
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:36:57.929
+!MESSAGE RedlinkServer telnet session connected on port 3025->55819 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:36:58.699
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55820, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 20:37:01.375
+!MESSAGE Telnet session connected on port 3331->55833 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:47:41.380
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:47:43.614
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:47:44.633
+!MESSAGE RedlinkServer telnet session connected on port 3025->55882 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:47:45.420
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55883, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 20:47:48.099
+!MESSAGE Telnet session connected on port 3331->55896 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-31 20:50:04.287
+!MESSAGE Indexed 'LPC845_LCD' (13 sources, 123 headers) in 8,24 sec: 14.768 declarations; 21.957 references; 0 unresolved inclusions; 0 syntax errors; 8 unresolved names (0,022 %)
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:56:55.861
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:56:58.158
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:56:59.167
+!MESSAGE RedlinkServer telnet session connected on port 3025->55930 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:56:59.947
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55931, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 20:57:02.620
+!MESSAGE Telnet session connected on port 3331->55944 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:58:18.330
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:58:20.475
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 20:58:21.490
+!MESSAGE RedlinkServer telnet session connected on port 3025->55950 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 20:58:22.258
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55951, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 20:58:24.958
+!MESSAGE Telnet session connected on port 3331->55965 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 21:01:38.023
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 21:01:40.241
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 21:01:41.250
+!MESSAGE RedlinkServer telnet session connected on port 3025->55979 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 21:01:42.015
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55980, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 21:01:44.534
+!MESSAGE Telnet session connected on port 3331->55992 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 21:02:16.322
+!MESSAGE cvc-complex-type.2.4.a: Se ha encontrado contenido no válido a partir del elemento '{"http://www.w3.org/2001/XInclude":include}'. Se esperaba uno de '{include, parameters, script}'.
+
+
+!ENTRY com.crt.log 1 0 2023-10-31 21:02:18.562
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-10-31 21:02:19.579
+!MESSAGE RedlinkServer telnet session connected on port 3025->55996 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-10-31 21:02:20.370
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.1.202303220859/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=55997, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, --flash-hashing, --flash-driver, LPC84x_64.cfx, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-10-31 21:02:23.078
+!MESSAGE Telnet session connected on port 3331->56010 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-31 21:22:07.785
+!MESSAGE Indexed 'LPC845_LCD' (14 sources, 124 headers) in 5,85 sec: 14.859 declarations; 21.959 references; 0 unresolved inclusions; 0 syntax errors; 10 unresolved names (0,027 %)
+
+!ENTRY org.eclipse.ui.console 4 2 2023-10-31 22:32:08.898
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:572)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:357)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:844)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:951)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3694)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2023-10-31 22:32:08.900
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:572)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:357)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:844)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:951)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3694)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 2 2023-10-31 22:32:08.901
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:572)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:357)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:844)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:951)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3694)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2023-10-31 22:32:08.902
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:572)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:357)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:844)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:951)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3694)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 2 2023-10-31 22:32:08.903
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:572)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:363)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:844)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:951)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3694)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2023-10-31 22:32:08.904
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:572)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:363)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:844)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:951)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3694)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 2 2023-10-31 22:32:08.906
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:572)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:363)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:844)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:951)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3694)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2023-10-31 22:32:08.907
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:572)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:363)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:844)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:951)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3694)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 2 2023-10-31 22:32:08.909
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:572)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:369)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:844)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:951)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3694)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2023-10-31 22:32:08.917
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:572)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:369)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:844)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:951)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3694)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 2 2023-10-31 22:32:08.919
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:572)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:369)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:844)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:951)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3694)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2023-10-31 22:32:08.920
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:572)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:369)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:844)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:951)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3694)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
