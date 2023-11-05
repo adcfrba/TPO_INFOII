@@ -46,7 +46,7 @@ void MainWindow::deviceDiscovered(const QBluetoothDeviceInfo &info)
     //Imprime información sobre el dispositivo descubierto
     qDebug() << "Nombre del dispositivo:" << info.name();
     qDebug() << "Dirección MAC del dispositivo:" << info.address().toString();
-    if (info.name() == "HC-06")
+    if (info.name() == "baymaxINFO2023")
         conectarBT(info);
 }
 
