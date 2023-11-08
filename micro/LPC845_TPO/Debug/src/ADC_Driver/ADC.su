@@ -1,4 +1,3 @@
-../src/ADC_Driver/ADC.cpp:12:6:void ADC_Inicializar(uint8_t)	16	static
-../src/ADC_Driver/ADC.cpp:42:6:void ADC_Disparo(uint8_t)	16	static
-../src/ADC_Driver/ADC.cpp:49:6:void ADC_SEQA_IRQHandler()	24	static
-c:\nxp\mcuxpressoide_11.7.1_9221\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.7.1.202301190959\tools\arm-none-eabi\include\c++\10.3.1\cmath:415:5:constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up) [with _Tp = float; _Up = double]	24	static
+../src/ADC_Driver/ADC.cpp:16:6:void ADC_Inicializar()	0	static
+../src/ADC_Driver/ADC.cpp:48:6:void ADC_Disparo(uint8_t)	0	static
+../src/ADC_Driver/ADC.cpp:55:6:void ADC_SEQA_IRQHandler()	8	static

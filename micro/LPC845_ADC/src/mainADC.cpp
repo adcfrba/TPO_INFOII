@@ -43,11 +43,11 @@ TIMERSW timerLecturaADC;
 
 int main(void)
 {
-    ADC_Inicializar(1); //HABILITO EL DEL PIN07, DONDE ESTA EL POTE
+    ADC_Inicializar(0); //HABILITO EL DEL PIN07, DONDE ESTA EL POTE
     //con ADC_Cuentas[] leo el resultado del adc
 	uart0Init(9600); //INICIO A NUESTRA UART
-	//timerDisparoADC.Start(200,200, disparoADC); //CADA 0.2 SEG LEE
-	//timerLecturaADC.Start(1000, 1000, leerData); //CADA 1 SEG LO MANDA A UN BUFFER TEMPORAL
+	timerDisparoADC.Start(200,200, disparoADC); //CADA 0.2 SEG LEE
+	timerLecturaADC.Start(1000, 1000, leerData); //CADA 1 SEG LO MANDA A UN BUFFER TEMPORAL
 	timerUART0.Start(1000,1000, enviarTrama); //CADA 2 SEG ENVIA
 
 	//SETEO DE LEDS APAGADOS
@@ -65,6 +65,7 @@ int main(void)
 		}
 		else
 			ledB.Set(1);
+
     }
 }
 
@@ -83,7 +84,7 @@ void Led(void){
 }
 
 void disparoADC(void){
-	static uint8_t 		CanalADC = 1;
+	static uint8_t 		CanalADC = 0;
 
 	ADC_Disparo(CanalADC);
 	/*CanalADC++;

@@ -7,15 +7,21 @@
 
 #include "Defines.h"
 
+
 uint32_t	ADC_Cuentas[2]; //PORQUE TENEMOS DOS SENSORES
 
-void ADC_Inicializar(uint8_t nADC)
+#define IOCON0_6_BASE (0x40044040u)
+#define IOCON0_6 *((uint32_t*)IOCON0_6_BASE)
+
+void ADC_Inicializar()
 {
 	SYSCON->PDRUNCFG &= ~(1 << 4);	// Enciendo el modulo del ADC que esta apagado por default
 	SYSCON->SYSAHBCLKCTRL0 |= (1 << 24);	// 24 = ADC
 
-	SWM0->PINENABLE0 &= ~(1 << (14 + nADC));	// ADC_0 enabled on pin PIO0_7 TEMPERATURA
-	//SWM0->PINENABLE0 &= ~(1 << 15);	// ADC_1 enabled on pin PIO0_6 GAS
+	SWM0->PINENABLE0 &= ~(1 << 14);	// ADC_0 enabled on pin PIO0_7 TEMPERATURA
+	SWM0->PINENABLE0 &= ~(1 << 15);	// ADC_1 enabled on pin PIO0_6 GAS
+
+	IOCON0_6 = 0;
 
 	ADC0->CTRL 	= (1)		// CLKDIV minimo si no hay una necesidad de velocidad
 			| (0 << 8)		// ASYNCMODE
@@ -61,13 +67,14 @@ void ADC_SEQA_IRQHandler(void)
 	switch(Canal)
 	{
 	case GAS:
-		Valor_Temporal = (Valor_Temporal * 5000) / 4096; //VOLTAJE en mV
-		RS = ((5000-Valor_Temporal)/Valor_Temporal)*RL; //usamos la ecuacion calculada 124
-		Valor_Temporal = 125*pow(RS/RO, -1.607);
+		Valor_Temporal = (Valor_Temporal * 5) / 4096; //VOLTAJE en mV
+		RS = ((5-Valor_Temporal)/Valor_Temporal)*RL; //usamos la ecuacion calculada 124
+		//Valor_Temporal = 125*pow(RS/RO, -1.607);
 		break;
 	case TEMPERATURA:
-		Valor_Temporal = (Valor_Temporal *5000) / 4096;
-		Valor_Temporal = (Valor_Temporal *1000) /50;//LM35 10mV=1C
+
+		Valor_Temporal = (Valor_Temporal *3300) / 4096;
+		Valor_Temporal = (Valor_Temporal *1000) /33;//LM35 10mV=1C
 		break;
 	default:
 		return;

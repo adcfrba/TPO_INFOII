@@ -51,6 +51,7 @@ void ADC_SEQA_IRQHandler(void)
 
 	uint32_t	Temporal = ADC0->SEQ_GDAT[0];
 	uint32_t 	Canal = (Temporal >> 26) & 0x0f;
+	uint32_t	Valor_Temporal;
 	uint32_t	lectura;
 	uint32_t	voltaje;
 	uint32_t	temp;
@@ -68,8 +69,8 @@ void ADC_SEQA_IRQHandler(void)
 		break;
 	case TEMPERATURA:
 		lectura = (Temporal >> 4) & 0xfff;
-		//voltaje = (lectura *5000) / 4096;
-		//temp = (voltaje *1000) / 50;//LM35 10mV=1C
+		voltaje = (lectura *5000) / 4096;
+		temp = (voltaje *1000) / 50;//LM35 10mV=1C
 		break;
 	default:
 		return;

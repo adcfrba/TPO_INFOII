@@ -15,8 +15,8 @@
 #include "ADC.h"
 #include "uart0.h"
 
-#define GAS 0
-#define TEMPERATURA 1
+#define GAS 1
+#define TEMPERATURA 0
 #define RL 1000
 
 #include <stdint.h>

@@ -1,9 +1,4 @@
-/*
- * TIMERSW.cpp
- *
- *  Created on: 22 ago. 2023
- *      Author: gusta
- */
+
 
 #include "Defines.h"
 

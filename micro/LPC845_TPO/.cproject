@@ -49,6 +49,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/GPIO_Driver}&quot;"/>
 								</option>
 								<option id="com.crt.advproject.cpp.fpu.2001252012" name="Floating point" superClass="com.crt.advproject.cpp.fpu" useByScannerDiscovery="true"/>
+								<option id="com.crt.advproject.cpp.exe.debug.option.optimization.level.909221586" superClass="com.crt.advproject.cpp.exe.debug.option.optimization.level" useByScannerDiscovery="true" value="gnu.cpp.compiler.optimization.level.general" valueType="enumerated"/>
 								<inputType id="com.crt.advproject.compiler.cpp.input.932453867" superClass="com.crt.advproject.compiler.cpp.input"/>
 							</tool>
 							<tool id="com.crt.advproject.gcc.exe.debug.1926290776" name="MCU C Compiler" superClass="com.crt.advproject.gcc.exe.debug">

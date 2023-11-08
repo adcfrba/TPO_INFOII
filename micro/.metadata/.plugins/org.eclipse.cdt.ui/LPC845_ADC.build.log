@@ -1,4 +1,4 @@
-20:02:14 **** Incremental Build of configuration Debug for project LPC845_ADC ****
+14:25:06 **** Incremental Build of configuration Debug for project LPC845_ADC ****
 make -r -j4 all 
 Building file: ../src/mainADC.cpp
 Invoking: MCU C++ Compiler
@@ -9,15 +9,15 @@ Building target: LPC845_ADC.axf
 Invoking: MCU C++ Linker
 arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_ADC.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_ADC_Debug.ld -o "LPC845_ADC.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mainADC.o ./src/mtb.o   
 Memory region         Used Size  Region Size  %age Used
-        MFlash64:       21960 B        64 KB     33.51%
-        RamLoc16:        2764 B        16 KB     16.87%
+        MFlash64:       54704 B        64 KB     83.47%
+        RamLoc16:        3156 B        16 KB     19.26%
 Finished building target: LPC845_ADC.axf
  
 Performing post-build steps
 arm-none-eabi-size "LPC845_ADC.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_ADC.axf" "LPC845_ADC.bin" ; # checksum -p LPC845 -d "LPC845_ADC.bin";
    text	   data	    bss	    dec	    hex	filename
-  19836	   2124	    640	  22600	   5848	LPC845_ADC.axf
+  52216	   2488	    668	  55372	   d84c	LPC845_ADC.axf
  
 
-20:02:19 Build Finished. 0 errors, 0 warnings. (took 4s.261ms)
+14:25:09 Build Finished. 0 errors, 0 warnings. (took 2s.397ms)
 

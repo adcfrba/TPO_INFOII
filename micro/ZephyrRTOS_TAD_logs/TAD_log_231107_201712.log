@@ -1,0 +1,10 @@
+"Task Aware Debugger for GDB" version 11.7.1 (202303141002)
+(c) 2016-2022 NXP Semiconductors, Inc.
+==================================
+20:11:18.481 INFO: [ZephyrRTOS] .config file could not be read [C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\Debug\.config (El sistema no puede encontrar el archivo especificado)]
+20:11:18.481 INFO: [TadModel] DSF session ID 12 has started.
+20:11:31.344 INFO: [TadState] TAD state changed: DEBUG_STARTED -> DEBUG_INIT_0 (RESUMED, USER_REQUEST)
+20:11:31.378 INFO: [TadState] TAD state changed: DEBUG_INIT_0 -> DEBUG_INIT_1 (SUSPENDED, SIGNAL)
+20:11:33.404 INFO: [TadState] TAD state changed: DEBUG_INIT_1 -> DEBUG_SUSPENDED (RESUMED, USER_REQUEST)
+20:11:33.525 INFO: [TadState] TAD state changed: DEBUG_SUSPENDED -> DEBUG_SUSPENDED (SUSPENDED, BREAKPOINT)
+20:17:12.704 INFO: [TadModel] DSF session ID 12 has ended.
