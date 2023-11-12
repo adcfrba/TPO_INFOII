@@ -1,3 +1,3 @@
 ../src/ADC_Driver/ADC.cpp:16:6:void ADC_Inicializar()	0	static
 ../src/ADC_Driver/ADC.cpp:48:6:void ADC_Disparo(uint8_t)	0	static
-../src/ADC_Driver/ADC.cpp:55:6:void ADC_SEQA_IRQHandler()	8	static
+../src/ADC_Driver/ADC.cpp:55:6:void ADC_SEQA_IRQHandler()	16	static

@@ -1,27 +1,23 @@
-21:04:25 **** Incremental Build of configuration Debug for project LPC845_TPO ****
+01:12:32 **** Incremental Build of configuration Debug for project LPC845_TPO ****
 make -r -j4 all 
-Building file: ../src/ADC_Driver/ADC.cpp
+Building file: ../src/TPOmain.cpp
 Invoking: MCU C++ Compiler
-arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\GPIO_Driver" -Og -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmacro-prefix-map="../src/ADC_Driver/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/ADC_Driver/ADC.d" -MT"src/ADC_Driver/ADC.o" -MT"src/ADC_Driver/ADC.d" -o "src/ADC_Driver/ADC.o" "../src/ADC_Driver/ADC.cpp"
-../src/ADC_Driver/ADC.cpp: In function 'void ADC_SEQA_IRQHandler()':
-../src/ADC_Driver/ADC.cpp:61:8: warning: variable 'RS' set but not used [-Wunused-but-set-variable]
-   61 |  float RS;
-      |        ^~
-Finished building: ../src/ADC_Driver/ADC.cpp
+arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\GPIO_Driver" -Og -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/TPOmain.d" -MT"src/TPOmain.o" -MT"src/TPOmain.d" -o "src/TPOmain.o" "../src/TPOmain.cpp"
+Finished building: ../src/TPOmain.cpp
  
 Building target: LPC845_TPO.axf
 Invoking: MCU C++ Linker
 arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_TPO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_TPO_Debug.ld -o "LPC845_TPO.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/TPOmain.o ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
 Memory region         Used Size  Region Size  %age Used
-        MFlash64:       54416 B        64 KB     83.03%
+        MFlash64:       59744 B        64 KB     91.16%
         RamLoc16:        3188 B        16 KB     19.46%
 Finished building target: LPC845_TPO.axf
  
 Performing post-build steps
 arm-none-eabi-size "LPC845_TPO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_TPO.axf" "LPC845_TPO.bin" ; # checksum -p LPC845 -d "LPC845_TPO.bin";
    text	   data	    bss	    dec	    hex	filename
-  51920	   2496	    692	  55108	   d744	LPC845_TPO.axf
+  57248	   2496	    692	  60436	   ec14	LPC845_TPO.axf
  
 
-21:04:27 Build Finished. 0 errors, 1 warnings. (took 1s.494ms)
+01:12:34 Build Finished. 0 errors, 0 warnings. (took 2s.221ms)
 

@@ -1,23 +1,11 @@
-14:25:06 **** Incremental Build of configuration Debug for project LPC845_ADC ****
+01:06:43 **** Incremental Build of configuration Debug for project LPC845_ADC ****
 make -r -j4 all 
-Building file: ../src/mainADC.cpp
-Invoking: MCU C++ Compiler
-arm-none-eabi-c++ -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -DCPP_USE_HEAP -D__LPC84X__ -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_ADC\inc" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_ADC\src\UART0_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_ADC\src\ADC_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_ADC\src\TECLADO_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_ADC\src\UTILS\CALLBACK" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_ADC\src\GPIOF_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_ADC\src\TIMERSW_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_ADC\src\SYSTICK_Driver" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\micro\LPC845_ADC\src\GPIO_Driver" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -MMD -MP -MF"src/mainADC.d" -MT"src/mainADC.o" -MT"src/mainADC.d" -o "src/mainADC.o" "../src/mainADC.cpp"
-Finished building: ../src/mainADC.cpp
- 
-Building target: LPC845_ADC.axf
-Invoking: MCU C++ Linker
-arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_ADC.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_ADC_Debug.ld -o "LPC845_ADC.axf" ./src/UTILS/CALLBACK/CALLBACK.o  ./src/UART0_Driver/uart0.o  ./src/TIMERSW_Driver/TIMERSW.o  ./src/TECLADO_Driver/teclado.o  ./src/SYSTICK_Driver/SYSTICK.o  ./src/GPIO_Driver/GPIO.o  ./src/GPIOF_Driver/GPIOF.o  ./src/ADC_Driver/ADC.o  ./src/aeabi_romdiv_patch.o ./src/cr_cpp_config.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mainADC.o ./src/mtb.o   
-Memory region         Used Size  Region Size  %age Used
-        MFlash64:       54704 B        64 KB     83.47%
-        RamLoc16:        3156 B        16 KB     19.26%
-Finished building target: LPC845_ADC.axf
- 
+make[1]: Nothing to be done for 'main-build'.
 Performing post-build steps
 arm-none-eabi-size "LPC845_ADC.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_ADC.axf" "LPC845_ADC.bin" ; # checksum -p LPC845 -d "LPC845_ADC.bin";
    text	   data	    bss	    dec	    hex	filename
   52216	   2488	    668	  55372	   d84c	LPC845_ADC.axf
  
 
-14:25:09 Build Finished. 0 errors, 0 warnings. (took 2s.397ms)
+01:06:43 Build Finished. 0 errors, 0 warnings. (took 540ms)
 

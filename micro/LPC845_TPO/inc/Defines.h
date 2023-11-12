@@ -15,7 +15,7 @@
 #include "teclado.h"
 #include "ADC.h"
 #include "uart0.h"
-//#include <math.h>
+#include <math.h>
 
 #define TEMPERATURA 1
 #define GAS 0

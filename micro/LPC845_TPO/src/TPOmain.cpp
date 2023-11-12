@@ -19,7 +19,7 @@ void disparoADC(void);
 void enviarTrama(void);
 void leerData(void);
 void armarTrama(float, float, uint8_t, uint8_t);
-void inicializacion(uint8_t, uint8_t);
+void inicializacion(int, uint8_t);
 
 //SYSTICK
 SYSTICK Systick(1000);
@@ -30,11 +30,11 @@ Gpio ledB(1, 1, 1);
 Gpio ledR(1, 2, 1);
 
 //PULSADOR EMERGENCIA
-GPIOF Pulsador(0,4,0); //PIN0_6
+GPIOF Pulsador(0,1,0); //PIN0_6
 
 //AUXILIARES GLOBALES
 uint8_t flag = 0;
-uint8_t flagPanico = 0;
+uint8_t flagPanico =0;
 char bufferTrama[15];
 float temp = 100;
 uint8_t oxi = 0;
@@ -53,16 +53,15 @@ TIMERSW timerPanico;
 
 int main(void) {
 
-	inicializacion((uint8_t)9600, 1);
+	inicializacion(9600, 1);
 
     while(1) {
-    	if((0==Pulsador.Read()) && (0==flagPanico))
+    	if((1==Pulsador.Read()) && (0==flagPanico))
     	{
-    		flagPanico = 1;
     		trama = ALERTA;
     		ledR.Set(0);
     	}
-		else if ((0==Pulsador.Read()) && (1==flagPanico))
+		else if ((15==flagPanico)) //en 30 seg se apaga
 		{
 			ledR.Set(1);
 			flagPanico = 0;
@@ -93,25 +92,6 @@ void disparoADC(void){
 	CanalADC++;
 	if(CanalADC > 1)
 		CanalADC = 0;
-}
-
-void enviarTrama(void)
-{
-	switch (trama)
-	{
-		case ALERTA:
-			//uart0Send( (uint8_t *)"<-37.2-0.1-99-100-236.3->", (uint32_t)0);
-			uart0Send( (uint8_t *)"¡ALERTA!", (uint32_t)0);
-			break;
-		case OK:
-			armarTrama(0,0,0,0);
-			uart0Send( (uint8_t *)bufferTrama, (uint32_t)0);
-			break;
-		default:
-			trama = OK;
-			break;
-	}
-
 }
 
 void leerData(void)
@@ -172,16 +152,35 @@ void leerData(void)
 		CanalADC = 0;
 	}
 }
+void enviarTrama(void)
+{
+	switch (trama)
+	{
+		case ALERTA:
+			//uart0Send( (uint8_t *)"<-37.2-0.1-99-100-236.3->", (uint32_t)0);
+			uart0Send( (uint8_t *)"¡ALERTA!", (uint32_t)0);
+			flagPanico++;
+			break;
+		case OK:
+			armarTrama(temp,gas,0,0);
+			uart0Send( (uint8_t *)bufferTrama, (uint32_t)0);
+			break;
+		default:
+			trama = OK;
+			break;
+	}
+
+}
 
 void armarTrama(float temp, float gas, uint8_t oxi, uint8_t pulso)
 {
-	//sprintf(bufferTrama, "<-%03d-%02f-%03f-%03f-%04f->",temp, gas, oxi, pulso,temp+gas+oxi+pulso);
-	sprintf(bufferTrama, "hola");
+	sprintf(bufferTrama, "<-%03f-%02f-%03d-%03d-%04f->",temp, gas, oxi, pulso,temp+gas+oxi+pulso);
+	//sprintf(bufferTrama, "hola");
 }
 
-void inicializacion(uint8_t baudrate, uint8_t leds)
+void inicializacion(int baudrate, uint8_t leds)
 {
-    ADC_Inicializar(); //HABILITO EL DEL PIN07, DONDE ESTA EL POTE
+    ADC_Inicializar(); //HABILITO EL DEL PIN07 Y EL 6
 	uart0Init(baudrate); //inicializamos la uart a utilizar
 
 	timerDisparoADC.Start(200,200, disparoADC); //CADA 0.2 SEG LEE

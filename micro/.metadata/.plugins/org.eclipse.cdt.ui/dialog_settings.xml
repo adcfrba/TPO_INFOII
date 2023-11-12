@@ -40,6 +40,9 @@
 		<item key="caseSensitive" value="false"/>
 		<item key="searchFlags" value="227191"/>
 		<list key="previousPatterns">
+			<item value="SYSCON_Type"/>
+			<item value="40044040"/>
+			<item value="CANT_ESTADOS_ESTABLES"/>
 			<item value="UART0_IRQHandler"/>
 			<item value="vCallBack"/>
 			<item value="typedefchar"/>

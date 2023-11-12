@@ -69,7 +69,7 @@ void ADC_SEQA_IRQHandler(void)
 	case GAS:
 		Valor_Temporal = (Valor_Temporal * 5) / 4096; //VOLTAJE en mV
 		RS = ((5-Valor_Temporal)/Valor_Temporal)*RL; //usamos la ecuacion calculada 124
-		//Valor_Temporal = 125*pow(RS/RO, -1.607);
+		Valor_Temporal = 125*pow(RS/RO, -1.607);
 		break;
 	case TEMPERATURA:
 
