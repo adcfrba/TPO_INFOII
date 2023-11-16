@@ -1,9 +1,8 @@
-../src/TPOmain.cpp:97:6:void leerData()	8	static
-../src/TPOmain.cpp:88:6:void disparoADC()	8	static
-../src/TPOmain.cpp:194:1:void __static_initialization_and_destruction_0(int, int)	8	static
-../src/TPOmain.cpp:75:6:void LedR()	8	static
-../src/TPOmain.cpp:175:6:void armarTrama(float, float, uint8_t, uint8_t)	56	static
-../src/TPOmain.cpp:155:6:void enviarTrama()	8	static
-../src/TPOmain.cpp:181:6:void inicializacion(int, uint8_t)	16	static
-../src/TPOmain.cpp:54:5:int main()	8	static
-../src/TPOmain.cpp:194:1:cpp)	8	static
+../src/TPOmain.cpp:102:6:void leerData()	24	static
+../src/TPOmain.cpp:93:6:void disparoADC()	8	static
+../src/TPOmain.cpp:80:6:void LedR()	8	static
+../src/TPOmain.cpp:190:6:void armarTrama(uint32_t, uint32_t, uint8_t, uint8_t)	48	static
+../src/TPOmain.cpp:168:6:void enviarTrama()	8	static
+../src/TPOmain.cpp:215:6:void inicializacion(int, uint8_t)	16	static
+../src/TPOmain.cpp:59:5:int main()	8	static
+../src/TPOmain.cpp:231:1:cpp)	8	static

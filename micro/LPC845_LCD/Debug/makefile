@@ -13,6 +13,7 @@ RM := rm -rf
 -include src/TIMERSW_Driver/subdir.mk
 -include src/TECLADO_Driver/subdir.mk
 -include src/SYSTICK_Driver/subdir.mk
+-include src/LCD_Driver/subdir.mk
 -include src/GPIO_Driver/subdir.mk
 -include src/GPIOF_Driver/subdir.mk
 -include src/ADC_Driver/subdir.mk
@@ -46,7 +47,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := LPC845_ADC
+BUILD_ARTIFACT_NAME := LPC845_LCD
 BUILD_ARTIFACT_EXTENSION := axf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -58,24 +59,24 @@ all:
 	+@$(MAKE) --no-print-directory main-build && $(MAKE) --no-print-directory post-build
 
 # Main-build Target
-main-build: LPC845_ADC.axf
+main-build: LPC845_LCD.axf
 
 # Tool invocations
-LPC845_ADC.axf: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+LPC845_LCD.axf: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU C++ Linker'
-	arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_ADC.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_ADC_Debug.ld -o "LPC845_ADC.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-c++ -nostdlib -Xlinker -Map="LPC845_LCD.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T LPC845_LCD_Debug.ld -o "LPC845_LCD.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) LPC845_ADC.axf
+	-$(RM) LPC845_LCD.axf
 	-@echo ' '
 
 post-build:
 	-@echo 'Performing post-build steps'
-	-arm-none-eabi-size "LPC845_ADC.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_ADC.axf" "LPC845_ADC.bin" ; # checksum -p LPC845 -d "LPC845_ADC.bin";
+	-arm-none-eabi-size "LPC845_LCD.axf"; # arm-none-eabi-objcopy -v -O binary "LPC845_LCD.axf" "LPC845_LCD.bin" ; # checksum -p LPC845 -d "LPC845_LCD.bin";
 	-@echo ' '
 
 .PHONY: all clean dependents main-build post-build

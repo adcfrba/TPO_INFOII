@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="ImportExportAction">
-		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.e4.ui.importer.wizard"/>
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.FileSystem"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
 			<item value="org.eclipse.cdt.ui.importWizardCategory"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">
+	</section>
+	<section name="FileSystemImportWizard">
+		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
+		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\MAX30102\IO"/>
+			<item value="C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\MAX30102\Timers"/>
+			<item value="C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\MAX30102\I2C"/>
+			<item value="C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\MAX30102"/>
+		</list>
+	</section>
+	<section name="ZipFileImportWizard">
 	</section>
 </section>

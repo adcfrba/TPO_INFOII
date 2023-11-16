@@ -8,7 +8,6 @@
 #ifndef TECLADO_DRIVER_TECLADO_H_
 #define TECLADO_DRIVER_TECLADO_H_
 #define NO_TECLA 255
-#include "defines.h"
 
 class teclado : public CALLBACK{
 private:

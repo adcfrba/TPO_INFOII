@@ -2,11 +2,17 @@
 #ifndef DEFINES_H_
 #define DEFINES_H_
 
-#include "LPC845.h"
-#include <stdio.h>
+#include <cr_section_macros.h>
+
 #include <vector>
-#include <algorithm>
-#include <functional>
+//#include <string.h>
+#include <stdio.h>
+#include <math.h>
+//#include <stdint.h>
+//#include <algorithm>
+//#include <functional>
+#include "LPC845.h"
+#include "tipos.h"
 #include "GPIO.h"
 #include "CALLBACK.h"
 #include "SYSTICK.h"
@@ -15,18 +21,30 @@
 #include "teclado.h"
 #include "ADC.h"
 #include "uart0.h"
-#include <math.h>
+//#include "io.h"
+//#include "ctimer.h"
+//#include "timers.h"
 
-#define TEMPERATURA 1
-#define GAS 0
+//#include "i2c.h"
+//#include "SpO2Calculator.h"
+//#include "io.h"
+
+//#include "../MAX30102/max30102.h"
+
+
+
+
+
+#define TEMPERATURA 0
+#define GAS 1
 #define RL 1000 //LA CAMBIAMOS EN EL MODULO
 #define RO 520 //ANALIZAR
 #define ALERTA 0
 #define OK 1
-#define TEMP_DELTA 10
-#define GAS_DELTA 5
+#define DESCONECTADO 2
+#define TEMP_DELTA 3000
+#define GAS_DELTA 5000
 #define N 5
-#include <stdint.h>
 
 
 #endif /* DEFINES_H_ */

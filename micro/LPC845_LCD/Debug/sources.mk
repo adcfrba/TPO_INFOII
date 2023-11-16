@@ -27,6 +27,7 @@ SUBDIRS := \
 src/ADC_Driver \
 src/GPIOF_Driver \
 src/GPIO_Driver \
+src/LCD_Driver \
 src/SYSTICK_Driver \
 src/TECLADO_Driver \
 src/TIMERSW_Driver \

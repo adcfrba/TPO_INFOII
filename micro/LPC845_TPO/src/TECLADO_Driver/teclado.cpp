@@ -5,7 +5,7 @@
  *      Author: notebook
  */
 
-#include "teclado.h"
+#include "defines.h"
 extern std::vector<CALLBACK*> vCallBack;
 
 teclado::teclado() {

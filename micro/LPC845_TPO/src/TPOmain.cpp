@@ -7,7 +7,6 @@
  Description : main definition
 ===============================================================================
 */
-#include <cr_section_macros.h>
 
 #include "Defines.h"
 
@@ -18,7 +17,7 @@ void LedV(void);
 void disparoADC(void);
 void enviarTrama(void);
 void leerData(void);
-void armarTrama(float, float, uint8_t, uint8_t);
+void armarTrama(uint32_t, uint32_t, uint8_t, uint8_t);
 void inicializacion(int, uint8_t);
 
 //SYSTICK
@@ -35,12 +34,19 @@ GPIOF Pulsador(0,1,0); //PIN0_6
 //AUXILIARES GLOBALES
 uint8_t flag = 0;
 uint8_t flagPanico =0;
-char bufferTrama[15];
-float temp = 100;
+uint8_t bufferTrama[12];
+uint32_t temp = 100;
 uint8_t oxi = 0;
 uint8_t pulso = 0;
-float gas = 100;
+uint32_t gas = 100;
 uint8_t trama =1;
+static uint8_t CanalADC = 0;
+static uint32_t tempAnterior = 50000;
+static uint32_t tempPromedio = 0;
+static uint32_t tempIndex;
+static uint32_t gasAnterior = 10000;
+static uint32_t gasPromedio = 0;
+static uint32_t gasIndex;
 
 //ADC
 extern uint32_t	ADC_Cuentas[2];
@@ -49,7 +55,6 @@ extern uint32_t	ADC_Cuentas[2];
 TIMERSW timerDisparoADC;
 TIMERSW timerUART0;
 TIMERSW timerLecturaADC;
-TIMERSW timerPanico;
 
 int main(void) {
 
@@ -97,16 +102,8 @@ void disparoADC(void){
 void leerData(void)
 {
 	//analisis uno por uno del sensor
-	static uint8_t CanalADC = 0;
-	static uint8_t tempAnterior = 20;
-	static uint8_t tempPromedio;
-	uint8_t tempLectura;
-	static uint8_t tempIndex;
-	static uint8_t gasAnterior = 1;
-	static uint8_t gasPromedio;
-	static uint8_t gasIndex;
-	uint8_t gasLectura;
-
+	uint32_t tempLectura;
+	uint32_t gasLectura;
 
 	if (0 == CanalADC) //TEMPERATURA
 	{
@@ -114,15 +111,22 @@ void leerData(void)
 		//ANALISIS DE VALORES VALIDOS
 		if(tempLectura > tempAnterior + TEMP_DELTA)
 			tempLectura = tempAnterior;
-		else if (tempLectura > tempAnterior + TEMP_DELTA && tempIndex < N)
+		else if ((tempLectura > tempAnterior + TEMP_DELTA) && (tempIndex < N))
 			tempLectura = tempAnterior;
 
-		tempPromedio += tempLectura;
-		tempIndex++;
+		if(tempLectura != 0)
+		{
+			tempPromedio += tempLectura;
+			tempAnterior = tempLectura;
+			tempIndex++;
+		}
+
 		if(tempIndex > N)
 		{
 			tempIndex = 0;
-			temp = tempPromedio/N;
+			temp = tempPromedio/(N+1);
+			tempAnterior = (uint32_t)temp;
+			tempPromedio = 0;
 		}
 
 		CanalADC++;
@@ -133,24 +137,33 @@ void leerData(void)
 		//ANALISIS DE VALORES VALIDOS
 		if(gasLectura > gasAnterior + GAS_DELTA)
 			gasLectura = gasAnterior;
-		else if (gasLectura > gasAnterior + GAS_DELTA && gasIndex < N)
+		else if ((gasLectura > gasAnterior + GAS_DELTA) && (gasIndex < N))
 			gasLectura = gasAnterior;
 
-		gasPromedio += gasLectura;
-		gasIndex++;
+		if(gasLectura != 0)
+		{
+			gasPromedio += gasLectura;
+			gasAnterior = gasLectura;
+			gasIndex++;
+		}
+
 		if(gasIndex > N)
 		{
 			gasIndex = 0;
-			gas = gasPromedio/N;
+			gas = gasPromedio/(N+1);
+			gasAnterior = (uint32_t)gas;
+			gasPromedio = 0;
 		}
 		CanalADC = 0;
 	}
 	else
 	{
-		temp = -1;
-		gas = -1;
+		temp = tempAnterior;
+		gas = gasAnterior;
 		CanalADC = 0;
 	}
+
+	//oxi = MAX30102();
 }
 void enviarTrama(void)
 {
@@ -158,13 +171,15 @@ void enviarTrama(void)
 	{
 		case ALERTA:
 			//uart0Send( (uint8_t *)"<-37.2-0.1-99-100-236.3->", (uint32_t)0);
-			uart0Send( (uint8_t *)"¡ALERTA!", (uint32_t)0);
+			uart0Send( (uint8_t *)"<-¡ALERTA!->", (uint32_t)0);
 			flagPanico++;
 			break;
 		case OK:
 			armarTrama(temp,gas,0,0);
 			uart0Send( (uint8_t *)bufferTrama, (uint32_t)0);
 			break;
+		case DESCONECTADO:
+			uart0Send((uint8_t *) "<-DESCONECTADO->", (uint32_t)0); //avisamos que no hay nadie conectado a los sensores
 		default:
 			trama = OK;
 			break;
@@ -172,15 +187,37 @@ void enviarTrama(void)
 
 }
 
-void armarTrama(float temp, float gas, uint8_t oxi, uint8_t pulso)
+void armarTrama(uint32_t temp, uint32_t gas, uint8_t oxi, uint8_t pulso)
 {
-	sprintf(bufferTrama, "<-%03f-%02f-%03d-%03d-%04f->",temp, gas, oxi, pulso,temp+gas+oxi+pulso);
+	/*
+	bufferTrama[0] = '<';
+	bufferTrama[1] = '-';
+	bufferTrama[2] = (temp/1000) + '0';
+	bufferTrama[3] = '-';
+	bufferTrama[4] = (gas/1000) + '0';
+	bufferTrama[5] = '-';
+	bufferTrama[6] = oxi;
+	bufferTrama[7] = '-';
+	bufferTrama[8] = pulso;
+	bufferTrama[9] = '-';
+	for (int i = 0; i<10; i++)
+		bufferTrama[10] ^= bufferTrama[i];
+	bufferTrama[11] = '-';
+	bufferTrama[12] = '>';
+	bufferTrama[10] ^= 	bufferTrama[11];
+	bufferTrama[10] ^= 	bufferTrama[12];
+
+	*/
+	sprintf((char*)bufferTrama, "<-%03d-%03d-%02d-%d-%02d->",temp, gas, (int)oxi, (int)pulso,(float)temp+gas+oxi+pulso);
 	//sprintf(bufferTrama, "hola");
 }
 
 void inicializacion(int baudrate, uint8_t leds)
 {
     ADC_Inicializar(); //HABILITO EL DEL PIN07 Y EL 6
+    //TimerStart(0, 1, MAX30102_Leer , DEC );
+    //IIC_Inicializacion( );
+
 	uart0Init(baudrate); //inicializamos la uart a utilizar
 
 	timerDisparoADC.Start(200,200, disparoADC); //CADA 0.2 SEG LEE

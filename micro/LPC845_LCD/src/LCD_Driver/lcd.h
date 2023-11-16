@@ -10,7 +10,7 @@
 
 class lcd {
 public:
-	void escribir(uint8_t comando);
+	void escribir(uint8_t control,uint8_t comando);
 	void inicializar(void);
 	void escribirTexto(uint8_t *);
 	void escribirTextoEspecifico(uint8_t *, uint8_t, uint8_t);
