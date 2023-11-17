@@ -21,15 +21,13 @@
 #include "teclado.h"
 #include "ADC.h"
 #include "uart0.h"
-//#include "io.h"
-//#include "ctimer.h"
-//#include "timers.h"
+#include "timers.h"
 
-//#include "i2c.h"
-//#include "SpO2Calculator.h"
+#include "i2c.h"
+#include "SpO2Calculator.h"
 //#include "io.h"
 
-//#include "../MAX30102/max30102.h"
+#include "../MAX30102/max30102.h"
 
 
 
@@ -38,7 +36,7 @@
 #define TEMPERATURA 0
 #define GAS 1
 #define RL 1000 //LA CAMBIAMOS EN EL MODULO
-#define RO 520 //ANALIZAR
+#define RO 150 //ANALIZAR
 #define ALERTA 0
 #define OK 1
 #define DESCONECTADO 2

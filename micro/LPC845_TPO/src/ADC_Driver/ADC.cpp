@@ -67,15 +67,14 @@ void ADC_SEQA_IRQHandler(void)
 	switch(Canal)
 	{
 	case GAS:
-		Valor_Temporal = (Valor_Temporal * 5) / 4096; //VOLTAJE
-		RS = ((5-Valor_Temporal)/Valor_Temporal)*RL; //usamos la ecuacion calculada 124
+		Valor_Temporal = (Valor_Temporal * 3.3) / 4096; //VOLTAJE
+		RS = ((3.3-Valor_Temporal)/Valor_Temporal)*RL; //usamos la ecuacion calculada 124
 		Valor_Temporal = 125*pow(RS/RO, -1.607);
-		Valor_Temporal*=1000;
+		Valor_Temporal = Valor_Temporal * 100; //para tener un digito y dos decimales
 		break;
 	case TEMPERATURA:
 
-		Valor_Temporal = (Valor_Temporal *3300) / 4096;
-		Valor_Temporal = (Valor_Temporal *1000) /33;//LM35 10mV=1C
+		Valor_Temporal = (Valor_Temporal *3300) / 4096; //LM35 10mV=1C lo mandamos en mili
 		break;
 	default:
 		return;

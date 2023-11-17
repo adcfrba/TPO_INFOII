@@ -21,6 +21,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\MAX30102"/>
 			<item value="C:\Users\notebook\Documents\INFO II 2023\micro\pruebaLED"/>
 			<item value="C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_GPIO_Parpadeo_Led"/>
 			<item value="C:\Users\notebook\Documents\INFO II 2023\micro\LPC845_SysTick"/>

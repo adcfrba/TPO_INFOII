@@ -34,12 +34,13 @@ GPIOF Pulsador(0,1,0); //PIN0_6
 //AUXILIARES GLOBALES
 uint8_t flag = 0;
 uint8_t flagPanico =0;
-uint8_t bufferTrama[12];
+uint8_t bufferTrama[30];
 uint32_t temp = 100;
 uint8_t oxi = 0;
 uint8_t pulso = 0;
 uint32_t gas = 100;
 uint8_t trama =1;
+float checksum;
 static uint8_t CanalADC = 0;
 static uint32_t tempAnterior = 50000;
 static uint32_t tempPromedio = 0;
@@ -163,8 +164,9 @@ void leerData(void)
 		CanalADC = 0;
 	}
 
-	//oxi = MAX30102();
+	oxi = MAX30102();
 }
+
 void enviarTrama(void)
 {
 	switch (trama)
@@ -208,15 +210,16 @@ void armarTrama(uint32_t temp, uint32_t gas, uint8_t oxi, uint8_t pulso)
 	bufferTrama[10] ^= 	bufferTrama[12];
 
 	*/
-	sprintf((char*)bufferTrama, "<-%03d-%03d-%02d-%d-%02d->",temp, gas, (int)oxi, (int)pulso,(float)temp+gas+oxi+pulso);
+	checksum = ((float)(temp/10)+(float)(gas/100)+oxi+pulso);
+	sprintf((char*)bufferTrama, "<-%d.%d-%d.%d-%d-%d-%f->",temp/10, temp%10, gas/100, gas%100, oxi, pulso, checksum);
 	//sprintf(bufferTrama, "hola");
 }
 
 void inicializacion(int baudrate, uint8_t leds)
 {
     ADC_Inicializar(); //HABILITO EL DEL PIN07 Y EL 6
-    //TimerStart(0, 1, MAX30102_Leer , DEC );
-    //IIC_Inicializacion( );
+    TimerStart(0, 1, MAX30102_Leer , DEC );
+    IIC_Inicializacion( );
 
 	uart0Init(baudrate); //inicializamos la uart a utilizar
 
