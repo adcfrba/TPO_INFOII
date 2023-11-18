@@ -18,8 +18,8 @@ void ADC_Inicializar()
 	SYSCON->PDRUNCFG &= ~(1 << 4);	// Enciendo el modulo del ADC que esta apagado por default
 	SYSCON->SYSAHBCLKCTRL0 |= (1 << 24);	// 24 = ADC
 
-	SWM0->PINENABLE0 &= ~(1 << 14);	// ADC_0 enabled on pin PIO0_7 TEMPERATURA
-	SWM0->PINENABLE0 &= ~(1 << 15);	// ADC_1 enabled on pin PIO0_6 GAS
+	SWM0->PINENABLE0 &= ~(1 << 14);	// ADC_0 enabled on pin PIO0_7 GAS
+	SWM0->PINENABLE0 &= ~(1 << 15);	// ADC_1 enabled on pin PIO0_6 TEMPERATURA
 
 	IOCON0_6 = 0;
 

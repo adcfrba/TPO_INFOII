@@ -41,8 +41,8 @@
 
  */
 
-#define	SDA							0,11		//Pin 24 stick
-#define	SCL							0,10		//Pin 23 stick
+#define	SDA							0,30		//Pin 24 stick
+#define	SCL							0,29		//Pin 23 stick
 
 #define	TAMANIO_MEMORIA				(1024 * 8)
 

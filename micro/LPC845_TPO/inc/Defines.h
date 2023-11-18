@@ -33,15 +33,15 @@
 
 
 
-#define TEMPERATURA 0
-#define GAS 1
+#define TEMPERATURA 1
+#define GAS 0
 #define RL 1000 //LA CAMBIAMOS EN EL MODULO
-#define RO 150 //ANALIZAR
+#define RO 250 //ANALIZAR
 #define ALERTA 0
 #define OK 1
 #define DESCONECTADO 2
-#define TEMP_DELTA 3000
-#define GAS_DELTA 5000
+#define TEMP_DELTA 10
+#define GAS_DELTA 500
 #define N 5
 
 

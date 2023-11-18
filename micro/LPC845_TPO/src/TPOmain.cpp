@@ -106,33 +106,7 @@ void leerData(void)
 	uint32_t tempLectura;
 	uint32_t gasLectura;
 
-	if (0 == CanalADC) //TEMPERATURA
-	{
-		tempLectura = ADC_Cuentas[CanalADC];
-		//ANALISIS DE VALORES VALIDOS
-		if(tempLectura > tempAnterior + TEMP_DELTA)
-			tempLectura = tempAnterior;
-		else if ((tempLectura > tempAnterior + TEMP_DELTA) && (tempIndex < N))
-			tempLectura = tempAnterior;
-
-		if(tempLectura != 0)
-		{
-			tempPromedio += tempLectura;
-			tempAnterior = tempLectura;
-			tempIndex++;
-		}
-
-		if(tempIndex > N)
-		{
-			tempIndex = 0;
-			temp = tempPromedio/(N+1);
-			tempAnterior = (uint32_t)temp;
-			tempPromedio = 0;
-		}
-
-		CanalADC++;
-	}
-	else if (1 == CanalADC) //GAS
+	if (0 == CanalADC) //GAS
 	{
 		gasLectura = ADC_Cuentas[CanalADC];
 		//ANALISIS DE VALORES VALIDOS
@@ -155,6 +129,34 @@ void leerData(void)
 			gasAnterior = (uint32_t)gas;
 			gasPromedio = 0;
 		}
+
+		CanalADC++;
+	}
+	else if (1 == CanalADC) //TEMPERATURA
+	{
+
+		tempLectura = ADC_Cuentas[CanalADC];
+		//ANALISIS DE VALORES VALIDOS
+		if(tempLectura > tempAnterior + TEMP_DELTA)
+			tempLectura = tempAnterior;
+		else if ((tempLectura > tempAnterior + TEMP_DELTA) && (tempIndex < N))
+			tempLectura = tempAnterior;
+
+		if(tempLectura != 0)
+		{
+			tempPromedio += tempLectura;
+			tempAnterior = tempLectura;
+			tempIndex++;
+		}
+
+		if(tempIndex > N)
+		{
+			tempIndex = 0;
+			temp = tempPromedio/(N+1);
+			tempAnterior = (uint32_t)temp;
+			tempPromedio = 0;
+		}
+
 		CanalADC = 0;
 	}
 	else
@@ -211,7 +213,7 @@ void armarTrama(uint32_t temp, uint32_t gas, uint8_t oxi, uint8_t pulso)
 
 	*/
 	checksum = ((float)(temp/10)+(float)(gas/100)+oxi+pulso);
-	sprintf((char*)bufferTrama, "<-%d.%d-%d.%d-%d-%d-%f->",temp/10, temp%10, gas/100, gas%100, oxi, pulso, checksum);
+	sprintf((char*)bufferTrama, "<-%d.%d-%d.%d-%d-%d-%1f->",temp/10, temp%10, gas/100, gas%100, oxi, pulso, checksum);
 	//sprintf(bufferTrama, "hola");
 }
 
@@ -225,7 +227,7 @@ void inicializacion(int baudrate, uint8_t leds)
 
 	timerDisparoADC.Start(200,200, disparoADC); //CADA 0.2 SEG LEE
 	timerLecturaADC.Start(200, 200, leerData); //CADA 0.2 SEG LO ANALIZA Y MANDA A UN BUFFER TEMPORAL
-	timerUART0.Start(2000,2000, enviarTrama); //CADA 2 SEG ENVIA
+	timerUART0.Start(5000,5000, enviarTrama); //CADA 2 SEG ENVIA
 
 	//SETEO DE LEDS APAGADOS
 	ledG.Set(leds);
