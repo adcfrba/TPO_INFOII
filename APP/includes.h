@@ -35,6 +35,9 @@
 #include <QByteArray>
 
 using namespace std;
-#define CHECKSUM 5
+#define CHECKSUM 4
+#define SENSORES 0
+#define ALERTA 1
+#define DESCONECTADO 2
 
 

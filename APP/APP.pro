@@ -12,6 +12,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    alarma.cpp \
     gas.cpp \
     historial.cpp \
     lectura.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
     temp.cpp
 
 HEADERS += \
+    alarma.h \
     gas.h \
     historial.h \
     includes.h \
@@ -30,6 +32,7 @@ HEADERS += \
     temp.h
 
 FORMS += \
+    alarma.ui \
     gas.ui \
     historial.ui \
     mainwindow.ui \

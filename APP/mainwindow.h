@@ -6,6 +6,7 @@
 #include "temp.h"
 #include "historial.h"
 #include "gas.h"
+#include "alarma.h"
 #include "lectura.h"
 
 QT_BEGIN_NAMESPACE
@@ -38,10 +39,7 @@ private slots:
     void conectarBT(const QBluetoothDeviceInfo &info);
 
     void receive();
-    void analizarTrama(QStringList, lectura);
-
-
-
+    void analizarTrama(QStringList, lectura, int);
     void on_pushButton_recargar_clicked();
 
 private:
@@ -53,6 +51,7 @@ private:
     ox objOx;
     vector<lectura>datosVector;
     temp objTemp;
+    alarma objAlarma;
 
     QTimer connectTimer;
     QString string, DatosRecibidos, trama;

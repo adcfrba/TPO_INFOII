@@ -126,7 +126,6 @@ void MainWindow::mostrarDatos(void)
 {
     ui->lcdNumber_gas->display(datos.getGas());
     ui->lcdNumber_ox->display(datos.getOxi());
-    ui->lcdNumber_pulso->display(datos.getPulso());
     ui->lcdNumber_temperatura->display(datos.getTemp());
 }
 
@@ -190,6 +189,8 @@ void MainWindow::setupMain(void)
     QIcon icon_historial (boton_historial);
     ui->pushButton_historial->setIcon(icon_historial);
     ui->pushButton_historial->setFont(fontSecundario);
+
+    ui->label_conexion->setText("¡Bienvenido!");
 }
 
 void MainWindow::conectarBT(const QBluetoothDeviceInfo &info)
@@ -212,53 +213,74 @@ void MainWindow::receive()
     CantBytesRecibidos = socket->bytesAvailable();
     DatosRecibidos = socket->readAll();
     trama += DatosRecibidos;
+    qDebug() << trama;
 
-    if(trama.back() =='>' && finalizarTrama == false)
+
+    if(trama.back() =='>')
     {
-        finalizarTrama = true;
-
         tramaExtraida = trama.split('-',Qt::SkipEmptyParts);
-        if(tramaExtraida.size() == 7)
-        {
-            analizarTrama(tramaExtraida, datos);
-            //ui->listWidget->addItem(trama);
-        }
-        trama.clear();
-        finalizarTrama = false;
+        if(tramaExtraida.size() == 6)
+            analizarTrama(tramaExtraida, datos, SENSORES);
+
+        else if (tramaExtraida.size() == 3 && tramaExtraida[1] == "¡ALERTA!")
+             analizarTrama(tramaExtraida, datos, ALERTA);
+
+        else if (tramaExtraida.size() == 3 && tramaExtraida[1] == "DESCONECTADO")
+            analizarTrama(tramaExtraida, datos, DESCONECTADO);
     }
     trama.clear();
 }
 
-void MainWindow::analizarTrama(QStringList tramaAnalizar, lectura datos)
+void MainWindow::analizarTrama(QStringList tramaAnalizar, lectura datos, int entrada)
 {
+    int rtn = 0;
     double checksum =0;
+    int aux = 0;
 
-    for(int i = 1; i < CHECKSUM; i++)
-        checksum+= tramaAnalizar[i].toDouble();
-
-    if(checksum == tramaAnalizar[CHECKSUM].toDouble() && m_db.open())
+    if (entrada == 0)
     {
-        qDebug() << "Database: connection ok";
-        QSqlDatabase::database().transaction();
-        qDebug()<<"Trama sin fallas";
-        fecha = QDateTime::currentDateTime();
-        datos.setFecha(fecha.toString("dd/MM/yy h:m:s ap").toStdString());
-        datos.setTemp((float)tramaAnalizar[1].toDouble());
-        datos.setGas((float)tramaAnalizar[2].toDouble());
-        datos.setOxi((float)tramaAnalizar[3].toDouble());
-        datos.setPulso(tramaAnalizar[4].toInt());
-        datos.setNombre("ANTO");
-        datos.nuevoData(m_db);
-        QSqlDatabase::database().commit();
-        m_db.close();
-        //mando data con datos
+        for(int i = 1; i < CHECKSUM; i++)
+            checksum+= tramaAnalizar[i].toDouble();
+        aux = CHECKSUM;
     }
     else
     {
-        qDebug()<<"Trama con fallas" << checksum; //OJO QUE EL CHECKSUM SUMA TODO, TENGO QUE RESTAR EL CHECKSUM Y LOS BARRAS
-
+        checksum = tramaAnalizar[1].toDouble();
+        aux = 1;
     }
 
+    if(checksum == tramaAnalizar[aux].toDouble() && m_db.open())
+    {
+        switch(entrada)
+        {
+        case SENSORES:
+            ui->label_conexion->setText("Sensando...no moverse...");
+            QSqlDatabase::database().transaction();
+            qDebug()<<"Trama sin fallas";
+            fecha = QDateTime::currentDateTime();
+            datos.setFecha(fecha.toString("dd/MM/yy h:m:s ap").toStdString());
+            datos.setTemp((float)tramaAnalizar[1].toDouble());
+            datos.setGas((float)tramaAnalizar[2].toDouble());
+            datos.setOxi((float)tramaAnalizar[3].toDouble());
+            datos.setPulso(0);
+           // datos.setPulso(tramaAnalizar[4].toInt());
+            datos.setNombre("BaymaxInfoII");
+            datos.nuevoData(m_db);
+            QSqlDatabase::database().commit();
+            m_db.close();
+            //mando data con datos
+            break;
+        case ALERTA:
+            rtn = objAlarma.exec();//se abre el popup
+            ui->label_conexion->setText("EMERGENCIA");
+            break;
+        case DESCONECTADO:
+            ui->label_conexion->setText("Persona desconectada");
+            break;
+        }
+    }
+    else
+        qDebug()<<"Trama con fallas" << checksum; //OJO QUE EL CHECKSUM SUMA TODO, TENGO QUE RESTAR EL CHECKSUM Y LOS BARRAS
 }
 
 
