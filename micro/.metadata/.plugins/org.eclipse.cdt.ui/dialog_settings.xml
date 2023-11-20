@@ -41,6 +41,7 @@
 		<item key="caseSensitive" value="false"/>
 		<item key="searchFlags" value="227191"/>
 		<list key="previousPatterns">
+			<item value="flagPanico"/>
 			<item value="CTIMER0"/>
 			<item value="tipos"/>
 			<item value="tiposh"/>

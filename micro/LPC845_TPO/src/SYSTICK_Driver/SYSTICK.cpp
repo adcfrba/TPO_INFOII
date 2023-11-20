@@ -3,7 +3,6 @@
 extern Gpio ledG;
 extern Gpio ledR;
 extern Gpio ledB;
-extern uint8_t flag;
 
 
 std::vector<CALLBACK*> vCallBack;
@@ -32,19 +31,4 @@ void SysTick_Handler(void)
 	for (CALLBACK* q : vCallBack )
 		q->Callback();
 
-	/* static uint32_t milisegundos = 0;
-	milisegundos ++;
-
-	if( milisegundos == 1000  )
-		{
-			milisegundos = 0;
-			flag ++;
-			flag %= 2;
-
-			if( flag )
-				ledR.Set(1);
-			else
-				ledR.Set(0);
-		}
-		*/
 }

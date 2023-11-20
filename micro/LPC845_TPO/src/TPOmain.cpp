@@ -17,7 +17,7 @@ void LedV(void);
 void disparoADC(void);
 void enviarTrama(void);
 void leerData(void);
-void armarTrama(uint32_t, uint32_t, uint8_t, uint8_t);
+void armarTrama(uint32_t, uint32_t, uint8_t);
 void inicializacion(int, uint8_t);
 
 //SYSTICK
@@ -29,25 +29,29 @@ Gpio ledB(1, 1, 1);
 Gpio ledR(1, 2, 1);
 
 //PULSADOR EMERGENCIA
-GPIOF Pulsador(0,1,0); //PIN0_6
+GPIOF Pulsador(0,1,0); //PIN0_1
 
 //AUXILIARES GLOBALES
 uint8_t flag = 0;
 uint8_t flagPanico =0;
 uint8_t bufferTrama[30];
 uint32_t temp = 100;
-uint8_t oxi = 0;
-uint8_t pulso = 0;
+uint8_t oxi = 100;
 uint32_t gas = 100;
-uint8_t trama =1;
+uint8_t trama = DESCONECTADO; //Inicialmente
 float checksum;
 static uint8_t CanalADC = 0;
-static uint32_t tempAnterior = 50000;
+
+//FILTRO DE DATA
+static uint32_t tempAnterior = 50000; //fuera de rango
 static uint32_t tempPromedio = 0;
-static uint32_t tempIndex;
-static uint32_t gasAnterior = 10000;
+static uint32_t tempIndex = 0;
+static uint32_t gasAnterior = 10000; //fuera de rango
 static uint32_t gasPromedio = 0;
-static uint32_t gasIndex;
+static uint32_t gasIndex = 0;
+static uint8_t oxiAnterior = 200; //fuera de rango
+static uint8_t oxiPromedio = 0;
+static uint8_t oxiIndex = 0;
 
 //ADC
 extern uint32_t	ADC_Cuentas[2];
@@ -64,10 +68,11 @@ int main(void) {
     while(1) {
     	if((1==Pulsador.Read()) && (0==flagPanico))
     	{
+    		flagPanico = 1;
     		trama = ALERTA;
     		ledR.Set(0);
     	}
-		else if ((15==flagPanico)) //en 30 seg se apaga
+		else if ((4==flagPanico)) //en 15 seg se apaga
 		{
 			ledR.Set(1);
 			flagPanico = 0;
@@ -102,9 +107,10 @@ void disparoADC(void){
 
 void leerData(void)
 {
-	//analisis uno por uno del sensor
+	//analisis uno por uno del sensor + filtros
 	uint32_t tempLectura;
 	uint32_t gasLectura;
+	uint8_t oxiLectura;
 
 	if (0 == CanalADC) //GAS
 	{
@@ -128,6 +134,12 @@ void leerData(void)
 			gas = gasPromedio/(N+1);
 			gasAnterior = (uint32_t)gas;
 			gasPromedio = 0;
+
+			if(flagPanico == 0)
+				trama = OK;
+
+			if(gas > (uint32_t)GASMAX)
+				trama = ALERTA;
 		}
 
 		CanalADC++;
@@ -155,6 +167,12 @@ void leerData(void)
 			temp = tempPromedio/(N+1);
 			tempAnterior = (uint32_t)temp;
 			tempPromedio = 0;
+
+			if(flagPanico == 0)
+				trama = OK;
+
+			if(temp > TEMPMAX)
+				trama = ALERTA;
 		}
 
 		CanalADC = 0;
@@ -166,20 +184,49 @@ void leerData(void)
 		CanalADC = 0;
 	}
 
-	oxi = MAX30102();
+	//OXIGENO
+	oxiLectura = MAX30102();
+	if (oxiLectura > oxiAnterior + OXI_DELTA)
+		oxiLectura = oxiAnterior;
+	else if ((oxiLectura > oxiAnterior + OXI_DELTA) && (oxiIndex < N))
+		oxiLectura = oxiAnterior;
+
+	if(oxiLectura != 0)
+	{
+		oxiPromedio += oxiLectura;
+		oxiAnterior = oxiLectura;
+		oxiIndex++;
+	}
+
+	if(oxiIndex > N)
+	{
+		oxiIndex = 0;
+		oxi = oxiPromedio/(N+1);
+		oxiAnterior = oxi;
+		oxiPromedio = 0;
+
+		if(flagPanico == 0)
+			trama = OK;
+
+		if((oxi < OXIMIN) && (oxi != 0))
+			trama = ALERTA;
+		if(0 == oxi)
+			trama = DESCONECTADO;
+	}
 }
 
 void enviarTrama(void)
 {
+
 	switch (trama)
 	{
 		case ALERTA:
-			//uart0Send( (uint8_t *)"<-37.2-0.1-99-100-236.3->", (uint32_t)0);
+			//uart0Send( (uint8_t *)"<-37.2-0.1-99-236.3->", (uint32_t)0);
 			uart0Send( (uint8_t *)"<-¡ALERTA!->", (uint32_t)0);
 			flagPanico++;
 			break;
 		case OK:
-			armarTrama(temp,gas,0,0);
+			armarTrama(temp,gas,oxi);
 			uart0Send( (uint8_t *)bufferTrama, (uint32_t)0);
 			break;
 		case DESCONECTADO:
@@ -191,29 +238,10 @@ void enviarTrama(void)
 
 }
 
-void armarTrama(uint32_t temp, uint32_t gas, uint8_t oxi, uint8_t pulso)
+void armarTrama(uint32_t temp, uint32_t gas, uint8_t oxi)
 {
-	/*
-	bufferTrama[0] = '<';
-	bufferTrama[1] = '-';
-	bufferTrama[2] = (temp/1000) + '0';
-	bufferTrama[3] = '-';
-	bufferTrama[4] = (gas/1000) + '0';
-	bufferTrama[5] = '-';
-	bufferTrama[6] = oxi;
-	bufferTrama[7] = '-';
-	bufferTrama[8] = pulso;
-	bufferTrama[9] = '-';
-	for (int i = 0; i<10; i++)
-		bufferTrama[10] ^= bufferTrama[i];
-	bufferTrama[11] = '-';
-	bufferTrama[12] = '>';
-	bufferTrama[10] ^= 	bufferTrama[11];
-	bufferTrama[10] ^= 	bufferTrama[12];
-
-	*/
-	checksum = ((float)(temp/10)+(float)(gas/100)+oxi+pulso);
-	sprintf((char*)bufferTrama, "<-%d.%d-%d.%d-%d-%d-%1f->",temp/10, temp%10, gas/100, gas%100, oxi, pulso, checksum);
+	checksum = ((float) temp/10) + ((float)gas/100) + (float)oxi;
+	sprintf((char*)bufferTrama, "<-%d.%d-%d.%d-%d-%.2f->",temp/10, temp%10, gas/100, gas%100, oxi, checksum);
 	//sprintf(bufferTrama, "hola");
 }
 
@@ -223,11 +251,15 @@ void inicializacion(int baudrate, uint8_t leds)
     TimerStart(0, 1, MAX30102_Leer , DEC );
     IIC_Inicializacion( );
 
+    //LCD
+
+    //UART
 	uart0Init(baudrate); //inicializamos la uart a utilizar
+	uart0Send( (uint8_t *)"AT+NAMEbaymaxINFO2023", (uint32_t)0);
 
 	timerDisparoADC.Start(200,200, disparoADC); //CADA 0.2 SEG LEE
 	timerLecturaADC.Start(200, 200, leerData); //CADA 0.2 SEG LO ANALIZA Y MANDA A UN BUFFER TEMPORAL
-	timerUART0.Start(5000,5000, enviarTrama); //CADA 2 SEG ENVIA
+	timerUART0.Start(5000,5000, enviarTrama); //CADA 5 SEG ENVIA
 
 	//SETEO DE LEDS APAGADOS
 	ledG.Set(leds);
