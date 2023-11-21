@@ -28,6 +28,7 @@ src/ADC_Driver \
 src/GPIOF_Driver \
 src/GPIO_Driver \
 src/I2C_Driver \
+src/LCD_Driver \
 src/MAX30102 \
 src/SYSTICK_Driver \
 src/TECLADO_Driver \

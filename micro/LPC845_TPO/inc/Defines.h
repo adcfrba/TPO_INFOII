@@ -22,6 +22,7 @@
 #include "ADC.h"
 #include "uart0.h"
 #include "timers.h"
+#include "lcd.h"
 
 #include "i2c.h"
 #include "SpO2Calculator.h"

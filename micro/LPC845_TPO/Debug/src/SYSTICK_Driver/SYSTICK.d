@@ -14,6 +14,7 @@ src/SYSTICK_Driver/SYSTICK.o src/SYSTICK_Driver/SYSTICK.d: \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\UART0_Driver/uart0.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\inc/tipos.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\TIMERSMAX_Driver/timers.h \
+ C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\LCD_Driver/lcd.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\I2C_Driver/i2c.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\MAX30102/SpO2Calculator.h \
  c:\users\notebook\documents\info\ ii\ 2023\tpo\tpo_infoii\micro\lpc845_tpo\src\max30102\max30102.h
@@ -31,6 +32,7 @@ C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\A
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\UART0_Driver/uart0.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\inc/tipos.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\TIMERSMAX_Driver/timers.h:
+C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\LCD_Driver/lcd.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\I2C_Driver/i2c.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\MAX30102/SpO2Calculator.h:
 c:\users\notebook\documents\info\ ii\ 2023\tpo\tpo_infoii\micro\lpc845_tpo\src\max30102\max30102.h:

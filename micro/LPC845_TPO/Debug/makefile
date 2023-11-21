@@ -15,6 +15,7 @@ RM := rm -rf
 -include src/TECLADO_Driver/subdir.mk
 -include src/SYSTICK_Driver/subdir.mk
 -include src/MAX30102/subdir.mk
+-include src/LCD_Driver/subdir.mk
 -include src/I2C_Driver/subdir.mk
 -include src/GPIO_Driver/subdir.mk
 -include src/GPIOF_Driver/subdir.mk
