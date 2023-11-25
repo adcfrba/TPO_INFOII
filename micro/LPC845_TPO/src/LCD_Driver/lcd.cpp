@@ -22,7 +22,7 @@ lcd::lcd(): LCD_RS(PIN_LCD16X2_RS,1), LCD_E(PIN_LCD16X2_E,1), LCD_D7(PIN_LCD16X2
 	for( i = 0 ; i < 3 ; i++ )
 	{
 		LCD_E.Set(0);
-		delay( );
+		LCD_Delay( );
 		LCD_D7.Set(0);
 		LCD_D6.Set(0);
 		LCD_D5.Set(1);
@@ -40,7 +40,7 @@ lcd::lcd(): LCD_RS(PIN_LCD16X2_RS,1), LCD_E(PIN_LCD16X2_E,1), LCD_D7(PIN_LCD16X2
 
 	//DESHABILITO ENABLE
 	LCD_E.Set(0);
-	delay( );
+	LCD_Delay( );
 
 	LCD_D7.Set(0);
 	LCD_D6.Set(0);
@@ -56,30 +56,30 @@ lcd::lcd(): LCD_RS(PIN_LCD16X2_RS,1), LCD_E(PIN_LCD16X2_E,1), LCD_D7(PIN_LCD16X2
 	LCD_E.Set(0);
 
 	//LO DEJO CLEAN Y RESETEO CURSOR TODO CON 4 BITS
-	escribir(LCD16x2_CONTROL, APAGAR_LCD);
-	escribir(LCD16x2_CONTROL, BORRAR_PANTALLA);
-	escribir(LCD16x2_CONTROL, RESETEAR_CURSOR);
-	escribir(LCD16x2_CONTROL, PREPARAR_TODO);
+	LCD_Escribir(LCD16x2_CONTROL, APAGAR_LCD);
+	LCD_Escribir(LCD16x2_CONTROL, BORRAR_PANTALLA);
+	LCD_Escribir(LCD16x2_CONTROL, RESETEAR_CURSOR);
+	LCD_Escribir(LCD16x2_CONTROL, PREPARAR_TODO);
 }
 
 lcd::~lcd()
 {
 
 }
-void lcd::escribir(uint8_t control, uint8_t comando)
+void lcd::LCD_Escribir(uint8_t control, uint8_t comando)
 {
 	int32_t q , i = 1;
 
 	//DESHABILITO EL ENABLE
-	LCD_E.Set(0);
+	//LCD_E.Set(0);
 
 	do
 	{
 		//ESCRIBO LOS DATOS
-		LCD_D4.Set((comando >> (0+i*4)) & 0x01);
-		LCD_D5.Set((comando >> (1+i*4)) & 0x01);
-		LCD_D6.Set((comando >> (2+i*4)) & 0x01);
 		LCD_D7.Set((comando >> (3+i*4)) & 0x01);
+		LCD_D6.Set((comando >> (2+i*4)) & 0x01);
+		LCD_D5.Set((comando >> (1+i*4)) & 0x01);
+		LCD_D4.Set((comando >> (0+i*4)) & 0x01);
 
 		//RS
 		LCD_RS.Set(control); //cuando es 0 configuro, cuando es 1 escribo data
@@ -100,25 +100,24 @@ void lcd::escribirTexto(uint8_t * texto)
 {
 	for(int i = 0; texto[i] != 0; i++)
 	{
-		escribir(LCD16x2_DATA, texto[i]);
+		LCD_Escribir(LCD16x2_DATA, texto[i]);
 	}
 }
 
-void lcd::escribirTextoEspecifico(uint8_t * texto, uint8_t linea, uint8_t columna)
+void lcd::Display_LCD(uint8_t * texto, uint8_t linea, uint8_t columna)
 {
 	uint32_t offset = 0; //por si linea y columna valen 0
 
 	offset = linea * 40; //cada una tiene 40
 	offset += columna;
 
-	escribir(LCD16x2_CONTROL, 0x80 + offset);
+	LCD_Escribir(LCD16x2_CONTROL, 0x80 + offset);
+
 	for(int i = 0; texto[i] != 0; i++)
-	{
-		escribir(LCD16x2_DATA, texto[i]);
-	}
+		LCD_Escribir(LCD16x2_DATA, texto[i]);
 }
 
-void lcd::delay(void)
+void lcd::LCD_Delay(void)
 {
 	uint32_t 	i;
 	for ( i = 0 ; i < 500000 ; i++ ); // 300000

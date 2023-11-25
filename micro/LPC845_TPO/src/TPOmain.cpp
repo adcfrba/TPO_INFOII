@@ -19,6 +19,10 @@ void enviarTrama(void);
 void leerData(void);
 void armarTrama(uint32_t, uint32_t, uint8_t);
 void inicializacion(int, uint8_t);
+void lcdInit(void);
+
+//LCD DISPLAY 16x2
+lcd lcdDisplay;
 
 //SYSTICK
 SYSTICK Systick(1000);
@@ -41,6 +45,8 @@ uint32_t gas = 100;
 uint8_t trama = DESCONECTADO; //Inicialmente
 float checksum;
 static uint8_t CanalADC = 0;
+uint8_t Buffer_linea_1[16];
+uint8_t Buffer_linea_2[16];
 
 //FILTRO DE DATA
 static uint32_t tempAnterior = 50000; //fuera de rango
@@ -223,14 +229,18 @@ void enviarTrama(void)
 		case ALERTA:
 			//uart0Send( (uint8_t *)"<-37.2-0.1-99-236.3->", (uint32_t)0);
 			uart0Send( (uint8_t *)"<-¡ALERTA!->", (uint32_t)0);
+			lcdDisplay.Display_LCD((uint8_t*)"ALERTA", 0,0);
 			flagPanico++;
 			break;
 		case OK:
 			armarTrama(temp,gas,oxi);
 			uart0Send( (uint8_t *)bufferTrama, (uint32_t)0);
+			lcdDisplay.Display_LCD(Buffer_linea_1, 0 , 0);
+			lcdDisplay.Display_LCD(Buffer_linea_2, 1 , 0);
 			break;
 		case DESCONECTADO:
 			uart0Send((uint8_t *) "<-DESCONECTADO->", (uint32_t)0); //avisamos que no hay nadie conectado a los sensores
+			lcdDisplay.Display_LCD((uint8_t*)"DESCONECTADO", 0,0);
 		default:
 			trama = OK;
 			break;
@@ -242,16 +252,19 @@ void armarTrama(uint32_t temp, uint32_t gas, uint8_t oxi)
 {
 	checksum = ((float) temp/10) + ((float)gas/100) + (float)oxi;
 	sprintf((char*)bufferTrama, "<-%d.%d-%d.%d-%d-%.2f->",temp/10, temp%10, gas/100, gas%100, oxi, checksum);
-	//sprintf(bufferTrama, "hola");
+	sprintf((char *)Buffer_linea_1, "sPO2:%d% T:%dC",(int)oxi,(int)temp);
+	sprintf((char *)Buffer_linea_2, "CO2:%dppm",(int)gas);
 }
 
 void inicializacion(int baudrate, uint8_t leds)
 {
+	//ADC Y MAX
     ADC_Inicializar(); //HABILITO EL DEL PIN07 Y EL 6
     TimerStart(0, 1, MAX30102_Leer , DEC );
     IIC_Inicializacion( );
 
     //LCD
+    lcdInit();
 
     //UART
 	uart0Init(baudrate); //inicializamos la uart a utilizar
@@ -267,4 +280,10 @@ void inicializacion(int baudrate, uint8_t leds)
 	ledR.Set(leds);
 }
 
-
+void lcdInit(void)
+{
+	lcdDisplay.LCD_Escribir(LCD16x2_CONTROL, BORRAR_PANTALLA);
+	lcdDisplay.LCD_Escribir(LCD16x2_CONTROL, RESETEAR_CURSOR);
+	lcdDisplay.Display_LCD((uint8_t*)"BAYMAX", 0 , 6);
+	lcdDisplay.Display_LCD((uint8_t*)"(Anto,Gabi,Eze)", 1, 0);
+}
