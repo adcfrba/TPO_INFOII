@@ -12,14 +12,14 @@
 
 
 //FUNCIONES A USAR
-void LedR(void);
-void LedV(void);
 void disparoADC(void);
 void enviarTrama(void);
 void leerData(void);
 void armarTrama(uint32_t, uint32_t, uint8_t);
 void inicializacion(int, uint8_t);
 void lcdInit(void);
+void demorai2c (void);
+
 
 //LCD DISPLAY 16x2
 lcd lcdDisplay;
@@ -40,13 +40,20 @@ uint8_t flag = 0;
 uint8_t flagPanico =0;
 uint8_t bufferTrama[30];
 uint32_t temp = 100;
-uint8_t oxi = 100;
+uint8_t oxi = 0;
 uint32_t gas = 100;
 uint8_t trama = DESCONECTADO; //Inicialmente
 float checksum;
 static uint8_t CanalADC = 0;
 uint8_t Buffer_linea_1[16];
 uint8_t Buffer_linea_2[16];
+
+//ADC
+extern uint32_t	ADC_Cuentas[2];
+
+//VARIABLES MAX30102
+extern uint8_t demora_i2c;
+extern uint8_t leerMAX30102;
 
 //FILTRO DE DATA
 static uint32_t tempAnterior = 50000; //fuera de rango
@@ -59,13 +66,12 @@ static uint8_t oxiAnterior = 200; //fuera de rango
 static uint8_t oxiPromedio = 0;
 static uint8_t oxiIndex = 0;
 
-//ADC
-extern uint32_t	ADC_Cuentas[2];
 
 //TIMERS
 TIMERSW timerDisparoADC;
 TIMERSW timerUART0;
 TIMERSW timerLecturaADC;
+TIMERSW timerLecturaMAX;
 
 int main(void) {
 
@@ -88,19 +94,6 @@ int main(void) {
     return 0 ;
 
 }
-
-void LedR(void){
-	static uint8_t status = 0;
-
-	if(status){
-		status = 0;
-		ledR.Set(0);
-	}else{
-		status = 1;
-		ledR.Set(1);
-	}
-}
-
 
 void disparoADC(void){
 	static uint8_t 		CanalADC = 0;
@@ -211,14 +204,14 @@ void leerData(void)
 		oxiAnterior = oxi;
 		oxiPromedio = 0;
 
-		if(flagPanico == 0)
+		if((flagPanico == 0)&& (oxi != 0))
 			trama = OK;
 
 		if((oxi < OXIMIN) && (oxi != 0))
 			trama = ALERTA;
-		if(0 == oxi)
-			trama = DESCONECTADO;
 	}
+	if((0 == oxi) && (flagPanico == 0))
+		trama = DESCONECTADO;
 }
 
 void enviarTrama(void)
@@ -252,15 +245,14 @@ void armarTrama(uint32_t temp, uint32_t gas, uint8_t oxi)
 {
 	checksum = ((float) temp/10) + ((float)gas/100) + (float)oxi;
 	sprintf((char*)bufferTrama, "<-%d.%d-%d.%d-%d-%.2f->",temp/10, temp%10, gas/100, gas%100, oxi, checksum);
-	sprintf((char *)Buffer_linea_1, "sPO2:%d% T:%dC",(int)oxi,(int)temp);
+	sprintf((char *)Buffer_linea_1, "sPO2:%d T:%dC",(int)oxi,(int)temp);
 	sprintf((char *)Buffer_linea_2, "CO2:%dppm",(int)gas);
 }
 
 void inicializacion(int baudrate, uint8_t leds)
 {
-	//ADC Y MAX
+	//ADC
     ADC_Inicializar(); //HABILITO EL DEL PIN07 Y EL 6
-    TimerStart(0, 1, MAX30102_Leer , DEC );
     IIC_Inicializacion( );
 
     //LCD
@@ -273,6 +265,7 @@ void inicializacion(int baudrate, uint8_t leds)
 	timerDisparoADC.Start(200,200, disparoADC); //CADA 0.2 SEG LEE
 	timerLecturaADC.Start(200, 200, leerData); //CADA 0.2 SEG LO ANALIZA Y MANDA A UN BUFFER TEMPORAL
 	timerUART0.Start(5000,5000, enviarTrama); //CADA 5 SEG ENVIA
+	timerLecturaMAX.Start(1,1,demorai2c);
 
 	//SETEO DE LEDS APAGADOS
 	ledG.Set(leds);
@@ -286,4 +279,11 @@ void lcdInit(void)
 	lcdDisplay.LCD_Escribir(LCD16x2_CONTROL, RESETEAR_CURSOR);
 	lcdDisplay.Display_LCD((uint8_t*)"BAYMAX", 0 , 6);
 	lcdDisplay.Display_LCD((uint8_t*)"(Anto,Gabi,Eze)", 1, 0);
+}
+
+void demorai2c (void)
+{
+	leerMAX30102=1;
+	if( demora_i2c )
+			demora_i2c --;
 }

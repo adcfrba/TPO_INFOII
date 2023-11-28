@@ -4,6 +4,8 @@ uint8_t data[192];
 uint8_t buffer[50];
 uint8_t SpO2;
 uint32_t red = 0, ir = 0;
+int32_t muestra;
+uint8_t leerMAX30102;
 
 uint8_t MAX30102( void )
 {
@@ -28,136 +30,98 @@ uint8_t MAX30102( void )
 		if( !GetDemora_IIC() )
 		{
 
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS);
-		IIC_Write(MAX30102_INT_STATUS_1);
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS | 1);
-		status1 = IIC_Read(NO_ACK);
-		IIC_Stop();
+			IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS);
+					IIC_Write(MAX30102_INT_STATUS_1);
+					IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS | 1);
+					status1 = IIC_Read(NO_ACK);
+					IIC_Stop();
 
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS);
-		IIC_Write(MAX30102_INT_STATUS_2);
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS | 1);
-		status2 = IIC_Read(NO_ACK);
-		IIC_Stop();
+					IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS);
+					IIC_Write(MAX30102_INT_STATUS_2);
+					IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS | 1);
+					status2 = IIC_Read(NO_ACK);
+					IIC_Stop();
 
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS);
-		IIC_Write(MAX30102_FIFO_WR_PTR);
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS | 1);
-		wr = IIC_Read(NO_ACK);
-		IIC_Stop();
+					IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS);
+					IIC_Write(MAX30102_FIFO_OV_PTR);
+					IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS | 1);
+					ov = IIC_Read(NO_ACK);
+					IIC_Stop();
 
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS);
-		IIC_Write(MAX30102_FIFO_OV_PTR);
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS | 1);
-		ov = IIC_Read(NO_ACK);
-		IIC_Stop();
+					IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS);
+					IIC_Write(MAX30102_FIFO_WR_PTR);
+					IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS | 1);
+					wr = IIC_Read(NO_ACK);
+					IIC_Stop();
 
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS);
-		IIC_Write(MAX30102_FIFO_RD_PTR);
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS | 1);
-		rd = IIC_Read(NO_ACK);
-		IIC_Stop();
+					IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS);
+					IIC_Write(MAX30102_FIFO_RD_PTR);
+					IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS | 1);
+					rd = IIC_Read(NO_ACK);
+					IIC_Stop();
 
-		samples = rd - wr;
-		if( ov >= 0xF )
-		{
-			ov = 0;
-		}
-		if(samples < 0)
-			samples +=MAX30102_SAMPLE_LEN_MAX;
-/*
-		if( wr == 0xFF )
-			samples = 0;
+					samples = (wr - rd)&(31);
+					if( ov >= 0xF )
+					{
+						ov = 0;
+					}
+					if(samples < 0)
+						samples +=MAX30102_SAMPLE_LEN_MAX;
+					muestra=samples;
 
- 	 	//Lectura de toda la FIFO
- 		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS);
-		IIC_Write(MAX30102_FIFO_DATA);
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS | 1);
-		if( samples )
-		{	for(i = 0; i < samples*MAX30102_BYTES_PER_SAMPLE; i ++ )	//cada muestra es de 6 bytes
-			{
-				data[i] = IIC_Read(ACK);
-			}
-		}
-		else
-		{
-			for(i = 0; i < 6; i ++ )	//cada muestra es de 6 bytes
-			{
-				data[i] = IIC_Read(ACK);
-			}
-		}
-		IIC_Stop();
+					//Lectura macaca
+			 		IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS);
+					IIC_Write(MAX30102_FIFO_DATA);
+				//	IIC_Write(MAX30102_FIFO_RD_PTR);
+					IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS | 1);
+				//	IIC_Write(MAX30102_FIFO_RD_PTR);
+				//	IIC_Write(MAX30102_FIFO_DATA);
+					for(i = 0; i < (samples*6); i ++ )	//cada muestra es de 6 bytes
+					{
+						data[i] = IIC_Read(ACK);
+					}
+					IIC_Stop();
 
-		if( samples )
-		{
-			for(i = 0; i < samples; i ++ )
-			{
-				red += (data[(i*MAX30102_BYTES_PER_SAMPLE)]<<16) | (data[(i*MAX30102_BYTES_PER_SAMPLE)+1]<<8) | data[(i*MAX30102_BYTES_PER_SAMPLE)+2];
-				ir += (data[(i*MAX30102_BYTES_PER_SAMPLE)+3]<<16) | (data[(i*MAX30102_BYTES_PER_SAMPLE)+4]<<8) | data[(i*MAX30102_BYTES_PER_SAMPLE)+5];
-			}
-		}
-		else
-		{
-			//red = (data[0]<<16) | (data[1]<<8) | data[2];      // Last IR reflectance datapoint
-			//ir = (data[3]<<16) | (data[4]<<8) | data[5];     // Last Red reflectance datapoint
-			//red &= 0x03FFFF;
-			//ir &= 0x03FFFF;
-			red = 0;
-			ir = 0;
-		}
+					IIC_Write(MAX30102_PHY_ADDRESS);
+					IIC_Write(MAX30102_FIFO_RD_PTR);
 
-		if( samples )
-		{
-			red /= samples;
-			ir /= samples;
-			red &= 0x03FFFF;
-			ir &= 0x03FFFF;
-		}
 
-*/
+					IIC_Stop();
+					for(i=0;i<samples;i++)
+					{
+						red = (data[(i*6)]<<14) | (data[(i*6)+1]<<6) | data[(i*6)+2]>>2;      // Last IR reflectance datapoint
+						ir = (data[i*6+3]<<14) | (data[i*6+4]<<6) | data[i*6+5]>>2;     // Last Red reflectance datapoint
+						red &= 0x03FFFF;
+						ir &= 0x03FFFF;
+					}
+					SpO2 = update(ir,red);
 
-		//Lectura macaca
- 		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS);
-		IIC_Write(MAX30102_FIFO_DATA);
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS | 1);
-		for(i = 0; i < 6; i ++ )	//cada muestra es de 6 bytes
-		{
-			data[i] = IIC_Read(ACK);
-		}
-		IIC_Stop();
+				//	MAX30102ResetPointers();
+			        /*
+					IIC_Start();
+					IIC_Write(MAX30102_PHY_ADDRESS);
+					IIC_Write(MAX30102_FIFO_RD_PTR);
+					IIC_Write(0);	//Ver esto
+					IIC_Stop();
+					*/
+					/*if( samples )
+					{
+						sprintf((char *)buffer, "RED: %d - IR: %d wr=%d rd=%d ov=%d st1=%d st2=%d\n", red, ir, wr, rd, ov, status1, status2);
+						UART1_Send(buffer, strlen((char *)buffer));
+					}*/
 
-		red = (data[0]<<16) | (data[1]<<8) | data[2];      // Last IR reflectance datapoint
-		ir = (data[3]<<16) | (data[4]<<8) | data[5];     // Last Red reflectance datapoint
-		red &= 0x03FFFF;
-		ir &= 0x03FFFF;
-
-		SpO2 = update(ir,red);
-        /*
-		IIC_Start();
-		IIC_Write(MAX30102_PHY_ADDRESS);
-		IIC_Write(MAX30102_FIFO_RD_PTR);
-		IIC_Write(0);	//Ver esto
-		IIC_Stop();
-		*/
-		/*if( samples )
-		{
-			sprintf((char *)buffer, "RED: %d - IR: %d wr=%d rd=%d ov=%d st1=%d st2=%d\n", red, ir, wr, rd, ov, status1, status2);
-			UART1_Send(buffer, strlen((char *)buffer));
-		}*/
 
 
 
@@ -166,9 +130,9 @@ uint8_t MAX30102( void )
 		}
 		break;
 	case 2:
-		if( GetFlagLecturaMAX30102( ) )
+		if( leerMAX30102==1 )
 		{
-			SetFlagLecturaMAX30102( 0 );
+			leerMAX30102=0;
 			SetDemora_IIC(IIC_DELAY_ms);
 			estado = 1;
 		}

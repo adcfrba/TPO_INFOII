@@ -13,7 +13,6 @@ src/GPIO_Driver/GPIO.o src/GPIO_Driver/GPIO.d: \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\ADC_Driver/ADC.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\UART0_Driver/uart0.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\inc/tipos.h \
- C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\TIMERSMAX_Driver/timers.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\LCD_Driver/lcd.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\I2C_Driver/i2c.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\MAX30102/SpO2Calculator.h \
@@ -31,7 +30,6 @@ C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\T
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\ADC_Driver/ADC.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\UART0_Driver/uart0.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\inc/tipos.h:
-C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\TIMERSMAX_Driver/timers.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\LCD_Driver/lcd.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\I2C_Driver/i2c.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\micro\LPC845_TPO\src\MAX30102/SpO2Calculator.h:

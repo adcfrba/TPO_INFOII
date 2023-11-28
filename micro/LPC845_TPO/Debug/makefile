@@ -11,7 +11,6 @@ RM := rm -rf
 -include src/UTILS/CALLBACK/subdir.mk
 -include src/UART0_Driver/subdir.mk
 -include src/TIMERSW_Driver/subdir.mk
--include src/TIMERSMAX_Driver/subdir.mk
 -include src/TECLADO_Driver/subdir.mk
 -include src/SYSTICK_Driver/subdir.mk
 -include src/MAX30102/subdir.mk
@@ -19,6 +18,7 @@ RM := rm -rf
 -include src/I2C_Driver/subdir.mk
 -include src/GPIO_Driver/subdir.mk
 -include src/GPIOF_Driver/subdir.mk
+-include src/DISPLAY_Driver/subdir.mk
 -include src/ADC_Driver/subdir.mk
 -include src/subdir.mk
 ifneq ($(MAKECMDGOALS),clean)

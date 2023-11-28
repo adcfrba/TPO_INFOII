@@ -21,8 +21,8 @@
 #include "teclado.h"
 #include "ADC.h"
 #include "uart0.h"
-#include "timers.h"
 #include "lcd.h"
+//#include "display.h"
 
 #include "i2c.h"
 #include "SpO2Calculator.h"
@@ -42,12 +42,20 @@
 #define OK 1
 #define DESCONECTADO 2
 #define GASMAX 3000
-#define TEMPMAX 450
+#define TEMPMAX 500
 #define OXIMIN 90
 #define OXI_DELTA 5
 #define TEMP_DELTA 10
 #define GAS_DELTA 500
 #define N 5
+
+
+//Gpio LCD_RS;
+//Gpio LCD_E;
+//Gpio LCD_D4;
+//Gpio LCD_D5;
+//Gpio LCD_D6;
+//Gpio LCD_D7;
 
 
 #endif /* DEFINES_H_ */

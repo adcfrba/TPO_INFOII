@@ -15,25 +15,6 @@ Gpio scl(SCL, 1);
 //-------------------------------------------
 void IIC_Inicializacion(void)
 {
-//	PINSEL_CFG_Type PinCfg;
-
-//	// Configuro los pines del micro con pullup
-//	GPIO_Config_Pin(SDA, 0, PINSEL_PINMODE_PULLUP, PINSEL_PINMODE_NORMAL);
-//	GPIO_Config_Pin(SCL, 0, PINSEL_PINMODE_PULLUP, PINSEL_PINMODE_NORMAL);
-//
-//	// Configuro los pines del micro como salida
-//	GPIO_Dir(SDA, 1);
-//	GPIO_Dir(SCL, 1);
-//
-//	// Seteo los pines
-//	GPIOSetValue(SDA, 1);
-//	GPIOSetValue(SCL, 1);
-
-	// Configuro los pines del micro como salida
-	//GPIO_Dir( SDA, 1 );
-	//LPC_IOCON->R_PIO1_1 = 1 | (1<<7);
-	//GPIO_Dir( SCL, 1 );
-	//LPC_IOCON->R_PIO1_0 = 1 | (1<<7);
 
 	// Seteo los pines
 	sda.Set(1);
