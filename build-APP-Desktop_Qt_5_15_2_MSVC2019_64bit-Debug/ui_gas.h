@@ -10,6 +10,7 @@
 #define UI_GAS_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
@@ -87,6 +88,8 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::LinkVisited, brush7);
         palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush4);
         gas->setPalette(palette);
+        QIcon icon(QIcon::fromTheme(QString::fromUtf8("weather-fog")));
+        gas->setWindowIcon(icon);
         verticalLayout = new QVBoxLayout(gas);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalFrame = new QFrame(gas);
@@ -198,7 +201,7 @@ public:
 
     void retranslateUi(QDialog *gas)
     {
-        gas->setWindowTitle(QCoreApplication::translate("gas", "Dialog", nullptr));
+        gas->setWindowTitle(QCoreApplication::translate("gas", "GAS", nullptr));
     } // retranslateUi
 
 };

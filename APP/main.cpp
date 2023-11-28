@@ -1,7 +1,4 @@
-#include "historial.h"
-#include "ox.h"
-#include "temp.h"
-#include "gas.h"
+#include "includes.h"
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"

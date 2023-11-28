@@ -84,7 +84,6 @@ void lectura::nuevoData(QSqlDatabase bd)
 {
     QSqlQuery qyInsert(bd);
     qyInsert.prepare("INSERT INTO lecturas(NOMBRE, TEMP, OXI, PULSO, GAS, FECHA) VALUES(:NOMBRE, :TEMP, :OXI, :PULSO, :GAS, :FECHA)");
-    //ACA TENEMOS LAS LECTURAS
     qyInsert.bindValue(":NOMBRE", QString::fromStdString(nombre));
     qyInsert.bindValue(":TEMP",temp);
     qyInsert.bindValue(":OXI",oxi);
@@ -97,7 +96,6 @@ void lectura::nuevoData(QSqlDatabase bd)
 void lectura::leerData(QSqlDatabase bd)
 {
     QSqlQuery qyData(bd);
-    //qyData.prepare("SELECT * FROM lecturas WHERE ID IN (SELECT max(ID) FROM lecturas)");
     qyData.exec("SELECT * FROM lecturas WHERE ID IN (SELECT max(ID) FROM lecturas)");
     while(qyData.next())
     {
@@ -115,7 +113,6 @@ void lectura::actData(QSqlDatabase bd)
     QSqlDatabase::database().transaction();
     QSqlQuery qyUpdate(bd);
     qyUpdate.prepare("UPDATE lecturas SET NOMBRE=:NOMBRE, TEMP=:TEMP, OXI=:OXI, PULSO=:PULSO, GAS=:GAS WHERE FECHA=:FECHA");
-    //NUEVMAENTE LAS LECTURAS
     qyUpdate.bindValue(":TEMP", temp);
     qyUpdate.bindValue(":OXI", oxi);
     qyUpdate.bindValue(":PULSO", pulso);

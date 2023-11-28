@@ -7,7 +7,7 @@ Historial::Historial(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    mModel = new QSqlTableModel(this); //traigo todo
+    mModel = new QSqlTableModel(this); //LEE TODAS LAS TABLAS DE SQL
     mModel->setTable("Lecturas");
     mModel->select();
     ui->tableView_historial->setModel(mModel);

@@ -276,7 +276,10 @@
    </palette>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>GAS</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="weather-fog"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

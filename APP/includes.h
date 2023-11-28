@@ -34,6 +34,7 @@
 #include <QDateTime>
 #include <QByteArray>
 
+
 using namespace std;
 #define CHECKSUM 4
 #define SENSORES 0

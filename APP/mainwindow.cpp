@@ -8,11 +8,11 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setupMain();
-    qDebug() <<"Drivers:" << QSqlDatabase::drivers(); //me tira la lista de los drivers disponibles
+    qDebug() <<"Drivers:" << QSqlDatabase::drivers(); //DRIVERS DISPONIBLES
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:/sqlite/gui/databases/mydb.sqlite"); //seteamos la base de datos
+    m_db.setDatabaseName("C:/sqlite/gui/databases/mydb.sqlite"); //BASE DE DATOS, VIVE EN LA PC
 
-    if (!m_db.open()) //checqueamos si se conecto o no
+    if (!m_db.open()) //CHECK OPEN
     {
         qDebug() << "Error: connection with database failed";
     }
@@ -20,9 +20,9 @@ MainWindow::MainWindow(QWidget *parent)
     {
         qDebug() << "Database: connection ok";
         QSqlDatabase::database().transaction();
-        datos.leerData(m_db); //obtenemos los datos y lo guardamos en el objeto
+        datos.leerData(m_db); //OBTENER DATA Y GUARDAR EN EL OBJETO
         mostrarDatos();
-        datosVector=leerVector(m_db); //ox
+        datosVector=leerVector(m_db);
 
         QSqlDatabase::database().commit();
         m_db.close();
@@ -30,7 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //BLUETOOTH
     connect(agent, SIGNAL(deviceDiscovered(QBluetoothDeviceInfo)),this, SLOT(deviceDiscovered(QBluetoothDeviceInfo)));
-    agent->start(); //inicia la busqueda de dispositivos
+    agent->start(); //BUSQUEDA DE DISPOSITIVOS
     socket = new QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol);
 }
 
@@ -43,7 +43,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::deviceDiscovered(const QBluetoothDeviceInfo &info)
 {
-    //Imprime información sobre el dispositivo descubierto
     qDebug() << "Nombre del dispositivo:" << info.name();
     qDebug() << "Dirección MAC del dispositivo:" << info.address().toString();
     if (info.name() == "baymaxINFO2023")
@@ -134,7 +133,7 @@ vector<lectura> MainWindow::leerVector(QSqlDatabase bd)
     vector <lectura> vector;
     lectura aux;
     QSqlQuery qyDataVector(bd);
-    qyDataVector.exec("SELECT * FROM lecturas ORDER BY ID DESC");
+    qyDataVector.exec("SELECT * FROM lecturas ORDER BY ID DESC"); //TOMA ULTIMA ENTRADA DE LA BASE DE DATOS
 
     for(int i = 0; i < 5; i++)
     {
@@ -145,7 +144,6 @@ vector<lectura> MainWindow::leerVector(QSqlDatabase bd)
         aux.setFecha(qyDataVector.value(6).toString().toStdString());
         aux.setPulso(qyDataVector.value(4).toInt());
         aux.setGas(qyDataVector.value(5).toFloat());
-        //qDebug()<<"A VER"<<aux.getNombre()<<aux.getTemp()<<aux.getOxi()<<aux.getFecha()<<aux.getPulso()<<aux.getGas();
         vector.push_back(aux);
     }
     return(vector);
@@ -195,7 +193,7 @@ void MainWindow::setupMain(void)
 
 void MainWindow::conectarBT(const QBluetoothDeviceInfo &info)
 {
-    string = info.address().toString(); //nos guarda la dirección del device en nuestro string
+    string = info.address().toString(); //DIRECCIÓN DEL DEVICE
     static const QString serviceUuid (QStringLiteral("00001101-0000-1000-8000-00805F9B34FB"));
     socket->connectToService(QBluetoothAddress(string), QBluetoothUuid(serviceUuid),QIODevice::ReadWrite);
     if(socket->state()==1) //ServiceLookupState
@@ -203,7 +201,6 @@ void MainWindow::conectarBT(const QBluetoothDeviceInfo &info)
         socket->write("OK");
         qDebug() << "Conexión: "<< string;
         connect(socket, SIGNAL(readyRead()), this, SLOT(receive()));
-        //QMessageBox::information(this, tr("BEYMAX"), tr("Conexión con BT exitosa"));
     }
 }
 
@@ -262,16 +259,15 @@ void MainWindow::analizarTrama(QStringList tramaAnalizar, lectura datos, int ent
             datos.setTemp((float)tramaAnalizar[1].toDouble());
             datos.setGas((float)tramaAnalizar[2].toDouble());
             datos.setOxi((float)tramaAnalizar[3].toDouble());
-            datos.setPulso(0);
-           // datos.setPulso(tramaAnalizar[4].toInt());
+            datos.setPulso(0); //HASTA CONSEGUIR EL SENSOR
+            //datos.setPulso(tramaAnalizar[4].toInt());
             datos.setNombre("BaymaxInfoII");
             datos.nuevoData(m_db);
             QSqlDatabase::database().commit();
             m_db.close();
-            //mando data con datos
             break;
         case ALERTA:
-            rtn = objAlarma.exec();//se abre el popup
+            rtn = objAlarma.exec();
             ui->label_conexion->setText("EMERGENCIA");
             break;
         case DESCONECTADO:
@@ -280,7 +276,7 @@ void MainWindow::analizarTrama(QStringList tramaAnalizar, lectura datos, int ent
         }
     }
     else
-        qDebug()<<"Trama con fallas" << checksum; //OJO QUE EL CHECKSUM SUMA TODO, TENGO QUE RESTAR EL CHECKSUM Y LOS BARRAS
+        qDebug()<<"Trama con fallas" << checksum;
 }
 
 

@@ -16,7 +16,7 @@ temp::~temp()
 
 void temp::on_buttonBox_accepted()
 {
-    //chart->setAnimationOptions(QChart );
+
 }
 
 vector<lectura> temp::getVectorTemp(void)

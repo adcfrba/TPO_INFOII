@@ -1,7 +1,6 @@
 #ifndef ALARMA_H
 #define ALARMA_H
 
-#include <QDialog>
 #include "includes.h"
 
 namespace Ui {

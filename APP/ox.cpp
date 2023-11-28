@@ -1,6 +1,5 @@
 #include "ox.h"
 #include "ui_ox.h"
-//#include <includes.h>
 
 ox::ox(QWidget *parent) :
     QDialog(parent),

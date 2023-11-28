@@ -1,7 +1,6 @@
 #ifndef HISTORIAL_H
 #define HISTORIAL_H
 
-#include <QDialog>
 #include "includes.h"
 
 namespace Ui {

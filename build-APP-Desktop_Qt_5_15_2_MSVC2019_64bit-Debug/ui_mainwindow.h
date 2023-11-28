@@ -40,7 +40,6 @@ public:
     QVBoxLayout *verticalLayout_7;
     QLabel *label_pulso;
     QPushButton *pushButton_pulso;
-    QLCDNumber *lcdNumber_pulso;
     QSpacerItem *horizontalSpacer_6;
     QFrame *line_2;
     QSpacerItem *horizontalSpacer_3;
@@ -69,7 +68,9 @@ public:
     QPushButton *pushButton_historial;
     QPushButton *pushButton_recargar;
     QSpacerItem *horizontalSpacer_2;
-    QHBoxLayout *horizontalLayout_5;
+    QSpacerItem *verticalSpacer_4;
+    QSpacerItem *verticalSpacer_5;
+    QLabel *label_conexion;
     QStatusBar *statusbar;
     QMenuBar *menubar;
 
@@ -77,7 +78,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(727, 328);
+        MainWindow->resize(732, 342);
         QPalette palette;
         QBrush brush(QColor(39, 44, 84, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -311,16 +312,6 @@ public:
         pushButton_pulso->setFlat(true);
 
         verticalLayout_7->addWidget(pushButton_pulso);
-
-        lcdNumber_pulso = new QLCDNumber(centralwidget);
-        lcdNumber_pulso->setObjectName(QString::fromUtf8("lcdNumber_pulso"));
-        lcdNumber_pulso->setLayoutDirection(Qt::LeftToRight);
-        lcdNumber_pulso->setAutoFillBackground(false);
-        lcdNumber_pulso->setFrameShape(QFrame::Box);
-        lcdNumber_pulso->setFrameShadow(QFrame::Raised);
-        lcdNumber_pulso->setSmallDecimalPoint(false);
-
-        verticalLayout_7->addWidget(lcdNumber_pulso);
 
 
         horizontalLayout->addLayout(verticalLayout_7);
@@ -569,7 +560,7 @@ public:
         sizePolicy3.setVerticalStretch(0);
         sizePolicy3.setHeightForWidth(pushButton_historial->sizePolicy().hasHeightForWidth());
         pushButton_historial->setSizePolicy(sizePolicy3);
-        pushButton_historial->setMinimumSize(QSize(150, 37));
+        pushButton_historial->setMinimumSize(QSize(102, 37));
         pushButton_historial->setMaximumSize(QSize(182, 52));
         QPalette palette8;
         QBrush brush13(QColor(91, 90, 127, 255));
@@ -649,7 +640,13 @@ public:
         font5.setBold(true);
         pushButton_recargar->setFont(font5);
         pushButton_recargar->setCursor(QCursor(Qt::PointingHandCursor));
-        QIcon icon2(QIcon::fromTheme(QString::fromUtf8("application-exit")));
+        QIcon icon2;
+        QString iconThemeName = QString::fromUtf8("application-exit");
+        if (QIcon::hasThemeIcon(iconThemeName)) {
+            icon2 = QIcon::fromTheme(iconThemeName);
+        } else {
+            icon2.addFile(QString::fromUtf8("."), QSize(), QIcon::Normal, QIcon::Off);
+        }
         pushButton_recargar->setIcon(icon2);
         pushButton_recargar->setFlat(true);
 
@@ -662,23 +659,45 @@ public:
 
         verticalLayout_4->addLayout(horizontalLayout_3);
 
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        verticalSpacer_4 = new QSpacerItem(20, 100, QSizePolicy::Minimum, QSizePolicy::Maximum);
 
-        verticalLayout_4->addLayout(horizontalLayout_5);
+        verticalLayout_4->addItem(verticalSpacer_4);
+
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Preferred);
+
+        verticalLayout_4->addItem(verticalSpacer_5);
+
+        label_conexion = new QLabel(centralwidget);
+        label_conexion->setObjectName(QString::fromUtf8("label_conexion"));
+        QPalette palette10;
+        palette10.setBrush(QPalette::Active, QPalette::WindowText, brush14);
+        palette10.setBrush(QPalette::Active, QPalette::ToolTipText, brush14);
+        palette10.setBrush(QPalette::Inactive, QPalette::WindowText, brush14);
+        palette10.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush14);
+        palette10.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush14);
+        label_conexion->setPalette(palette10);
+        QFont font6;
+        font6.setFamily(QString::fromUtf8("Fixedsys"));
+        font6.setPointSize(16);
+        font6.setBold(false);
+        font6.setItalic(true);
+        label_conexion->setFont(font6);
+        label_conexion->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_4->addWidget(label_conexion);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        QFont font6;
-        font6.setFamily(QString::fromUtf8("MS Serif"));
-        font6.setBold(false);
-        statusbar->setFont(font6);
+        QFont font7;
+        font7.setFamily(QString::fromUtf8("MS Serif"));
+        font7.setBold(false);
+        statusbar->setFont(font7);
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 727, 21));
-        menubar->setFont(font6);
+        menubar->setGeometry(QRect(0, 0, 732, 21));
+        menubar->setFont(font7);
         MainWindow->setMenuBar(menubar);
 
         retranslateUi(MainWindow);
@@ -693,7 +712,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "BAYMAX", nullptr));
         label_nombre->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>BAYMAX </p></body></html>", nullptr));
-        label_pulso->setText(QCoreApplication::translate("MainWindow", "Pulso", nullptr));
+        label_pulso->setText(QCoreApplication::translate("MainWindow", "Niveles", nullptr));
         pushButton_pulso->setText(QString());
         label__oxigenacion->setText(QCoreApplication::translate("MainWindow", "Oxigenacion", nullptr));
         pushButton_ox->setText(QString());
@@ -706,6 +725,7 @@ public:
 #endif // QT_CONFIG(whatsthis)
         pushButton_historial->setText(QCoreApplication::translate("MainWindow", "Historial", nullptr));
         pushButton_recargar->setText(QString());
+        label_conexion->setText(QString());
     } // retranslateUi
 
 };

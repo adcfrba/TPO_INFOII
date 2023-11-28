@@ -1,14 +1,6 @@
 #ifndef TEMP_H
 #define TEMP_H
-/*
-#include <QDialog>
-#include <QtCharts>
-#include <QChartView>
-#include <QLineSeries>
-#include <QBarSeries>
-#include <QBarSet>
-#include <QLegend>
-*/
+
 #include <lectura.h>
 #include <vector>
 

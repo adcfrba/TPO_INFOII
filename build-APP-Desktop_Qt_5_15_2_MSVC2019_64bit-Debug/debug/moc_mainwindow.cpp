@@ -79,8 +79,8 @@ static const uint qt_meta_data_MainWindow[] = {
        6,    1,   63,    2, 0x08 /* Private */,
        9,    1,   66,    2, 0x08 /* Private */,
       10,    0,   69,    2, 0x08 /* Private */,
-      11,    2,   70,    2, 0x08 /* Private */,
-      13,    0,   75,    2, 0x08 /* Private */,
+      11,    3,   70,    2, 0x08 /* Private */,
+      13,    0,   77,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -90,7 +90,7 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, 0x80000000 | 7,    8,
     QMetaType::Void, 0x80000000 | 7,    8,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QStringList, 0x80000000 | 12,    2,    2,
+    QMetaType::Void, QMetaType::QStringList, 0x80000000 | 12, QMetaType::Int,    2,    2,    2,
     QMetaType::Void,
 
        0        // eod
@@ -109,7 +109,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 4: _t->deviceDiscovered((*reinterpret_cast< const QBluetoothDeviceInfo(*)>(_a[1]))); break;
         case 5: _t->conectarBT((*reinterpret_cast< const QBluetoothDeviceInfo(*)>(_a[1]))); break;
         case 6: _t->receive(); break;
-        case 7: _t->analizarTrama((*reinterpret_cast< QStringList(*)>(_a[1])),(*reinterpret_cast< lectura(*)>(_a[2]))); break;
+        case 7: _t->analizarTrama((*reinterpret_cast< QStringList(*)>(_a[1])),(*reinterpret_cast< lectura(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
         case 8: _t->on_pushButton_recargar_clicked(); break;
         default: ;
         }
