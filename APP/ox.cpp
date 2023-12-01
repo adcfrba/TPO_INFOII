@@ -56,10 +56,9 @@ void ox::cargarData(void)
     axisX->AxisLabelsPositionOnValue;
     axisX->setGridLineVisible(true);
 
-    axisY->append("Bajo", 50);
+    axisY->append("Bajo", 80);
     axisY->append("Aceptable", 100);
-    axisY->append("Alto", 150);
-    axisY->setRange(50, 150);
+    axisY->setRange(50, 120);
     axisY->setGridLineVisible(true);
     axisY->setGridLineColor(QRgb(0x0a369d));
 

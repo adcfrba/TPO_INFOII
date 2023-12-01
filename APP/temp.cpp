@@ -35,7 +35,7 @@ void temp::cargarData(void)
     qDebug() <<"temp" << vectorTemp[0].getTemp();
 
     QBarSet *bien = new QBarSet ("Ultimas temperaturas");
-    *bien << vectorTemp[4].getTemp() << vectorTemp[3].getTemp() << vectorTemp[2].getTemp() << vectorTemp[1].getTemp() << vectorTemp[0].getTemp();
+    *bien << vectorTemp[3].getTemp() << vectorTemp[2].getTemp() << vectorTemp[1].getTemp() << vectorTemp[0].getTemp();
     bien->setColor((QRgb(0x00A4BD)));
 
     QStackedBarSeries * seriesTemp = new QStackedBarSeries();
@@ -45,7 +45,7 @@ void temp::cargarData(void)
 
     chart->addSeries(seriesTemp);
     chart->setAnimationOptions(QChart::AllAnimations);
-    QStringList dias ={ QString::fromStdString(vectorTemp[4].getFecha()) , QString::fromStdString(vectorTemp[3].getFecha()) , QString::fromStdString(vectorTemp[2].getFecha()) , QString::fromStdString(vectorTemp[1].getFecha()) , QString::fromStdString(vectorTemp[0].getFecha())};
+    QStringList dias ={ QString::fromStdString(vectorTemp[3].getFecha()) , QString::fromStdString(vectorTemp[2].getFecha()) , QString::fromStdString(vectorTemp[1].getFecha()) , QString::fromStdString(vectorTemp[0].getFecha())};
 
     QBarCategoryAxis *axisX = new QBarCategoryAxis();
     axisX->append(dias);

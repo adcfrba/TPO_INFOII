@@ -31,7 +31,7 @@ public:
     {
         if (temp->objectName().isEmpty())
             temp->setObjectName(QString::fromUtf8("temp"));
-        temp->resize(749, 591);
+        temp->resize(847, 548);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -175,7 +175,7 @@ public:
 
     void retranslateUi(QDialog *temp)
     {
-        temp->setWindowTitle(QCoreApplication::translate("temp", "Dialog", nullptr));
+        temp->setWindowTitle(QCoreApplication::translate("temp", "Temperatura", nullptr));
     } // retranslateUi
 
 };

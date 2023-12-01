@@ -264,7 +264,10 @@
    </palette>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Monoxido de carbono</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="applications-office"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

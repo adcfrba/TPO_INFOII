@@ -10,6 +10,7 @@
 #define UI_OX_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
@@ -81,6 +82,8 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::LinkVisited, brush7);
         palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush4);
         ox->setPalette(palette);
+        QIcon icon(QIcon::fromTheme(QString::fromUtf8("applications-office")));
+        ox->setWindowIcon(icon);
         verticalLayout = new QVBoxLayout(ox);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalFrame = new QFrame(ox);
@@ -195,7 +198,7 @@ public:
 
     void retranslateUi(QDialog *ox)
     {
-        ox->setWindowTitle(QCoreApplication::translate("ox", "Dialog", nullptr));
+        ox->setWindowTitle(QCoreApplication::translate("ox", "Monoxido de carbono", nullptr));
     } // retranslateUi
 
 };

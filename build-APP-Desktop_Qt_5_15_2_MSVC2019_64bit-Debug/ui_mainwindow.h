@@ -37,6 +37,7 @@ public:
     QSpacerItem *verticalSpacer_2;
     QFrame *line;
     QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_3;
     QVBoxLayout *verticalLayout_6;
     QLabel *label_oxigenacion;
     QPushButton *pushButton_ox;
@@ -55,6 +56,7 @@ public:
     QLabel *label_temperatura;
     QPushButton *pushButton_temp;
     QLCDNumber *lcdNumber_temperatura;
+    QSpacerItem *horizontalSpacer_6;
     QFrame *line_5;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_3;
@@ -242,6 +244,10 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
         verticalLayout_6 = new QVBoxLayout();
         verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         label_oxigenacion = new QLabel(centralwidget);
@@ -451,6 +457,10 @@ public:
 
 
         horizontalLayout->addLayout(verticalLayout);
+
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_6);
 
 
         verticalLayout_4->addLayout(horizontalLayout);
