@@ -159,7 +159,6 @@ void MainWindow::setupMain(void)
 
     ui->label_nombre->setFont(fontTitulo);
     ui->label_gas->setFont(fontSecundario);
-    ui->label_pulso->setFont(fontSecundario);
     ui->label_temperatura->setFont(fontSecundario);
     ui->label__oxigenacion->setFont(fontSecundario);
 
@@ -179,14 +178,6 @@ void MainWindow::setupMain(void)
     QIcon icon_temp (boton_temp);
     ui->pushButton_temp->setIcon(icon_temp);
     ui->pushButton_temp->setIconSize(boton_temp.rect().size());
-    QPixmap boton_pulso ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/corazon.png");
-    QIcon icon_pulso (boton_pulso);
-    ui->pushButton_pulso->setIcon(icon_pulso);
-    ui->pushButton_pulso->setIconSize(boton_pulso.rect().size());
-    QPixmap boton_historial("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/historial-medico.png");
-    QIcon icon_historial (boton_historial);
-    ui->pushButton_historial->setIcon(icon_historial);
-    ui->pushButton_historial->setFont(fontSecundario);
 
     ui->label_conexion->setText("¡Bienvenido!");
 }
@@ -216,7 +207,7 @@ void MainWindow::receive()
     if(trama.back() =='>')
     {
         tramaExtraida = trama.split('-',Qt::SkipEmptyParts);
-        if(tramaExtraida.size() == 6)
+        if(tramaExtraida.size() == 7)
             analizarTrama(tramaExtraida, datos, SENSORES);
 
         else if (tramaExtraida.size() == 3 && tramaExtraida[1] == "¡ALERTA!")
@@ -246,8 +237,9 @@ void MainWindow::analizarTrama(QStringList tramaAnalizar, lectura datos, int ent
         aux = 1;
     }
 
-    if(checksum == tramaAnalizar[aux].toDouble() && m_db.open())
+    if(checksum == tramaAnalizar[aux].toDouble())
     {
+        qDebug()<<aux;
         switch(entrada)
         {
         case SENSORES:
@@ -265,6 +257,7 @@ void MainWindow::analizarTrama(QStringList tramaAnalizar, lectura datos, int ent
             datos.nuevoData(m_db);
             QSqlDatabase::database().commit();
             m_db.close();
+            mostrarDatos();
             break;
         case ALERTA:
             rtn = objAlarma.exec();
