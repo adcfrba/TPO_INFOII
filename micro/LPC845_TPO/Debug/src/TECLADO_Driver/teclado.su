@@ -1,9 +1,0 @@
-../src/TECLADO_Driver/teclado.cpp:25:1:teclado::~teclado()	8	static
-../src/TECLADO_Driver/teclado.cpp:25:1:virtual teclado::~teclado()	8	static
-../src/TECLADO_Driver/teclado.cpp:51:9:uint8_t teclado::leer()	0	static
-../src/TECLADO_Driver/teclado.cpp:63:9:uint8_t teclado::TECLADO_Read()	32	static
-c:\nxp\mcuxpressoide_11.7.1_9221\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.7.1.202301190959\tools\arm-none-eabi\include\c++\10.3.1\bits\vector.tcc:426:7:) [with _Args = {const unsigned char&}; _Tp = unsigned char; _Alloc = std::allocator<unsigned char>]	40	static
-../src/TECLADO_Driver/teclado.cpp:28:6:void teclado::antirebote()	16	static
-../src/TECLADO_Driver/teclado.cpp:46:6:virtual void teclado::Callback()	8	static
-c:\nxp\mcuxpressoide_11.7.1_9221\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.7.1.202301190959\tools\arm-none-eabi\include\c++\10.3.1\bits\vector.tcc:426:7:) [with _Args = {CALLBACK*}; _Tp = CALLBACK*; _Alloc = std::allocator<CALLBACK*>]	48	static
-../src/TECLADO_Driver/teclado.cpp:11:1:teclado::teclado()	48	static

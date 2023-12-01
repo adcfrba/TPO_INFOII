@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;LPC845_LCD/src/LCDDriver.h&apos;" deleteContents="false" description="Delete resource &apos;LPC845_LCD/src/LCDDriver.h&apos;" element1="/LPC845_LCD/src/LCDDriver.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1698796337545"/>&#x0A;<refactoring comment="Delete resource &apos;LPC845_LCD/src/LCDDriver.cpp&apos;" deleteContents="false" description="Delete resource &apos;LPC845_LCD/src/LCDDriver.cpp&apos;" element1="/LPC845_LCD/src/LCDDriver.cpp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1698796341944"/>
-</session>

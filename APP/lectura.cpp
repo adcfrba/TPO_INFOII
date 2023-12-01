@@ -10,16 +10,6 @@ void lectura::setTemp(float newTemp)
     temp = newTemp;
 }
 
-int lectura::getPulso() const
-{
-    return pulso;
-}
-
-void lectura::setPulso(int newPulso)
-{
-    pulso = newPulso;
-}
-
 float lectura::getOxi() const
 {
     return oxi;
@@ -63,17 +53,15 @@ void lectura::setFecha(const string &newFecha)
 lectura::lectura()
 {
     temp = 0.0;
-    pulso = 0;
     oxi = 0.0;
     gas = 0;
     nombre = " ";
     fecha = " ";
 }
 
-lectura::lectura(float _temp, int _pulso, float _oxi, float _gas, string _nombre, string _fecha)
+lectura::lectura(float _temp, float _oxi, float _gas, string _nombre, string _fecha)
 {
     temp = _temp;
-    pulso = _pulso;
     oxi = _oxi;
     gas = _gas;
     nombre = _nombre;
@@ -83,11 +71,10 @@ lectura::lectura(float _temp, int _pulso, float _oxi, float _gas, string _nombre
 void lectura::nuevoData(QSqlDatabase bd)
 {
     QSqlQuery qyInsert(bd);
-    qyInsert.prepare("INSERT INTO lecturas(NOMBRE, TEMP, OXI, PULSO, GAS, FECHA) VALUES(:NOMBRE, :TEMP, :OXI, :PULSO, :GAS, :FECHA)");
+    qyInsert.prepare("INSERT INTO lecturas(NOMBRE, TEMP, OXI, GAS, FECHA) VALUES(:NOMBRE, :TEMP, :OXI, :GAS, :FECHA)");
     qyInsert.bindValue(":NOMBRE", QString::fromStdString(nombre));
     qyInsert.bindValue(":TEMP",temp);
     qyInsert.bindValue(":OXI",oxi);
-    qyInsert.bindValue(":PULSO",pulso);
     qyInsert.bindValue(":GAS",gas);
     qyInsert.bindValue(":FECHA", QString::fromStdString(fecha));
     qyInsert.exec();
@@ -102,9 +89,8 @@ void lectura::leerData(QSqlDatabase bd)
         nombre = qyData.value(1).toString().toStdString();
         temp = qyData.value(2).toFloat();
         oxi = qyData.value(3).toFloat();
-        fecha = qyData.value(6).toString().toStdString();
-        pulso = qyData.value(4).toInt();
-        gas = qyData.value(5).toFloat();
+        gas = qyData.value(4).toFloat();
+        fecha = qyData.value(5).toString().toStdString();
     }
 }
 
@@ -112,10 +98,9 @@ void lectura::actData(QSqlDatabase bd)
 {
     QSqlDatabase::database().transaction();
     QSqlQuery qyUpdate(bd);
-    qyUpdate.prepare("UPDATE lecturas SET NOMBRE=:NOMBRE, TEMP=:TEMP, OXI=:OXI, PULSO=:PULSO, GAS=:GAS WHERE FECHA=:FECHA");
+    qyUpdate.prepare("UPDATE lecturas SET NOMBRE=:NOMBRE, TEMP=:TEMP, OXI=:OXI, GAS=:GAS WHERE FECHA=:FECHA");
     qyUpdate.bindValue(":TEMP", temp);
     qyUpdate.bindValue(":OXI", oxi);
-    qyUpdate.bindValue(":PULSO", pulso);
     qyUpdate.bindValue(":GAS", gas);
     qyUpdate.bindValue(":NOMBRE", QString::fromStdString(nombre));
     qyUpdate.bindValue(":FECHA", QString::fromStdString(fecha));//se usa la fecha

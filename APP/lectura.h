@@ -7,7 +7,6 @@ class lectura
 {
 private:
     float temp;
-    int pulso;
     float oxi;
     float gas;
     string nombre;
@@ -15,11 +14,9 @@ private:
 
 public:
     lectura();
-    lectura(float, int, float, float, string, string);
+    lectura(float, float, float, string, string);
     float getTemp() const;
     void setTemp(float newTemp);
-    int getPulso() const;
-    void setPulso(int newPulso);
     float getOxi() const;
     void setOxi(float newOxi);
     float getGas() const;

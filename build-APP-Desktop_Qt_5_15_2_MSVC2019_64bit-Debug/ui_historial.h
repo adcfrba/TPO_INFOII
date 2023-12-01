@@ -38,7 +38,7 @@ public:
     {
         if (Historial->objectName().isEmpty())
             Historial->setObjectName(QString::fromUtf8("Historial"));
-        Historial->resize(744, 399);
+        Historial->resize(643, 399);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);

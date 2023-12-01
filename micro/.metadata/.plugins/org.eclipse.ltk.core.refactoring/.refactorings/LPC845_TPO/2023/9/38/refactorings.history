@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;LPC845_TPO/src/LPC845_CPP_R2052.cpp&apos; to &apos;TPOmain.cpp&apos;" description="Rename resource &apos;LPC845_CPP_R2052.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/LPC845_CPP_R2052.cpp" name="TPOmain.cpp" stamp="1695508049866" updateReferences="true"/>
-</session>

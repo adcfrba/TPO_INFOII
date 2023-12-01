@@ -31,6 +31,7 @@ public:
     QVBoxLayout *verticalLayout_3;
     QLabel *label_alerta1;
     QLabel *label_alerta2;
+    QLabel *label_alerta3;
     QFrame *line;
     QDialogButtonBox *buttonBox;
 
@@ -124,15 +125,17 @@ public:
         sizePolicy1.setHeightForWidth(label_alerta1->sizePolicy().hasHeightForWidth());
         label_alerta1->setSizePolicy(sizePolicy1);
         QPalette palette1;
-        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush1);
-        palette1.setBrush(QPalette::Active, QPalette::ButtonText, brush1);
-        QBrush brush10(QColor(164, 188, 207, 255));
+        QBrush brush10(QColor(170, 0, 0, 255));
         brush10.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::ToolTipText, brush10);
-        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush10);
+        palette1.setBrush(QPalette::Active, QPalette::ButtonText, brush1);
+        QBrush brush11(QColor(164, 188, 207, 255));
+        brush11.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::ToolTipText, brush11);
+        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush10);
         palette1.setBrush(QPalette::Inactive, QPalette::ButtonText, brush1);
-        palette1.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush10);
-        palette1.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush10);
+        palette1.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush11);
+        palette1.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush11);
         label_alerta1->setPalette(palette1);
         label_alerta1->setLayoutDirection(Qt::LeftToRight);
         label_alerta1->setAlignment(Qt::AlignCenter);
@@ -150,6 +153,41 @@ public:
         label_alerta2->setAlignment(Qt::AlignCenter);
 
         verticalLayout_3->addWidget(label_alerta2);
+
+        label_alerta3 = new QLabel(alarma);
+        label_alerta3->setObjectName(QString::fromUtf8("label_alerta3"));
+        QPalette palette3;
+        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush1);
+        palette3.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette3.setBrush(QPalette::Active, QPalette::Text, brush2);
+        palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette3.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette3.setBrush(QPalette::Active, QPalette::Window, brush4);
+        palette3.setBrush(QPalette::Active, QPalette::Highlight, brush5);
+        palette3.setBrush(QPalette::Active, QPalette::Link, brush6);
+        palette3.setBrush(QPalette::Active, QPalette::LinkVisited, brush7);
+        palette3.setBrush(QPalette::Active, QPalette::AlternateBase, brush4);
+        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette3.setBrush(QPalette::Inactive, QPalette::Text, brush2);
+        palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush4);
+        palette3.setBrush(QPalette::Inactive, QPalette::Highlight, brush8);
+        palette3.setBrush(QPalette::Inactive, QPalette::Link, brush6);
+        palette3.setBrush(QPalette::Inactive, QPalette::LinkVisited, brush7);
+        palette3.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush4);
+        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush4);
+        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush4);
+        palette3.setBrush(QPalette::Disabled, QPalette::Highlight, brush9);
+        palette3.setBrush(QPalette::Disabled, QPalette::Link, brush6);
+        palette3.setBrush(QPalette::Disabled, QPalette::LinkVisited, brush7);
+        palette3.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush4);
+        label_alerta3->setPalette(palette3);
+        label_alerta3->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_3->addWidget(label_alerta3);
 
 
         horizontalLayout->addLayout(verticalLayout_3);
@@ -188,7 +226,8 @@ public:
         alarma->setWindowTitle(QCoreApplication::translate("alarma", "EMERGENCIA", nullptr));
         pushButton_alarma->setText(QString());
         label_alerta1->setText(QCoreApplication::translate("alarma", "\302\241ALERTA!", nullptr));
-        label_alerta2->setText(QCoreApplication::translate("alarma", "Usuario con malestar, contactar de inmediato con ayuda", nullptr));
+        label_alerta2->setText(QCoreApplication::translate("alarma", "Usuario con malestar", nullptr));
+        label_alerta3->setText(QCoreApplication::translate("alarma", "Contactar de inmediato con ayuda", nullptr));
     } // retranslateUi
 
 };

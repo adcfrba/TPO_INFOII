@@ -135,15 +135,14 @@ vector<lectura> MainWindow::leerVector(QSqlDatabase bd)
     QSqlQuery qyDataVector(bd);
     qyDataVector.exec("SELECT * FROM lecturas ORDER BY ID DESC"); //TOMA ULTIMA ENTRADA DE LA BASE DE DATOS
 
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i < 4; i++)
     {
         qyDataVector.next();
         aux.setNombre(qyDataVector.value(1).toString().toStdString());
         aux.setTemp(qyDataVector.value(2).toFloat());
         aux.setOxi(qyDataVector.value(3).toFloat());
-        aux.setFecha(qyDataVector.value(6).toString().toStdString());
-        aux.setPulso(qyDataVector.value(4).toInt());
-        aux.setGas(qyDataVector.value(5).toFloat());
+        aux.setGas(qyDataVector.value(4).toFloat());
+        aux.setFecha(qyDataVector.value(5).toString().toStdString());
         vector.push_back(aux);
     }
     return(vector);
@@ -160,7 +159,7 @@ void MainWindow::setupMain(void)
     ui->label_nombre->setFont(fontTitulo);
     ui->label_gas->setFont(fontSecundario);
     ui->label_temperatura->setFont(fontSecundario);
-    ui->label__oxigenacion->setFont(fontSecundario);
+    ui->label_oxigenacion->setFont(fontSecundario);
 
     QPixmap boton_recarga ("C:/Users/notebook/Documents/INFO II 2023/TPO/TPO_INFOII/APP/images/cargando-flechas");
     QIcon icon_recarga (boton_recarga);
@@ -207,7 +206,7 @@ void MainWindow::receive()
     if(trama.back() =='>')
     {
         tramaExtraida = trama.split('-',Qt::SkipEmptyParts);
-        if(tramaExtraida.size() == 7)
+        if(tramaExtraida.size() == 6)
             analizarTrama(tramaExtraida, datos, SENSORES);
 
         else if (tramaExtraida.size() == 3 && tramaExtraida[1] == "¡ALERTA!")
@@ -251,8 +250,6 @@ void MainWindow::analizarTrama(QStringList tramaAnalizar, lectura datos, int ent
             datos.setTemp((float)tramaAnalizar[1].toDouble());
             datos.setGas((float)tramaAnalizar[2].toDouble());
             datos.setOxi((float)tramaAnalizar[3].toDouble());
-            datos.setPulso(0); //HASTA CONSEGUIR EL SENSOR
-            //datos.setPulso(tramaAnalizar[4].toInt());
             datos.setNombre("BaymaxInfoII");
             datos.nuevoData(m_db);
             QSqlDatabase::database().commit();
