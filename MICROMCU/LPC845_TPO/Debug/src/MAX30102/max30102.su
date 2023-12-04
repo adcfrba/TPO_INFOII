@@ -1,0 +1,3 @@
+../src/MAX30102/max30102.cpp:152:6:void MAX30102ResetPointers()	8	static
+../src/MAX30102/max30102.cpp:173:9:uint8_t MAX30102InitialConfig()	8	static
+../src/MAX30102/max30102.cpp:10:9:uint8_t MAX30102()	24	static

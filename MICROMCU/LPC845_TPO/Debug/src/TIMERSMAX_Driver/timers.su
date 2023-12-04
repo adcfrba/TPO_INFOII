@@ -1,0 +1,13 @@
+../src/TIMERSMAX_Driver/timers.cpp:20:6:void AnalizarTimers()	16	static
+../src/TIMERSMAX_Driver/timers.cpp:43:6:void TimerEvent()	16	static
+../src/TIMERSMAX_Driver/timers.cpp:65:6:void TimerStart(uint8_t, uint32_t, Timer_Handler, uint8_t)	12	static
+../src/TIMERSMAX_Driver/timers.cpp:198:6:void MAX30102_Leer()	8	static
+../src/TIMERSMAX_Driver/timers.cpp:215:6:void EV_DAC()	8	static
+../src/TIMERSMAX_Driver/timers.cpp:103:6:void SetTimer(uint8_t, uint32_t)	0	static
+../src/TIMERSMAX_Driver/timers.cpp:127:10:uint32_t GetTimer(uint8_t)	8	static
+../src/TIMERSMAX_Driver/timers.cpp:154:6:void StandByTimer(uint8_t, uint8_t)	0	static
+../src/TIMERSMAX_Driver/timers.cpp:166:6:void TimerStop(uint8_t)	0	static
+../src/TIMERSMAX_Driver/timers.cpp:181:6:void TimerClose()	8	static
+../src/TIMERSMAX_Driver/timers.cpp:205:9:uint8_t GetFlagLecturaMAX30102()	0	static
+../src/TIMERSMAX_Driver/timers.cpp:210:6:void SetFlagLecturaMAX30102(uint8_t)	0	static
+../src/TIMERSMAX_Driver/timers.cpp:221:10:uint32_t GetTiempoDAC()	0	static
