@@ -7,7 +7,7 @@
 #include <vector>
 #include <stdio.h>
 #include <math.h>
-#include "LPC845.h"
+#include <LPC845.h>
 #include "tipos.h"
 #include "GPIO.h"
 #include "CALLBACK.h"
@@ -20,14 +20,13 @@
 #include "i2c.h"
 #include "SpO2Calculator.h"
 #include "../MAX30102/max30102.h"
-
-//#include "lcd.h"
-#include "DRIVER_LCD16X2.h"
+#include "gpiolcd.h"
+#include "lcd.h"
 
 #define TEMPERATURA 1
 #define GAS 0
 #define RL 1000 //LA CAMBIAMOS EN EL MODULO
-#define RO 500 //ANALIZAR
+#define RO 6880 //ANALIZAR
 #define ALERTA 0
 #define OK 1
 #define DESCONECTADO 2

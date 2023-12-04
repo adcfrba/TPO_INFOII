@@ -155,7 +155,7 @@ public:
         tableView_historial->horizontalHeader()->setVisible(true);
         tableView_historial->horizontalHeader()->setDefaultSectionSize(100);
         tableView_historial->horizontalHeader()->setHighlightSections(false);
-        tableView_historial->horizontalHeader()->setStretchLastSection(true);
+        tableView_historial->horizontalHeader()->setStretchLastSection(false);
         tableView_historial->verticalHeader()->setVisible(false);
 
         horizontalLayout->addWidget(tableView_historial);

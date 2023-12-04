@@ -38,8 +38,8 @@
 								<option id="gnu.cpp.compiler.option.optimization.flags.922652192" name="Other optimization flags" superClass="gnu.cpp.compiler.option.optimization.flags" useByScannerDiscovery="false" value="-fno-common" valueType="string"/>
 								<option id="com.crt.advproject.cpp.hdrlib.2120509424" name="Library headers" superClass="com.crt.advproject.cpp.hdrlib" useByScannerDiscovery="false" value="Newlib" valueType="enumerated"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.453085098" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/DRIVER_LCD16X2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/I2C_Driver}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/GPIOLCD_Driver}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/LCD_Driver}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/MAX30102}&quot;"/>
@@ -74,8 +74,8 @@
 								<option id="gnu.c.compiler.option.misc.other.2096316997" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections" valueType="string"/>
 								<option id="gnu.c.compiler.option.optimization.flags.1803093965" name="Other optimization flags" superClass="gnu.c.compiler.option.optimization.flags" useByScannerDiscovery="false" value="-fno-common" valueType="string"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.2062358861" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/DRIVER_LCD16X2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/I2C_Driver}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/GPIOLCD_Driver}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/LCD_Driver}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/MAX30102}&quot;"/>
@@ -133,7 +133,7 @@
 					</folderInfo>
 					<fileInfo id="com.crt.advproject.config.exe.debug.1311962369.408348420" name="max30102.cpp" rcbsApplicability="disable" resourcePath="src/MAX30102/max30102.cpp" toolsToInvoke="com.crt.advproject.cpp.exe.debug.267898346.2094937079">
 						<tool id="com.crt.advproject.cpp.exe.debug.267898346.2094937079" name="MCU C++ Compiler" superClass="com.crt.advproject.cpp.exe.debug.267898346">
-							<option id="com.crt.advproject.cpp.exe.debug.option.optimization.level.1951178576" superClass="com.crt.advproject.cpp.exe.debug.option.optimization.level" useByScannerDiscovery="true" value="gnu.cpp.compiler.optimization.level.general" valueType="enumerated"/>
+							<option id="com.crt.advproject.cpp.exe.debug.option.optimization.level.1951178576" name="Optimization Level" superClass="com.crt.advproject.cpp.exe.debug.option.optimization.level" useByScannerDiscovery="true" value="gnu.cpp.compiler.optimization.level.general" valueType="enumerated"/>
 							<inputType id="com.crt.advproject.compiler.cpp.input.1374259127" superClass="com.crt.advproject.compiler.cpp.input"/>
 						</tool>
 					</fileInfo>
