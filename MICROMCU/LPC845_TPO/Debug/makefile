@@ -11,7 +11,6 @@ RM := rm -rf
 -include src/UTILS/CALLBACK/subdir.mk
 -include src/UART0_Driver/subdir.mk
 -include src/TIMERSW_Driver/subdir.mk
--include src/TECLADO_Driver/subdir.mk
 -include src/SYSTICK_Driver/subdir.mk
 -include src/MAX30102/subdir.mk
 -include src/LCD_Driver/subdir.mk

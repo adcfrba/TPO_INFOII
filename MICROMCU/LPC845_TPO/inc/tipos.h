@@ -34,11 +34,12 @@
 #define  	__IO   				volatile        /*Defines 'read / write' permission */
 
 typedef		unsigned char 		uint8_t;
-//typedef		char 				int8_t;
-typedef		short unsigned int 	uint16_t;
-typedef		short  int 			in2t16_t;
+typedef		signed char 		int8_t;
+typedef		unsigned short	 	uint16_t;
+typedef		short 				int16_t;
 typedef		unsigned int 		uint32_t;
 typedef		int 				int32_t;
+
 
 
 /***********************************************************************************************************************************

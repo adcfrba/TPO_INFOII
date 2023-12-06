@@ -9,7 +9,6 @@ src/SYSTICK_Driver/SYSTICK.o src/SYSTICK_Driver/SYSTICK.d: \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\TIMERSW_Driver/TIMERSW.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\GPIOF_Driver/GPIOF.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\inc/defines.h \
- C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\TECLADO_Driver/teclado.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\ADC_Driver/ADC.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\UART0_Driver/uart0.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\inc/tipos.h \
@@ -27,7 +26,6 @@ C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\sr
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\TIMERSW_Driver/TIMERSW.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\GPIOF_Driver/GPIOF.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\inc/defines.h:
-C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\TECLADO_Driver/teclado.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\ADC_Driver/ADC.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\UART0_Driver/uart0.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\inc/tipos.h:

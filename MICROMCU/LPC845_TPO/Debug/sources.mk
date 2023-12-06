@@ -33,7 +33,6 @@ src/I2C_Driver \
 src/LCD_Driver \
 src/MAX30102 \
 src/SYSTICK_Driver \
-src/TECLADO_Driver \
 src/TIMERSW_Driver \
 src \
 src/UART0_Driver \

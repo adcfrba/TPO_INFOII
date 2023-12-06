@@ -131,12 +131,6 @@
 							<tool id="com.crt.advproject.tool.debug.debug.237383263" name="MCU Debugger" superClass="com.crt.advproject.tool.debug.debug"/>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="com.crt.advproject.config.exe.debug.1311962369.408348420" name="max30102.cpp" rcbsApplicability="disable" resourcePath="src/MAX30102/max30102.cpp" toolsToInvoke="com.crt.advproject.cpp.exe.debug.267898346.2094937079">
-						<tool id="com.crt.advproject.cpp.exe.debug.267898346.2094937079" name="MCU C++ Compiler" superClass="com.crt.advproject.cpp.exe.debug.267898346">
-							<option id="com.crt.advproject.cpp.exe.debug.option.optimization.level.1951178576" name="Optimization Level" superClass="com.crt.advproject.cpp.exe.debug.option.optimization.level" useByScannerDiscovery="true" value="gnu.cpp.compiler.optimization.level.general" valueType="enumerated"/>
-							<inputType id="com.crt.advproject.compiler.cpp.input.1374259127" superClass="com.crt.advproject.compiler.cpp.input"/>
-						</tool>
-					</fileInfo>
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>

@@ -14,7 +14,6 @@
 #include "SYSTICK.h"
 #include "TIMERSW.h"
 #include "GPIOF.h"
-#include "teclado.h"
 #include "ADC.h"
 #include "uart0.h"
 #include "i2c.h"
