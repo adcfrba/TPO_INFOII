@@ -27,7 +27,6 @@ SUBDIRS := \
 src/ADC_Driver \
 src/DISPLAY_Driver \
 src/GPIOF_Driver \
-src/GPIOLCD_Driver \
 src/GPIO_Driver \
 src/I2C_Driver \
 src/LCD_Driver \

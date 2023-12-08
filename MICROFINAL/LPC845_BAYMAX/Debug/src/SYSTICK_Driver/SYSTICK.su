@@ -1,0 +1,5 @@
+../src/SYSTICK_Driver/SYSTICK.cpp:40:1:void __static_initialization_and_destruction_0(int, int)	8	static
+c:\nxp\mcuxpressoide_11.7.1_9221\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.7.1.202301190959\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_vector.h:678:7:std::vector<_Tp, _Alloc>::~vector() [with _Tp = CALLBACK*; _Alloc = std::allocator<CALLBACK*>]	8	static
+../src/SYSTICK_Driver/SYSTICK.cpp:16:1:SYSTICK::SYSTICK(uint32_t)	8	static
+../src/SYSTICK_Driver/SYSTICK.cpp:34:6:void SysTick_Handler()	16	static
+../src/SYSTICK_Driver/SYSTICK.cpp:40:1:cpp)	8	static

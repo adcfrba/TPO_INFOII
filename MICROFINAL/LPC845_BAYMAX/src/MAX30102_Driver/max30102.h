@@ -1,0 +1,32 @@
+
+#define IIC_DELAY_ms				10
+#define IIC_DELAY_30ms				30
+#define MAX30102_PHY_ADDRESS		0xAE
+#define MAX30102_INT_STATUS_1		0x00
+#define MAX30102_INT_STATUS_2		0x01
+#define MAX30102_INT_EN_1			0x02
+#define MAX30102_INT_EN_2			0x03
+#define MAX30102_FIFO_WR_PTR		0x04
+#define MAX30102_FIFO_OV_PTR		0x05
+#define MAX30102_FIFO_RD_PTR		0x06
+#define MAX30102_FIFO_DATA			0x07
+#define MAX30102_FIFO_CONFIG		0x08
+#define MAX30102_MODE_CONFIG		0x09
+#define MAX30102_SPO2_CONFIG 		0x0A
+#define MAX30102_LED1_PA 			0x0C
+#define MAX30102_LED2_PA 			0x0D
+#define MAX30102_PILOT_PA 			0x10
+
+#define MAX30102_BYTES_PER_SAMPLE 	6
+#define MAX30102_SAMPLE_LEN_MAX 	32
+
+#define MAX30102_LED_PA_10mA	 	0x32
+#define MAX30102_LED_PA_25mA	 	0x7F
+#define MAX30102_LED_PA_50mA 		0xFF
+
+
+
+uint8_t MAX30102( void );
+void MAX30102ResetPointers( void );
+uint8_t MAX30102InitialConfig( void );
+

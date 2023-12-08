@@ -16,7 +16,6 @@ RM := rm -rf
 -include src/LCD_Driver/subdir.mk
 -include src/I2C_Driver/subdir.mk
 -include src/GPIO_Driver/subdir.mk
--include src/GPIOLCD_Driver/subdir.mk
 -include src/GPIOF_Driver/subdir.mk
 -include src/DISPLAY_Driver/subdir.mk
 -include src/ADC_Driver/subdir.mk

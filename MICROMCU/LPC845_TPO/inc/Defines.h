@@ -19,8 +19,7 @@
 #include "i2c.h"
 #include "SpO2Calculator.h"
 #include "../MAX30102/max30102.h"
-#include "gpiolcd.h"
-#include "lcd.h"
+#include "displayLCD.h"
 
 #define TEMPERATURA 1
 #define GAS 0

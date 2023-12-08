@@ -1,0 +1,14 @@
+../src/LCD_Driver/LCD.cpp:124:6:void LCD::LCD_Escribir(uint8_t, uint8_t)	32	static
+../src/LCD_Driver/LCD.cpp:64:6:void LCD::LCD_Display(const char*, uint8_t, uint8_t)	16	static
+../src/LCD_Driver/LCD.cpp:95:6:void LCD::LCD_Display(uint32_t, uint8_t, uint8_t, uint8_t)	48	dynamic
+../src/LCD_Driver/LCD.cpp:78:6:void LCD::clear()	8	static
+../src/LCD_Driver/LCD.cpp:85:6:void LCD::LCD_Display(char, uint8_t, uint8_t)	16	static
+../src/LCD_Driver/LCD.cpp:3:1:LCD::LCD()	40	static
+../src/LCD_Driver/LCD.cpp:153:6:void LCD::LCD_delay()	0	static
+../src/LCD_Driver/LCD.cpp:160:6:LCD& LCD::operator<<(const char*)	8	static
+../src/LCD_Driver/LCD.cpp:167:6:LCD& LCD::operator<<(uint8_t)	24	static
+../src/LCD_Driver/LCD.cpp:182:6:LCD& LCD::operator<<(char)	8	static
+../src/LCD_Driver/LCD.cpp:188:6:LCD& LCD::row(uint8_t)	0	static
+../src/LCD_Driver/LCD.cpp:195:6:LCD& LCD::pos(uint8_t)	0	static
+../src/LCD_Driver/LCD.cpp:201:6:LCD& LCD::digits(uint8_t)	0	static
+../src/LCD_Driver/LCD.cpp:207:13:static const char* LCD::uiToStr(uint32_t, uint8_t, uint8_t)	24	static

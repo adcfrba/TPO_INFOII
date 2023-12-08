@@ -1,0 +1,21 @@
+../src/I2C_Driver/i2c.cpp:347:1:void __static_initialization_and_destruction_0(int, int)	8	static
+../src/I2C_Driver/i2c.cpp:9:6:void IIC_Inicializacion()	16	static
+../src/I2C_Driver/i2c.cpp:25:6:void IIC_Start()	16	static
+../src/I2C_Driver/i2c.cpp:44:6:void IIC_Stop()	8	static
+../src/I2C_Driver/i2c.cpp:60:9:uint8_t IIC_Read_Clock()	16	static
+../src/I2C_Driver/i2c.cpp:94:6:void IIC_Clock()	8	static
+../src/I2C_Driver/i2c.cpp:109:9:uint8_t IIC_Write(uint8_t)	16	static
+../src/I2C_Driver/i2c.cpp:129:9:uint8_t IIC_Read(uint8_t)	16	static
+../src/I2C_Driver/i2c.cpp:155:9:uint8_t GetDemora_IIC()	0	static
+../src/I2C_Driver/i2c.cpp:159:6:void SetDemora_IIC(uint8_t)	0	static
+../src/I2C_Driver/i2c.cpp:166:6:void IIC_Write_Driver_32b(uint32_t, uint8_t, uint32_t)	0	static
+../src/I2C_Driver/i2c.cpp:178:10:uint32_t IIC_Read_Driver_32b(uint32_t, uint8_t)	0	static
+../src/I2C_Driver/i2c.cpp:202:6:void IIC_Write_Driver_16b(uint32_t, uint8_t, uint16_t)	0	static
+../src/I2C_Driver/i2c.cpp:217:9:uint8_t IIC_Write_Driver(uint32_t, uint8_t, uint8_t)	0	static
+../src/I2C_Driver/i2c.cpp:266:9:uint8_t IIC_Read_Driver(uint32_t, uint8_t)	0	static
+../src/I2C_Driver/i2c.cpp:191:10:uint16_t IIC_Read_Driver_16b(uint32_t, uint8_t)	16	static
+../src/I2C_Driver/i2c.cpp:303:6:void IIC_Leer_Bloque(uint32_t, uint8_t*, uint32_t)	0	static
+../src/I2C_Driver/i2c.cpp:313:6:void IIC_Guardar_Bloque(uint32_t, uint8_t*, uint32_t)	0	static
+../src/I2C_Driver/i2c.cpp:326:6:void IIC_Demora(uint32_t)	0	static
+../src/I2C_Driver/i2c.cpp:339:6:void Borrar_Memoria(uint8_t)	16	static
+../src/I2C_Driver/i2c.cpp:347:1:cpp)	8	static

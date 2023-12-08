@@ -1,0 +1,10 @@
+../src/TPO_main.cpp:259:6:void demorai2c()	0	static
+../src/TPO_main.cpp:97:6:void disparoADC()	8	static
+../src/TPO_main.cpp:106:6:void leerData()	8	static
+../src/TPO_main.cpp:284:1:void __static_initialization_and_destruction_0(int, int)	8	static
+../src/TPO_main.cpp:228:6:void armarTrama(uint32_t, uint32_t, uint8_t)	56	static
+../src/TPO_main.cpp:199:6:void enviarTrama()	8	static
+../src/TPO_main.cpp:236:6:void inicializacion(int, uint8_t)	16	static
+../src/TPO_main.cpp:69:5:int main()	8	static
+../src/TPO_main.cpp:266:6:void imprimirLCD()	8	static
+../src/TPO_main.cpp:284:1:cpp)	8	static

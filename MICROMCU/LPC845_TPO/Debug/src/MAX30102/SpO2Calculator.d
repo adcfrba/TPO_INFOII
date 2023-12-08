@@ -15,8 +15,7 @@ src/MAX30102/SpO2Calculator.o src/MAX30102/SpO2Calculator.d: \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\I2C_Driver/i2c.h \
  C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\MAX30102/SpO2Calculator.h \
  c:\users\notebook\documents\info\ ii\ 2023\tpo\tpo_infoii\micromcu\lpc845_tpo\src\max30102\max30102.h \
- C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\GPIOLCD_Driver/gpiolcd.h \
- C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\LCD_Driver/lcd.h
+ C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\LCD_Driver/displayLCD.h
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\inc/Defines.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\inc/LPC845.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\inc/tipos.h:
@@ -32,5 +31,4 @@ C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\in
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\I2C_Driver/i2c.h:
 C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\MAX30102/SpO2Calculator.h:
 c:\users\notebook\documents\info\ ii\ 2023\tpo\tpo_infoii\micromcu\lpc845_tpo\src\max30102\max30102.h:
-C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\GPIOLCD_Driver/gpiolcd.h:
-C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\LCD_Driver/lcd.h:
+C:\Users\notebook\Documents\INFO\ II\ 2023\TPO\TPO_INFOII\MICROMCU\LPC845_TPO\src\LCD_Driver/displayLCD.h:
