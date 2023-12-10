@@ -1,0 +1,37 @@
+16:03:45 **** Incremental Build of configuration Debug for project TP0_MICRO ****
+make -r -j4 all 
+Building file: ../src/TP0_MICRO.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__LPC84X__ -D__REDLIB__ -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\TP0_MICRO\inc" -I"C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\TP0_MICRO\src\GPIO" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP0_MICRO.d" -MT"src/TP0_MICRO.o" -MT"src/TP0_MICRO.d" -o "src/TP0_MICRO.o" "../src/TP0_MICRO.c"
+In file included from C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\TP0_MICRO\inc/LPC845.h:140,
+                 from C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\TP0_MICRO\inc/Defines.h:21,
+                 from ../src/TP0_MICRO.c:1:
+C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\TP0_MICRO\inc/core_cm0plus.h: In function '__NVIC_DisableIRQ':
+C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\TP0_MICRO\inc/core_cm0plus.h:772:5: warning: implicit declaration of function '__DSB' [-Wimplicit-function-declaration]
+  772 |     __DSB();
+      |     ^~~~~
+C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\TP0_MICRO\inc/core_cm0plus.h:773:5: warning: implicit declaration of function '__ISB' [-Wimplicit-function-declaration]
+  773 |     __ISB();
+      |     ^~~~~
+C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\TP0_MICRO\inc/core_cm0plus.h: In function '__NVIC_SystemReset':
+C:\Users\notebook\Documents\INFO II 2023\TPO\TPO_INFOII\TP0_MICRO\inc/core_cm0plus.h:931:5: warning: implicit declaration of function '__NOP' [-Wimplicit-function-declaration]
+  931 |     __NOP();
+      |     ^~~~~
+Finished building: ../src/TP0_MICRO.c
+ 
+Building target: TP0_MICRO.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="TP0_MICRO.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "TP0_MICRO_Debug.ld" -o "TP0_MICRO.axf" ./src/GPIO/GPIO.o  ./src/TP0_MICRO.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc84x.o ./src/crp.o ./src/mtb.o   
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       12196 B        64 KB     18.61%
+        RamLoc16:         756 B        16 KB      4.61%
+Finished building target: TP0_MICRO.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "TP0_MICRO.axf"; # arm-none-eabi-objcopy -v -O binary "TP0_MICRO.axf" "TP0_MICRO.bin" ; # checksum -p LPC845 -d "TP0_MICRO.bin";
+   text	   data	    bss	    dec	    hex	filename
+  12196	      0	    756	  12952	   3298	TP0_MICRO.axf
+ 
+
+16:03:46 Build Finished. 0 errors, 3 warnings. (took 1s.41ms)
+
