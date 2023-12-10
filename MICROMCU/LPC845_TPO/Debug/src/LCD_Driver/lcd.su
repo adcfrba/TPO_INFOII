@@ -1,4 +1,0 @@
-../src/LCD_Driver/lcd.cpp:11:6:void LCD_Escribir(uint8_t, uint8_t)	32	static
-../src/LCD_Driver/lcd.cpp:38:6:void Display_LCD(uint8_t*, uint8_t, uint8_t)	16	static
-../src/LCD_Driver/lcd.cpp:53:6:void Inicializar_LCD()	16	static
-../src/LCD_Driver/lcd.cpp:119:6:void LCD_Delay()	0	static

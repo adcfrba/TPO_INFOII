@@ -1,5 +1,0 @@
-../src/GPIOLCD/gpiolcd.cpp:3:6:void Inicializar_GPIO()	8	static
-../src/GPIOLCD/gpiolcd.cpp:21:6:void GPIO_Set(uint32_t, uint32_t, uint32_t)	0	static
-../src/GPIOLCD/gpiolcd.cpp:31:6:void GPIO_Dir(uint32_t, uint32_t, uint32_t)	0	static
-../src/GPIOLCD/gpiolcd.cpp:40:10:uint32_t GPIO_Read(uint32_t, uint32_t)	0	static
-../src/GPIOLCD/gpiolcd.cpp:51:9:int32_t IOCON_config_io(uint32_t, IOCON_config_t*)	20	static

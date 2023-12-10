@@ -1,9 +1,0 @@
-../src/TPOmain.cpp:278:6:void demorai2c()	0	static
-../src/TPOmain.cpp:285:6:void imprimirLCD()	8	static
-../src/TPOmain.cpp:100:6:void disparoADC()	8	static
-../src/TPOmain.cpp:109:6:void leerData()	32	static
-../src/TPOmain.cpp:245:6:void armarTrama(uint32_t, uint32_t, uint8_t)	56	static
-../src/TPOmain.cpp:220:6:void enviarTrama()	8	static
-../src/TPOmain.cpp:253:6:void inicializacion(int, uint8_t)	16	static
-../src/TPOmain.cpp:74:5:int main()	8	static
-../src/TPOmain.cpp:289:1:cpp)	16	static

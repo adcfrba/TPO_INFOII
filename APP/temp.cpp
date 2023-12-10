@@ -53,7 +53,7 @@ void temp::cargarData(void)
     chart->addAxis(axisX, Qt::AlignBottom);
 
     QValueAxis *axisY = new QValueAxis();
-    axisY->setRange(33,45);
+    axisY->setRange(20,40);
     axisY->setTitleText("[&deg;C]");
     axisY->applyNiceNumbers();
     chart->addAxis(axisY, Qt::AlignLeft);
